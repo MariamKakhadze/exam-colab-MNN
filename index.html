@@ -8,6 +8,186 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <!--this is a sidebar library for desktop-->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <div class="sidebar-header">
+                <button class="library-link sidebar-link">
+                    <img src="assets/icons/sidebar-library/library.png" alt="library-icon" class="library-icon">
+                    <span> My Library </span>
+
+                </button>
+
+            </div>
+            <ul class="sidebar-nav-list">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/pin.png" alt="pin">
+                        <span>Pins</span>
+                    </a>
+                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
+                </li>
+
+                <li class="sidebar-item">
+                    <input type="checkbox" id="playlist-toggle" class="dropdown-checkbox" hidden>
+                    <label for="playlist-dropdown" class="sidebar-link">
+                         <img src="assets/icons/sidebar-library/playlists.png" alt="arrow">
+                        <span>Playlists</span>
+                    </label>
+                   <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
+
+                    <ul class="sidebar-dropdown">
+                        <li>
+                            <a href="#">
+                                <img src="assets/icons/sidebar-library/playlists.png" alt="playlist" class="playlits-dropdown-icon">
+                                <span>Chill stuff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/icons/sidebar-library/playlists.png" alt="playlist" class="playlits-dropdown-icon">
+                                <span>Rock n Roll</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/icons/sidebar-library/playlists.png" alt="playlist" class="playlits-dropdown-icon">
+                                <span>The Jux Box</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/icons/sidebar-library/playlists.png" alt="playlist" class="playlits-dropdown-icon">
+                                <span>Selected Linkin Park</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/icons/sidebar-library/playlists.png" alt="playlist" class="playlits-dropdown-icon">
+                                <span>vibe</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/likedSongs.png" alt="liked">
+                        <span>Liked songs</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/saves.png" alt="saves">
+                        <span>Saves</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/albums.png" alt="albums">
+                        <span>Albums</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/folders.png" alt="foldrs">
+                        <span>Folders</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/podcasts.png" alt="podcasts">
+                        <span>Podcasts</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/audiobooks.png" alt="audiobooks">
+                        <span>Audiobooks</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/artists.png" alt="ARTISTS">
+                        <span>Artists</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+
+    <!--this is a sidebar library for mobile-->
+    <section class="mobile-library">
+        <header class="mobile-library-header">
+            <form class="search-form" role="search">
+                <div class="search-input-wrapper">
+                <img src="assets/icons/sidebar-library/search.png" alt="search-icon" class="search-icon">
+            
+            <input 
+                type="search" 
+                placeholder="Search library" 
+                class="search-input"
+                aria-label="Search your library"
+            >
+        </div>
+    </form>
+        <img src="assets/icons/sidebar-library/plus.png" alt="plus">
+
+        </header>
+
+        <div class="filter">
+            <button class="group">
+                <img src="assets/icons/sidebar-library/group.png" alt="group">
+                <span>Group</span>
+
+            </button>
+            <button class="recents">
+                <span>Recents</span>
+                <img src="assets/icons/sidebar-library/recents.png" alt="recents" class="recents-og">
+            </button>
+
+        </div>
+
+        <ul class="mobile-library-list">
+            <li class="mobile-library-item">
+                <span>Playlists</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+
+            </li>
+
+            <li class="mobile-library-item">
+                <span>Playlists by Spotify</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+
+            </li>
+
+            <li class="mobile-library-item">
+                <span>Albums</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+
+            </li>
+
+            <li class="mobile-library-item">
+                <span>Folders</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+
+            </li>
+
+            <li class="mobile-library-item">
+                <span>Artists</span>
+                <img src="assets/icons/sidebar-library/arrow.png" alt="">
+
+            </li>
+
+        </ul>
+
+    </section>
 </body>
 </html>
