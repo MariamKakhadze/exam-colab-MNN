@@ -1,11 +1,19 @@
+@use '../abstract/variables' as v;
+
+body {
+    background-color: v.$background-color; 
+    color: v.$primary-text-color; 
+    font-family: 'Satoshi';
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a{
+a, li{
     text-decoration: none;
+    color: inherit;
 }
 
 ul, ol{
@@ -16,4 +24,6 @@ button {
     cursor: pointer;
     border: none;
     background: none;
+    color: inherit;
+    font-family: inherit;
 }
