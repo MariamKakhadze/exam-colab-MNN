@@ -1,0 +1,10 @@
+// style for icon buttons (changes color on hover and slightly scales up)
+@mixin icon-btn {
+    color: $secondary-text-color;
+    transition: color 0.02s, transform 0.1s;
+
+    &:hover {
+        color: $primary-text-color;
+        transform: scale(1.04);
+    }
+}

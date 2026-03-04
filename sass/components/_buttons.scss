@@ -1,0 +1,8 @@
+// button styles (hover color + scale) to player icons
+.player .add-sm{
+    margin-left: 10px;
+    @include icon-btn;
+}
+.player .play-sm{
+    @include icon-btn;
+}

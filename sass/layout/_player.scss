@@ -1,0 +1,113 @@
+// this is the scrolling animation for the song title
+@keyframes marquee-scroll { 
+  0%    { transform: translateX(0); }        
+  85%, 100% { transform: translateX(-50%); }        
+}
+
+// the music player bar at the bottom of the screen
+.player {
+    position: fixed;
+    bottom: 95px;          
+    left: 0;
+    right: 0;
+    background-color: #333842;
+    border-radius: $radius-main;
+    width: 100%;
+    height: 61px;
+    margin: 0 8px;
+    padding: 8px;
+    font-family: 'satoshi';
+    z-index: 100;
+} 
+
+// only used on desktop, hidden for now
+.left-cont {
+    display: none;
+}
+
+// the album art and song info on mobile
+.phone-cont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    // album cover image
+    img {
+        width: 43px;
+        height: 43px;
+        padding-right:8px ;
+    }
+}
+
+// the column about song title, artist, album
+.song-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    letter-spacing: 3%;
+    line-height: 100%;
+    font-size:$font-size-medium ;
+    font-weight: $font-weight-regular;
+        
+    // the song title row
+    .song-name {
+        position: relative;
+        overflow: hidden;
+        width: 150px;
+
+        // this creates the fade/blur effect on the right edge
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 28px;
+            z-index: 2;
+            pointer-events: none;
+            right: 0;
+            background: linear-gradient(to left, #333842, transparent); 
+            }
+
+        // the scrolling track
+        .marquee {         
+            display: flex;
+            width: max-content;
+            animation: marquee-scroll 8s ease-in-out infinite;
+        }
+        .song {
+            white-space: nowrap;
+            padding-right: 60px;
+            color: $primary-text-color;
+        }
+    }
+
+    // artist name below the song title
+    .artist {
+        color: $secondary-text-color;
+    }
+
+    // album name, only shown on desktop
+    .album {
+        display: none;
+    }
+}
+// the progress bar at the bottom of the player
+.progress-bar{
+        width: 90%;
+        position: fixed;
+        bottom: 95.5px;          
+        left: 12px;
+        right: 0;
+    }
+
+// right side controls like volume,lyrics, only used on desktop
+.desktop-cont {
+    display: none;
+}
+
+// ───────────────────────────
+// DESKTOP
+// ───────────────────────────
+

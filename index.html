@@ -43,7 +43,7 @@
                 
                 <button class="player-next">
                     <img class="next" src="./assets/icons/player/Name=Next, Filled=No.svg" alt="Next">
-                    <img class="netx-hover" src="./assets/icons/player/Name=Next, Filled=No (1).svg" alt="next">
+                    <img class="next-hover" src="./assets/icons/player/Name=Next, Filled=No (1).svg" alt="next">
                 </button>
 
         <!--Shuffle button-->
@@ -82,130 +82,152 @@
 
         
                 <!-- ================================
-                    Right Side — cover, song info, favoritess,
-                    add button, lyrics, devices,
+                    Right Side — phone container,cover, song info,
+                    favoritess, add button, lyrics, devices,
                     more options, like, queue
                 ================================ -->
 
             <div class="right-cont">
+                <div class="phone-cont">
 
         <!-- Album cover -->
 
-                <a class="cover" href="">
-                    <img src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                </a>
+                    <a class="cover" href="">
+                        <img src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    </a>
         
         <!-- Song title, artist, album links -->
 
-                <div class="song-btn">
-                    <a class="song" href="">Get Lucky <span>(feat. Pharrell Williams and Nile Rodgers)</span></a>
-                    <a class="artist" href="">Daft Punk</a>
-                    <a class="album" href="">Random Access Memories</a>
+                    <div class="song-btn">
+                        <div class="song-name">
+                            <div class="marquee">
+                                <a class="song" href="">Get Lucky <span>(feat. Pharrell Williams and Nile Rodgers)</span></a>
+                            </div>
+                        </div>
+                        <a class="artist" href="">Daft Punk</a>
+                        <a class="album" href="">Random Access Memories</a>
+                    </div>
+
+        <!-- Phone buttons-->
+
+                    <button class="add-sm">
+                        <svg class="add-sm"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="play-sm">
+                        <svg class="play-sm" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.0942 18.2343C29.3511 18.9599 29.3511 20.774 28.0942 21.4997L18.1966 27.2141C16.9398 27.9397 15.3687 27.0327 15.3687 25.5814L15.3687 14.1526C15.3687 12.7013 16.9398 11.7943 18.1966 12.5199L28.0942 18.2343Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+        <!--progress-bar for phone-->            
+
+                    <svg class="progress-bar" width="320" height="17" viewBox="0 0 320 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 15.3047L318.5 15.3047" stroke="#898989" stroke-opacity="0.27" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M1.5 15.3047H143.881" stroke="#E0E0E0" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+
                 </div>
-
-        <!-- Phone icons-->
-
-                <img class="add-sm" src="./assets/icons/player/Name=Add to Playlist, Filled=No.svg" alt="Add">
-                <img class="add-sm-hover" src="./assets/icons/player/Name=Add to Playlist, Filled=No (1).svg" alt="Add">
-                <img class="play-sm" src="./assets/icons/player/Name=Play Simple, Filled=No.svg" alt="Play">
-                <img class="play-sm-hover" src="./assets/icons/player/Name=Play Simple, Filled=No (1).svg" alt="Play">
-
+                <div class="desktop-cont">
         <!-- Favorite button -->
 
-                <button class="favorite">
-                    <img class="fav" src="./assets/icons/player/Name=Like, Filled=No.svg" alt="Favorite">
-                    <img class="fav-hover" src="./assets/icons/player/Name=Like, Filled=Yes.svg" alt="Favorite">
+                    <button class="favorite">
+                        <img class="fav" src="./assets/icons/player/Name=Like, Filled=No.svg" alt="Favorite">
+                        <img class="fav-hover" src="./assets/icons/player/Name=Like, Filled=Yes.svg" alt="Favorite">
 
-                </button>
+                    </button>
             
                     <!-- ================================
                     ADD TO PLAYLIST
                     Checkbox toggle opens the window
                     ================================ -->
 
-                <div class="add-btn">
-                    <input type="checkbox" id="add-toggle" class="toogle-input">
+                    <div class="add-btn">
+                        <input type="checkbox" id="add-toggle" class="toogle-input">
                     
         <!-- Toggle label (the add button) -->
 
-                    <label for="add-toggle" class="add-btn">
-                        <img class="add" src="./assets/icons/player/Name=Add to Playlist, Filled=No.svg" alt="Add">
-                        <img class="add-hover" src="./assets/icons/player/Name=Add to Playlist, Filled=No (1).svg" alt="add">
-                    </label>
+                        <label for="add-toggle" class="add-btn">
+                            <img class="add" src="./assets/icons/player/Name=Add to Playlist, Filled=No.svg" alt="Add">
+                            <img class="add-hover" src="./assets/icons/player/Name=Add to Playlist, Filled=No (1).svg" alt="add">
+                        </label>
                 
         <!-- Backdrop — click to close -->
 
-                    <label for="add-toggle" class="add-backdrop"></label>
+                        bel for="add-toggle" class="add-backdrop"></label>
                     
         <!-- Add to playlist window -->
 
-                    <div class="add-window">
-                        <div class="add-header">
-                            <span>Add to playlist</span>
+                        <div class="add-window">
+                            <div class="add-header">
+                                <span>Add to playlist</span>
 
         <!-- Search bar inside the window -->
 
-                            <div class="add-search">
-                                <input type="text" placeholder="Search for a playlist/folder">
-                                <img class="search" src="./assets/icons/player/Name=Search, Filled=No.svg" alt="Search">
-                            </div>
+                                <div class="add-search">
+                                    <input type="text" placeholder="Search for a playlist/folder">
+                                    <img class="search" src="./assets/icons/player/Name=Search, Filled=No.svg" alt="Search">
+                                </div>
 
         <!-- Create new playlist button -->
 
-                            <button class="new-list">
-                                <img src="./assets/icons/player/Name=Add Simple, Filled=No.svg" alt="New Playlist">
-                                <span>New Playlist</span>
-                            </button>
+                                <button class="new-list">
+                                    <img src="./assets/icons/player/Name=Add Simple, Filled=No.svg" alt="New Playlist">
+                                    <span>New Playlist</span>
+                                </button>
             
         <!-- Playlist items -->
 
-                            <div class="playlists">
-                                <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
-                                <span>Chill stuff</span>
-                                <button class="add-to-list">
-                                    <img class="ckeck" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Add">
-                                    <img class="ckeck-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Add">
-                                </button>
-                            </div>
-                            <div class="playlists">
-                                <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
-                                <span>Chill stuff</span>
-                                <button class="add-to-list">
-                                    <img class="ckeck" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Add">
-                                    <img class="ckeck-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Add">
-                                </button>
-                            </div>
+                                <div class="playlists">
+                                    <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
+                                    <span>Chill stuff</span>
+                                    <button class="add-to-list">
+                                        <img class="ckeck" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Add">
+                                        <img class="ckeck-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Add">
+                                    </button>
+                                </div>
+                                <div class="playlists">
+                                    <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
+                                    <span>Chill stuff</span>
+                                    <button class="add-to-list">
+                                        <img class="ckeck" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Add">
+                                        <img class="ckeck-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Add">
+                                    </button>
+                                </div>
 
         <!-- Playlist item (with more options) -->
 
-                            <div class="playlists">
-                                <img class="folder" src="./assets/icons/player/Name=Folder, Filled=No.svg" alt="Playlist">
-                                <span>Chill stuff</span>
-                                <button class="right-btn">
-                                    <img src="./assets/icons/player/Property 1=Right.svg" alt="More">
-                                </button>
-                            </div>
+                                <div class="playlists">
+                                    <img class="folder" src="./assets/icons/player/Name=Folder, Filled=No.svg" alt="Playlist">
+                                    <span>Chill stuff</span>
+                                    <button class="right-btn">
+                                        <img src="./assets/icons/player/Property 1=Right.svg" alt="More">
+                                    </button>
+                                </div>
                     
         <!-- Playlist items -->
 
-                            <div class="playlists">
-                                <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
-                                <span>Chill stuff</span>
-                                <button class="add-to-list">
-                                    <img class="ckeck" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Add">
-                                    <img class="ckeck-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Add">
-                                </button>
-                            </div>
+                                <div class="playlists">
+                                    <img class="playlist" src="./assets/icons/player/Name=Playlist, Filled=No.svg" alt="Playlist">
+                                    <span>Chill stuff</span>
+                                    <button class="add-to-list">
+                                        <img class="ckeck" src="./assets/icons/player/Name=Check, Filled=No.svg" alt="Add">
+                                        <img class="ckeck-hover" src="./assets/icons/player/Name=Check, Filled=Yes.svg" alt="Add">
+                                    </button>
+                                </div>
 
         <!-- Cancel / Done buttons -->
 
-                            <div class="playlist-btn">
-                                <button class="Cancel">Cancel</button>
-                                <button class="Done">Done</button>
+                                <div class="playlist-btn">
+                                    <button class="Cancel">Cancel</button>
+                                    <button class="Done">Done</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
         <!-- END add-btn -->
 
@@ -214,136 +236,136 @@
                     Checkbox toggle opens the window
                 ================================ -->
 
-                <div class="lyrics-btn">
-                    <input type="checkbox" id="lyrics-toggle" class="toogle-input">
+                    <div class="lyrics-btn">
+                        <input type="checkbox" id="lyrics-toggle" class="toogle-input">
                     
         <!-- Toggle label (the lyrics button) -->
 
-                    <label for="lyrics-toggle" class="lyrics-btn">
-                        <img class="lyrics" src="./assets/icons/player/Property 1=Default (1).svg" alt="Lyrics">
-                        <img class="lyrics-hover" src="./assets/icons/player/Property 1=Hover (1).svg" alt="lyrics">
-                    </label>
+                        <label for="lyrics-toggle" class="lyrics-btn">
+                            <img class="lyrics" src="./assets/icons/player/Property 1=Default (1).svg" alt="Lyrics">
+                            <img class="lyrics-hover" src="./assets/icons/player/Property 1=Hover (1).svg" alt="lyrics">
+                        </label>
 
         <!-- Backdrop — click to close -->
 
-                    <label for="lyrics-toggle" class="lyrics-backdrop"></label>
+                        <label for="lyrics-toggle" class="lyrics-backdrop"></label>
                     
         <!-- Lyrics window -->
 
-                    <div class="lyrics-window">
-                        <div class="lyrics-header">
-                            <span>Lyrics</span>
-                            <img class="arrow" src="./assets/icons/player/Frame 93.svg" alt="Lyrics">
+                        <div class="lyrics-window">
+                            <div class="lyrics-header">
+                                <span>Lyrics</span>
+                                <img class="arrow" src="./assets/icons/player/Frame 93.svg" alt="Lyrics">
                             
         <!-- Sync lyrics button, Share lyrics icon -->
 
-                            <button class="sync">
-                                <img class="sync" src="./assets/icons/player/Name=Synced Lyrics, Filled=No.svg" alt="Sync">
-                                <img class="sync-hover" src="./assets/icons/player/Name=Synced Lyrics, Filled=Yes.svg" alt="sync">
-                            </button>
-                            <button class="sync">
-                                <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
-                                <img class="share-hover" src="./assets/icons/player/Name=Share, Filled=No (1).svg" alt="share">
-                            </button>
-                        </div>
+                                <button class="sync">
+                                    <img class="sync" src="./assets/icons/player/Name=Synced Lyrics, Filled=No.svg" alt="Sync">
+                                    <img class="sync-hover" src="./assets/icons/player/Name=Synced Lyrics, Filled=Yes.svg" alt="sync">
+                                </button>
+                                <button class="sync">
+                                    <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
+                                    <img class="share-hover" src="./assets/icons/player/Name=Share, Filled=No (1).svg" alt="share">
+                                </button>
+                            </div>
 
         <!-- Lyrics text content -->
 
-                        <div class="lyrics-content">
-                            <pre class="upper">
-                                Like the legend of the phoenix, huh
-                                All ends with beginnings
-                                What keeps the planet spinning, ah
-                                The force from the beginning, hm, look
-                            </pre>
-                            <pre class="down">
-                                We've come too far
-                                To give up who we are
-                                So let's raise the bar
-                                And our cups to the stars
-                                She's up all night 'til the sun
-                                I'm up all night to get some
-                            </pre>
+                            <div class="lyrics-content">
+                                <pre class="upper">
+                                    Like the legend of the phoenix, huh
+                                    All ends with beginnings
+                                    What keeps the planet spinning, ah
+                                    The force from the beginning, hm, look
+                                </pre>
+                                <pre class="down">
+                                    We've come too far
+                                    To give up who we are
+                                    So let's raise the bar
+                                    And our cups to the stars
+                                    She's up all night 'til the sun
+                                    I'm up all night to get some
+                                </pre>
+                            </div>
                         </div>
                     </div>
-                </div>
 
         <!-- END lyrics-btn -->
 
          <!-- Connect to a device button -->
 
-                <button class="devices">
-                    <img class="devices" src="./assets/icons/player/Name=Device, Filled=No.svg" alt="Devices">
-                    <img class="devices-hover" src="./assets/icons/player/Name=Device, Filled=No (1).svg" alt="Devices">
-                </button>
+                    <button class="devices">
+                        <img class="devices" src="./assets/icons/player/Name=Device, Filled=No.svg" alt="Devices">
+                        <img class="devices-hover" src="./assets/icons/player/Name=Device, Filled=No (1).svg" alt="Devices">
+                    </button>
 
                 <!-- ================================
                     MORE OPTIONS
                     Button opens a dropdown menu
                 ================================ -->
 
-                <div class="more-options">
+                    <div class="more-options">
             
         <!-- More button -->
-                    <button class="more-btn">
-                        <img class="more" src="./assets/icons/player/Property 1=Default (2).svg" alt="More">
-                        <img class="more-hover" src="./assets/icons/player/Property 1=Hover (2).svg" alt="More">
-                    </button>
+                        <button class="more-btn">
+                            <img class="more" src="./assets/icons/player/Property 1=Default (2).svg" alt="More">
+                            <img class="more-hover" src="./assets/icons/player/Property 1=Hover (2).svg" alt="More">
+                        </button>
                 
         <!-- Dropdown menu list -->
 
-                    <div class="more-dropdown">
-                        <ul>
-                            <li><img src="./assets/icons/player/Name=Download, Filled=No.svg" alt="list">Download song</li>
-                            <li><img src="./assets/icons/player/Name=Timer, Filled=Yes.svg" alt="list">Sleep timer</li>
-                            <li><img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">Hide song</li>
-                            <li><img src="./assets/icons/player/Name=Share, Filled=No.svg" alt="list">Share song</li>
-                            <li><img src="./assets/icons/player/Name=Add to Library, Filled=No.svg" alt="list">Add to library<img src="./assets/icons/player/Property 1=Right.svg" alt="icon"></li>
-                            <li><img src="./assets/icons/player/Name=Add to Queue, Filled=No.svg" alt="list">Add song to queue<img src="./assets/icons/player/Property 1=Right.svg" alt="icon"></li>
-                            <li><img src="./assets/icons/player/Name=Radio, Filled=No.svg" alt="list">Go to song radio</li>
-                            <li><img src="./assets/icons/player/Name=Album, Filled=No.svg" alt="list">View album</li>
-                            <li><img src="./assets/icons/player/Name=Artist, Filled=No.svg" alt="list">Vieb artist<img src="./assets/icons/player/Property 1=Right.svg" alt="icon"></li>
-                            <li><img src="./assets/icons/player/Name=Miniplayer, Filled=No.svg" alt="list">Miniplayer</li>
-                            <li><img src="./assets/icons/player/Name=Full Screen, Filled=No.svg" alt="list">Fullscreen</li>
-                        </ul>
+                        <div class="more-dropdown">
+                            <ul>
+                                <li><img src="./assets/icons/player/Name=Download, Filled=No.svg" alt="list">Download song</li>
+                                <li><img src="./assets/icons/player/Name=Timer, Filled=Yes.svg" alt="list">Sleep timer</li>
+                                <li><img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">Hide song</li>
+                                <li><img src="./assets/icons/player/Name=Share, Filled=No.svg" alt="list">Share song</li>
+                                <li><img src="./assets/icons/player/Name=Add to Library, Filled=No.svg" alt="list">Add to library<img src="./assets/icons/player/Property 1=Right.svg" alt="icon"></li>
+                                <li><img src="./assets/icons/player/Name=Add to Queue, Filled=No.svg" alt="list">Add song to queue<img src="./assets/icons/player/Property 1=Right.svg" alt="icon"></li>
+                                <li><img src="./assets/icons/player/Name=Radio, Filled=No.svg" alt="list">Go to song radio</li>
+                                <li><img src="./assets/icons/player/Name=Album, Filled=No.svg" alt="list">View album</li>
+                                <li><img src="./assets/icons/player/Name=Artist, Filled=No.svg" alt="list">Vieb artist<img src="./assets/icons/player/Property 1=Right.svg" alt="icon"></li>
+                                <li><img src="./assets/icons/player/Name=Miniplayer, Filled=No.svg" alt="list">Miniplayer</li>
+                                <li><img src="./assets/icons/player/Name=Full Screen, Filled=No.svg" alt="list">Fullscreen</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
         <!-- END more options-->
 
         <!-- vertical line -->
 
-                <img class="vertical-line" src="./assets/icons/player/Frame 62.svg" alt="line">
+                    <img class="vertical-line" src="./assets/icons/player/Frame 62.svg" alt="line">
 
                 <!-- ================================
                     LIKE Checkbox toggle expands the box
                 ================================ -->
-                <div class="like-cont">
+                    <div class="like-cont">
                 
         <!-- Hidden checkbox toggle -->
          
-                    <input type="checkbox" id="toggle" class="toogle-input">
+                        <input type="checkbox" id="toggle" class="toogle-input">
 
 
 
-                    <div class="expand-box">
+                        <div class="expand-box">
                         <img class="like-next" src="./assets/icons/player/icons big (2).svg" alt="next">
                         <img class="like" src="./assets/icons/player/icons big.svg" alt="like">
                         <img class="dislike" src="./assets/icons/player/icons big (1).svg" alt="dislike">
 
         <!-- Open expanded box -->
 
-                        <label for="toggle" class="close-btn">
-                            <img class="close" src="./assets/icons/player/Group 84.svg" alt="close">
-                        </label>
+                            <label for="toggle" class="close-btn">
+                                <img class="close" src="./assets/icons/player/Group 84.svg" alt="close">
+                            </label>
 
         <!-- Close expanded box -->
 
-                        <label for="toggle" class="open-btn">
-                            <img class="open" src="./assets/icons/player/Property 1=Default (4).svg" alt="open">
-                        </label>
+                            <label for="toggle" class="open-btn">
+                                <img class="open" src="./assets/icons/player/Property 1=Default (4).svg" alt="open">
+                            </label>
+                        </div>
                     </div>
-                </div>
 
         <!-- END like-cont -->
 
@@ -352,216 +374,219 @@
                     Checkbox toggle opens the window
                 ================================ -->
 
-                <div class="queue">
-                    <input type="checkbox" id="queue-toggle" class="toogle-input">
+                    <div class="queue">
+                        <input type="checkbox" id="queue-toggle" class="toogle-input">
                     
          <!-- Toggle label (the queue button) -->
 
-                    <label for="queue-toggle" class="queue-btn">
-                        <img class="queue" src="./assets/icons/player/Property 1=Default (3).svg" alt="Queue">
-                        <img class="queue-hover" src="./assets/icons/player/Property 1=Hover (3).svg" alt="queue">
-                    </label>
+                        <label for="queue-toggle" class="queue-btn">
+                            <img class="queue" src="./assets/icons/player/Property 1=Default (3).svg" alt="Queue">
+                            <img class="queue-hover" src="./assets/icons/player/Property 1=Hover (3).svg" alt="queue">
+                        </label>
 
         <!-- Backdrop — click to close -->
 
-                    <label for="queue-toggle" class="queue-backdrop"></label>
-                    <div class="queue-window">
+                        <label for="queue-toggle" class="queue-backdrop"></label>
+                        <div class="queue-window">
                     
         <!-- Queue header with tabs -->
 
-                        <div class="queue-header">
-                            <span>Queue</span>
-                            <span>Recent</span>
-                            <hr>
-                        </div>
+                            <div class="queue-header">
+                                <span>Queue</span>
+                                <span>Recent</span>
+                                <hr>
+                            </div>
 
         <!-- List of queued songs -->
 
-                        <div class="queue-list">
+                            <div class="queue-list">
                         
         <!-- Currently playing song -->
 
-                            <div class="queue-song">
-                                <div class="cover">
-                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                    <img class="lines" src="./assets/icons/player/icons big (3).svg" alt="lines">
+                                <div class="queue-song">
+                                    <div class="cover">
+                                        <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                        <img class="lines" src="./assets/icons/player/icons big (3).svg" alt="lines">
+                                    </div>
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
-                                </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
 
         <!-- label Next up -->
 
-                            <span>Next up:</span>
+                                <span>Next up:</span>
 
         <!-- Playback controls inside queue -->
 
-                            <div class="icon-nav">
-                                <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
-                                <span>Random Access Memories</span>
-                                <button class="shuffle">
-                                    <img class="shuffle" src="./assets/icons/player/Name=Shuffle, Filled=No.svg" alt="Shuffle">
-                                    <img class="shuffle-hover" src="./assets/icons/player/Name=Shuffle, Filled=No (1).svg" alt="shuffle">
-                                </button>
-                                <button class="repeat">
-                                    <img class="repeat" src="./assets/icons/player/Name=Next, Filled=No.svg" alt="Repeat">
-                                    <img class="repeat-hover" src="./assets/icons/player/Name=Loop, Filled=No (1).svg" alt="repeat">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
+                                <div class="icon-nav">
+                                    <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
+                                    <span>Random Access Memories</span>
+                                    <button class="shuffle">
+                                        <img class="shuffle" src="./assets/icons/player/Name=Shuffle, Filled=No.svg" alt="Shuffle">
+                                        <img class="shuffle-hover" src="./assets/icons/player/Name=Shuffle, Filled=No (1).svg" alt="shuffle">
+                                    </button>
+                                    <button class="repeat">
+                                        <img class="repeat" src="./assets/icons/player/Name=Next, Filled=No.svg" alt="Repeat">
+                                        <img class="repeat-hover" src="./assets/icons/player/Name=Loop, Filled=No (1).svg" alt="repeat">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
+                                </div>
 
         <!-- Queue song items -->
 
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
 
         <!-- Second playlist -->
-                            <div class="icon-nav">
-                                <img class="album-icon" src="./assets/icons/player/Property 1=Playlist.svg" alt="album-icon">
-                                <span>Chill Playlist</span>
-                                <button class="shuffle">
-                                    <img class="shuffle" src="./assets/icons/player/Name=Shuffle, Filled=No.svg" alt="Shuffle">
-                                    <img class="shuffle-hover" src="./assets/icons/player/Name=Shuffle, Filled=No (1).svg" alt="shuffle">
-                                </button>
-                                <button class="repeat">
-                                    <img class="repeat" src="./assets/icons/player/Name=Next, Filled=No.svg" alt="Repeat">
-                                    <img class="repeat-hover" src="./assets/icons/player/Name=Loop, Filled=No (1).svg" alt="repeat">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
+                                <div class="icon-nav">
+                                    <img class="album-icon" src="./assets/icons/player/Property 1=Playlist.svg" alt="album-icon">
+                                    <span>Chill Playlist</span>
+                                    <button class="shuffle">
+                                        <img class="shuffle" src="./assets/icons/player/Name=Shuffle, Filled=No.svg" alt="Shuffle">
+                                        <img class="shuffle-hover" src="./assets/icons/player/Name=Shuffle, Filled=No (1).svg" alt="shuffle">
+                                    </button>
+                                    <button class="repeat">
+                                        <img class="repeat" src="./assets/icons/player/Name=Next, Filled=No.svg" alt="Repeat">
+                                        <img class="repeat-hover" src="./assets/icons/player/Name=Loop, Filled=No (1).svg" alt="repeat">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
+                                </div>
 
         <!-- Queue song items -->
 
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
-                            </div>
-                            <div class="queue-song">
-                                <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
-                                <div class="name">
-                                    <span>Get Lucky (feat. ...</span>
-                                    <small>Daft Punk</small>
+                                <div class="queue-song">
+                                    <img class="cover" src="./assets/photo/player/Rectangle 7.svg" alt="cover">
+                                    <div class="name">
+                                        <span>Get Lucky (feat. ...</span>
+                                        <small>Daft Punk</small>
+                                    </div>
+                                    <button class="dots">
+                                        <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
+                                        <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
+                                    </button>
+                                    <button class="close">
+                                        <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
+                                        <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
+                                    </button>
                                 </div>
-                                <button class="dots">
-                                    <img class="dots" src="./assets/icons/player/icons big (4).svg" alt="icon">
-                                    <img class="dots" src="./assets/icons/player/icons big (5).svg" alt="icon">
-                                </button>
-                                <button class="close">
-                                    <img class="close" src="./assets/icons/player/icons big (6).svg" alt="icon">
-                                    <img class="close" src="./assets/icons/player/icons big (7).svg" alt="icon">
-                                </button>
                             </div>
-                        </div>
 
         <!-- Queue footer -->
 
-                        <div class="queue-footer">
-                            <span>Auto-Play Similar Tracks</span>
-                            <img src="./assets/icons/player/Group 62.svg" alt="icon">
+                            <div class="queue-footer">
+                                <span>Auto-Play Similar Tracks</span>
+                                <img src="./assets/icons/player/Group 62.svg" alt="icon">
+                            </div>
                         </div>
                     </div>
-                </div>
         <!-- END queue -->
+                </div>
+        
+        <!--END desktop-cont-->
 
             </div>
         <!-- END right-cont -->
