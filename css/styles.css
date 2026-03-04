@@ -112,6 +112,44 @@ button {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .player {
+    max-width: 1491px;
+    height: 81px;
+    bottom: 0;
+    padding: 0;
+    margin: 4px 7px;
+  }
+  .phone-cont {
+    display: none;
+  }
+  .left-cont {
+    display: flex;
+    align-items: center;
+    margin: 21px 26px 20px 21px;
+    max-width: 655px;
+  }
+  .left-time {
+    color: #898989;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3%;
+    line-height: 100%;
+    margin: 0 auto;
+  }
+  .playback-bar {
+    transition: transform 0.1s;
+  }
+  .playback-bar .bar-hover {
+    display: none;
+  }
+  .playback-bar:hover :first-child {
+    display: none;
+  }
+  .playback-bar:hover :last-child {
+    display: block;
+  }
+}
 .player .add-sm {
   margin-left: 10px;
   color: #898989;
@@ -129,6 +167,68 @@ button {
 .player .play-sm:hover {
   color: #E0E0E0;
   transform: scale(1.04);
+}
+
+.player .btn-playback {
+  display: none;
+}
+.player .btn-playback ~ label #start {
+  display: block;
+}
+.player .btn-playback ~ label #pause {
+  display: none;
+}
+.player .btn-playback:checked ~ label #start {
+  display: none;
+}
+.player .btn-playback:checked ~ label #pause {
+  display: block;
+}
+
+.player-prev, .player-next {
+  color: #898989;
+  transition: color 0.02s, transform 0.1s;
+}
+.player-prev:hover, .player-next:hover {
+  color: #E0E0E0;
+  transform: scale(1.04);
+}
+
+.shuffle {
+  color: #898989;
+  transition: color 0.02s, transform 0.1s;
+}
+.shuffle:hover {
+  color: #E0E0E0;
+  transform: scale(1.04);
+}
+
+.repeat {
+  color: #898989;
+  transition: color 0.02s, transform 0.1s;
+}
+.repeat:hover {
+  color: #E0E0E0;
+  transform: scale(1.04);
+}
+
+.volume input {
+  display: none;
+  width: 70%;
+  height: 4px;
+  appearance: none;
+  transform: translateX(-20%) translateY(-400%) rotate(-90deg);
+}
+.volume .vol-icon {
+  color: #898989;
+  transition: color 0.02s, transform 0.1s;
+}
+.volume .vol-icon:hover {
+  color: #E0E0E0;
+  transform: scale(1.04);
+}
+.volume:hover input {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

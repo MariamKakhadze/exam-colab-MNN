@@ -111,3 +111,52 @@
 // DESKTOP
 // ───────────────────────────
 
+@media (min-width: 768px) {
+
+    // the music player bar at the bottom of the screen
+    .player {
+        max-width: 1491px;
+        height: 81px;
+        bottom: 0;
+        padding: 0;
+        margin: 4px 7px;
+    }
+
+    // hide mobile layout on desktop
+    .phone-cont {
+        display: none;
+    }
+
+    // show desktop left section (buttons + progress bar)
+    .left-cont {
+        display: flex;
+        align-items: center;
+        margin: 21px 26px 20px 21px;
+        max-width: 655px;
+    }
+
+    //progress bar
+    .left-time {
+        color: $secondary-text-color;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        letter-spacing: 3%;
+        line-height: 100%;
+        margin: 0 auto;
+    }
+    .playback-bar {
+        transition:  transform 0.1s;
+        .bar-hover {
+            display: none;
+        }
+
+        &:hover {
+            :first-child {
+                display: none;
+            }
+            :last-child {
+                display: block;
+            }
+        }
+    }
+}

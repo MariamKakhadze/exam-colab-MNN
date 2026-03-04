@@ -6,3 +6,46 @@
 .player .play-sm{
     @include icon-btn;
 }
+
+// play/pause button style
+.player {
+    .btn-playback {
+        display: none;
+        & ~ label #start {display: block;}
+        & ~ label #pause {display: none;}
+        &:checked ~ label #start {display: none;}
+        &:checked ~ label #pause {display: block;}
+    }
+}
+
+// previous and next button style
+.player-prev, .player-next {
+    @include icon-btn;
+}
+
+// Shuffle button
+.shuffle {
+    @include icon-btn;
+}
+
+// Repeat button
+.repeat {
+    @include icon-btn;
+}
+
+// Volume button
+.volume {
+    input {
+        display: none;
+        width: 70%;
+        height: 4px;
+        appearance: none; 
+        transform: translateX(-20%) translateY(-400%) rotate(-90deg);   
+    }
+    .vol-icon {
+        @include icon-btn;   
+    }
+    &:hover {
+        input {display: block;}
+    }
+}
