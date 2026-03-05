@@ -5,166 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+ <link rel="stylesheet" href="./sass/main.css">
 </head>
 <body>
-    <!--this is a sidebar library for desktop-->
-    <aside class="sidebar">
-        <nav class="sidebar-nav">
-            <div class="sidebar-header">
-                <button class="library-link">
-                    <img src="assets/icons/sidebar-library/library.png" alt="library-icon" class="library-icon">
-                    <span> My Library </span>
 
-                </button>
+     <!-- Header Section  Nino Gogoberidze -->
+    <header class="navbar">
+        <div class="navbar-container">
+           <!-- Left Section   -->
+            <section class="nav-group left-section">
+                <a href="#" class="nav-link"> 
+                     <div class="icon-box">
+                         <img src="./assets/icons/sidebar-library/library.png" alt="library icon">
+                     </div>
+                     <span class="label">Library</span>
+                </a>
+            </section>
+            
+    <!-- Left Section  / -->
+
+   <!-- + middle Section / -->
+            <nav class="nav-group center-section">
+                <a href="#" class="nav-link active">
+                    <div class="icon-box active-bg">
+                        <img src="./assets/icons/nav-library/icons big.svg" 
+                        alt="home icon">
+                    </div>
+                    <span class="label">Home</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <div class="icon-box">
+                        <img src="./assets/icons/nav-library/icons big (1).svg" 
+                        alt="discover icon">
+                    </div>
+                    <span class="label">Discover</span>
+                </a>
+                <div class="search-container">
+                    <div class="search-icon box">
+                        <img src="./assets/icons/nav-library/icons big (2).svg" 
+                        alt="search icon">
+
+                    </div>
+                    <input type="text" placeholder="Search"
+                     class="Search-input">
+                </div>
+            </nav>
+    
+        </div>
+        <!-- middle Section  / -->
+        <!-- right Section  / -->
+         <section class="nav-group right section">
+            <button class="tool-btn">
+                <div class="icon-box">
+                    <img src="./assets/icons/nav-library/icons big (3).svg" 
+                    alt="news">
+                </div>
+            </button>
+
+            <button class="tool-btn">
+                <div class="icon-box">
+                     <img src="./assets/icons/nav-library/icons big (4).svg" alt="private">
+                </div>
+            </button>
+
+            <button class="tool-btn">
+                <div class="icon-box">
+                    <img src="./assets/icons/nav-library/icons big (5).svg" alt="friends">
+                </div>
+            </button>
+            <button class="tool-btn">
+                <div class="icon-box">
+                     <img src="./assets/icons/nav-library/icons big (6).svg"
+                      alt="settings">
+                </div>
+            </button>
+            <div class="profile-box">
+                  <img src="./assets/icons/nav-library/Sprite-0002 1.svg" 
+                  alt="sprite">
 
             </div>
-            <ul class="sidebar-nav-list">
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/pin.png" alt="pin">
-                        <span>Pins</span>
-                    </a>
-                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
-                </li>
+         </section>
+    </header>
 
-                <li class="sidebar-item">
-                    
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/playlists.png" alt="pin">
-                        <span>Playlists</span>
-                    </a>
-                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
-                </li>
+      
+     <!-- Header Section  Nino Gogoberidze   -->
+    
 
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/likedSongs.png" alt="liked">
-                        <span>Liked songs</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/saves.png" alt="saves">
-                        <span>Saves</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/albums.png" alt="albums">
-                        <span>Albums</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/folders.png" alt="foldrs">
-                        <span>Folders</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/podcasts.png" alt="podcasts">
-                        <span>Podcasts</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/audiobooks.png" alt="audiobooks">
-                        <span>Audiobooks</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <img src="assets/icons/sidebar-library/artists.png" alt="ARTISTS">
-                        <span>Artists</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-
-
-    <!--this is a sidebar library for mobile-->
-    <section class="mobile-library">
-        <header class="mobile-library-header">
-            <form class="search-form" role="search">
-                <div class="search-input-wrapper">
-            <input 
-                type="search" 
-                placeholder="Search library" 
-                class="search-input"
-                aria-label="Search your library"
-            >
-            <img src="assets/icons/sidebar-library/search.png" alt="search-icon" class="search-icon">
-        </div>
-    </form>
-        <img src="assets/icons/sidebar-library/plus.png" alt="plus">
-
-        
-        </header>
-
-        <div class="filter">
-            <button class="group">
-                <img src="assets/icons/sidebar-library/group.png" alt="group">
-                <span>Group</span>
-
-            </button>
-            <button class="recents">
-                <span>Recents</span>
-                <img src="assets/icons/sidebar-library/recents.png" alt="recents" class="recents-og">
-            </button>
-
-        </div>
-
-        <ul class="mobile-library-list">
-            <li class="mobile-library-item">
-                <a href="#">
-                <span>Playlists</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Playlists by Spotify</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Albums</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Folders</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Artists</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-        </ul>
-
-    </section>
+    
 </body>
 </html>
