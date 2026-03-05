@@ -53,3 +53,14 @@ Used object-fit: contain on the icon image to maintain its aspect ratio within t
 * Integrated the **Search Bar** featuring a dedicated search icon.
 * Added the **Right Section**: Includes tool buttons (News, Private, Friends, Settings) and the profile section.
 * Organized the file system for icons in `assets/icons/nav-library/`.
+ 
+ #CSS
+ Header Layout: Elements are horizontally aligned using Flexbox, following the design requirements.
+
+Typography: Integrated the Satoshi font family with base sizing established (1rem = 10px).
+
+Flexbox Positioning: Utilized strategic spacing (margin-right: auto) to group navigation elements while keeping utility tools and profile aligned to the right.
+
+Note: This version represents an initial draft of the CSS styles. While the layout is functional, the final version is subject to further refinements and adjustments to ensure 100% alignment with the design specifications.
+
+Author: Nino Gogoberidze

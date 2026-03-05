@@ -1,0 +1,14 @@
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+body {
+    font-family: 'Satoshi', sans-serif;
+    font-size: $font-size-medium; // 1.4rem (14px)
+    font-weight: $font-weight-regular;
+    -webkit-font-smoothing: antialiased; // უფრო გლუვი ფონტისთვის
+}
+
+h1, h2, h3 {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-large;
+}
