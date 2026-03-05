@@ -1,19 +1,19 @@
 // 1. Abstracts
-@import 'abstract/variables'; 
-@import 'abstract/mixins';
+@use 'abstract/variables'; 
+@use 'abstract/mixins';
 
 // 2. Base
-@import 'base/reset';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/typography';
 
 // 3. Layout
-@import 'layout/container'; 
-@import 'layout/sidebar';
-@import 'layout/header';
-@import 'layout/main-content';
-@import 'layout/player';
+@use 'layout/container'; 
+@use 'layout/sidebar';
+@use 'layout/header';
+@use 'layout/main-content';
+@use 'layout/player';
 
 // 4. Components
-@import 'components/filters';
-@import 'components/cards';
-@import 'components/buttons';
+@use 'components/filters';
+@use 'components/cards';
+@use 'components/buttons';
