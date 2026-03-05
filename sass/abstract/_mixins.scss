@@ -8,3 +8,54 @@
         transform: scale(1.04);
     }
 }
+
+// Toggle button — hides checkbox, adds hover + active color to label
+@mixin toggle-btn($default-color: $secondary-text-color, $active-color: $primary-text-color) {
+    input[type="checkbox"] {
+        display: none;
+    }
+    label {
+        cursor: pointer;
+        color: $default-color;
+
+        &:hover {
+        color: $active-color;
+        }
+    }
+
+    input:checked ~ label {
+        color: $active-color;
+    }
+}
+
+// Toggle window — shows/hides a popup window and its backdrop
+@mixin toggle-window($window, $backdrop) {
+    #{$window} {
+        display: none;
+        z-index: 2;
+    }
+
+    #{$backdrop} {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+    }
+
+    input:checked ~ #{$backdrop} {
+        display: block;
+    }
+
+    input:checked ~ #{$window} {
+        display: block;
+    }
+}
+
+// Checkbox toggle for playlist check buttons
+@mixin check-btn {
+    display: none;
+    & ~ label .check {display: block;}
+    & ~ label .check-hover {display: none;}
+    &:checked ~ label .check {display: none;}
+    &:checked ~ label .check-hover {display: block;}
+}
