@@ -43,3 +43,13 @@ Set the icon container to a precise 40.41px x 40.41px to match the design specif
 Applied Flexbox to the .nav-item class to ensure the icon and the "My Library" label are perfectly aligned horizontally with a consistent gap.
 
 Used object-fit: contain on the icon image to maintain its aspect ratio within the box
+---
+### 📅 Update: 05/03/2026
+**Author:** Nino Gogoberidze (Header Section)
+
+**Work Accomplished:**
+* Added the core HTML structure for the **Navbar**.
+* Developed the **Middle Section**: Includes Home and Discover links with corresponding icons.
+* Integrated the **Search Bar** featuring a dedicated search icon.
+* Added the **Right Section**: Includes tool buttons (News, Private, Friends, Settings) and the profile section.
+* Organized the file system for icons in `assets/icons/nav-library/`.
