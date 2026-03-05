@@ -1,3 +1,5 @@
+@use '../abstract/variables' as *;
+
 // this is the scrolling animation for the song title
 @keyframes marquee-scroll { 
   0%    { transform: translateX(0); }        

@@ -1,6 +1,6 @@
 // 1. Abstracts
-@use 'abstract/variables'; 
-@use 'abstract/mixins';
+@use 'abstract/variables' as *; 
+@use 'abstract/mixins' as *;
 
 // 2. Base
 @use 'base/reset';

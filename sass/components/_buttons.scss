@@ -1,3 +1,5 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
 // button styles (hover color + scale) to player icons
 .player .add-sm{
     margin-left: 10px;
