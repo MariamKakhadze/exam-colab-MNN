@@ -1,14 +1,19 @@
+@use '../abstract/variables' as v;
+
 html {
     font-size: 62.5%; // 1rem = 10px
 }
+
 body {
     font-family: 'Satoshi', sans-serif;
-    font-size: $font-size-medium; // 1.4rem (14px)
-    font-weight: $font-weight-regular;
-    -webkit-font-smoothing: antialiased; // უფრო გლუვი ფონტისთვის
+    // Add the 'v.' prefix to all variables
+    font-size: v.$font-size-medium; 
+    font-weight: v.$font-weight-regular;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
-    font-weight: $font-weight-bold;
-    font-size: $font-size-large;
+    // Add the 'v.' prefix here too
+    font-weight: v.$font-weight-bold;
+    font-size: v.$font-size-large;
 }
