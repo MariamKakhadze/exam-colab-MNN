@@ -75,15 +75,7 @@
             font-size: v.$font-size-medium;
             font-weight: v.$font-weight-regular;
         }
-        .library-link{
-            @include m.flex-center($gap:11px);
-            align-items: center;
-            padding-left: 15px;
-
-        }
-        .library-link:hover {
-                    color: v.$primary-text-color; 
-                }
+        
 
         .sidebar-nav-list{
             display: flex;
