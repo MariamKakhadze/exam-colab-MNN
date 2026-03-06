@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Page</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="song-header">
+        <img class="cover-bg" src="" alt="cover">
+        <div class="song-right">
+            <h1></h1>
+            <div class="song-information">
+                <img src="" alt="artist">
+                <a href="" class="artist"></a>
+                <img src="" alt="dot">
+                <img src=" " alt="album">
+                <a href="" class="album-name"></a>
+                <img src="" alt="dot">
+                <p class="year"></p>
+                <img src="" alt="dot">
+                <p class="duration"></p>
+                <img src="" alt="dot">
+                <p class="copies"></p>
+            </div>
+            <div class="song-nav">
+                 <!-- Play / Pause button -->
+            <input class="btn-playback" type="checkbox"  id="playback-toggle">
+            <label for="playback-toggle">
+                <img id="start" src="./assets/icons/player/Name=Play, Filled=No.svg" alt="Start">
+                <img id="pause" src="./assets/icons/player/Name=Pause, Filled=No.svg" alt="Pause">
+            </label>
+                <!-- Favorite button -->
+            <input class="favorite" type="checkbox"  id="favorite-toggle">
+            <label for="favorite-toggle">
+                <img class="fav" src="./assets/icons/player/Name=Like, Filled=No.svg" alt="Favorite">
+                <img class="fav-hover" src="./assets/icons/player/Name=Like, Filled=Yes.svg" alt="Favorite">
+            </label>
+            <label for="add-toggle" class="add-btn">
+                <svg class="add-desktop"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </label>
+            <label for="list-add-toggle" class="list-add-btn">
+                <svg class="list-add-desktop"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                </svg>
+            </label>
+            <label for="download-toggle" class="download-btn">
+                <svg class="download-desktop"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                </svg>
+            </label>
+            <label for="share-toggle">
+                <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
+                <img class="share-hover" src="./assets/icons/player/Name=Share, Filled=No (1).svg" alt="share">
+            </label>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
