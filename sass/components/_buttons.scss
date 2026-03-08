@@ -185,3 +185,24 @@
         margin-right: 5px;
     }
 }
+.song-page {
+    .close-btn {
+        width: 40.41px;
+        height: 40.41px;
+        cursor: pointer;
+        margin-bottom: 18.59px;
+        color: $secondary-text-color;
+        transition: color 0.15s;
+
+        &:hover {
+            color: $primary-text-color;
+        }
+    }
+    .favorite {
+        display: none;
+        & ~ label .fav {display: block;}
+        & ~ label .fav-hover {display: none;}
+        &:checked ~ label .fav {display: none;}
+        &:checked ~ label .fav-hover {display: block;}
+    }
+}

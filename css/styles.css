@@ -258,7 +258,7 @@ h1, h2, h3 {
   right: 0;
   background-color: #333842;
   border-radius: 10px;
-  width: 100%;
+  width: 100vw;
   height: 61px;
   margin: 0 8px;
   padding: 8px;
@@ -717,7 +717,95 @@ h1, h2, h3 {
   }
 }
 .song-page {
-  background-color: linear-gradient(rgb(59, 65, 77), rgb(39, 43, 51));
+  background: linear-gradient(to bottom, rgb(59, 65, 77) 0%, rgb(39, 43, 51) 100%);
+  font-family: "satoshi";
+  border-radius: 10px;
+}
+
+.song-header {
+  padding: 57px 18px 53px 18px;
+}
+
+.mobile-header {
+  display: flex;
+  flex-direction: row;
+}
+.mobile-header .mobile-album-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+  margin-left: 50px;
+}
+.mobile-header .mobile-album-name {
+  margin-top: 10px;
+  color: #E0E0E0;
+  font-size: 12px;
+}
+
+.cover-bg {
+  width: 100%;
+  margin-bottom: 27px;
+}
+
+.song-right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.song-right .mobile-song-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+}
+.song-right .mobile-song-info::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  right: -2px;
+  background: linear-gradient(to left, #333842, transparent);
+}
+.song-right .mobile-song-info h1 {
+  width: max-content;
+  color: #E0E0E0;
+  font-size: 20px;
+  animation: marquee-scroll 10s ease-in-out infinite;
+}
+.song-right .mobile-song-info p {
+  color: #898989;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.song-information .artist,
+.song-information .artist-icon,
+.song-information .dot,
+.song-information .album-name,
+.song-information .year,
+.song-information .album-icon,
+.song-information .duration,
+.song-information .copies {
+  display: none;
+}
+
+.song-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+.playback-btn, .list-add-btn, .download-btn, .share, .more-btn {
+  display: none;
+}
+
+.genre, .singers {
+  display: none;
 }
 
 .player .add-sm {
@@ -1046,6 +1134,33 @@ h1, h2, h3 {
   width: 40.41px;
   height: 40.41px;
   margin-right: 5px;
+}
+
+.song-page .close-btn {
+  width: 40.41px;
+  height: 40.41px;
+  cursor: pointer;
+  margin-bottom: 18.59px;
+  color: #898989;
+  transition: color 0.15s;
+}
+.song-page .close-btn:hover {
+  color: #E0E0E0;
+}
+.song-page .favorite {
+  display: none;
+}
+.song-page .favorite ~ label .fav {
+  display: block;
+}
+.song-page .favorite ~ label .fav-hover {
+  display: none;
+}
+.song-page .favorite:checked ~ label .fav {
+  display: none;
+}
+.song-page .favorite:checked ~ label .fav-hover {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
