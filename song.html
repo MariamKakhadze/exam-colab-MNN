@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="song-page">
+    <input type="checkbox" id="lyrics-toggle" class="lyrics-input">
+    <input type="checkbox" id="queue-toggle" class="queue-input">
 
         <!-- ================================
         SONG HEADER
@@ -26,7 +28,9 @@
         </div>
 
         <!-- Album cover image -->
-        <img class="cover-bg" src="../assets/photo/player/Rectangle 6.svg" alt="cover">
+        <div class="cover-area">
+            <img class="cover-bg" src="../assets/photo/player/Rectangle 6.svg" alt="cover">
+        </div>
 
         <!-- Right side — song info, controls, genre, singers -->
         <div class="song-right">
@@ -186,6 +190,238 @@
 
     </section>
     <!-- END song-header -->
+    <section class="mobile-lyrics-view">
+        
+         <div class="mobile-lyrics-topbar">
+            <a href="index.html" class="close-btn">
+                <img src="./assets/icons/song-page/Name=Down, Filled=No.svg" alt="close">
+            </a>
+            <img class="line-bar" src="./assets/icons/player/icons big (3).svg" alt="lines">
+            <span>Get Lucky (feat. Pharrell...</span>
+        </div>
+        <div class="mobile-lyrics">
+            <p class="lyrics-white">
+                Like the legend of the phoenix, huh<br>
+                All ends with beginnings<br>
+                What keeps the planet spinning, ah<br>
+                The force from the beginning, hm, look<br>
+                <span>We've come too far</span><br>
+            </p>
+            <p class="lyrics-dark">
+                To give up who we are<br>
+                So let's raise the bar<br>
+                And our cups to the stars<br>
+                She's up all night 'til the sun<br>
+                I'm up all night to get some<br>
+                She’s up all night for good fun<br>
+                I’m up all night to get lucky<br>
+                We’re up all night ‘til the sun<br>
+                We’re up all night to get some<br>
+                We’re up all night for good fun<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                The present has no rhythm<br>
+                Your gift keeps on giving<br>
+                What is this I’m feeling?<br>
+                If you want to leave, I’m with it<br>
+                We’ve come too far<br>
+                To give up who we are<br>
+                So let’s raise the bar<br>
+                And our cups to the stars<br>
+                She's up all night 'til the sun<br>
+                I'm up all night to get some<br>
+                She’s up all night for good fun<br>
+                I’m up all night to get lucky<br>
+                We’re up all night ‘til the sun<br>
+                We’re up all night to get some<br>
+                We’re up all night for good fun<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+                We’re up all night to get lucky<br>
+            </p>
+        </div>
+    </section>
+    <section class="mobile-queue-view">
+        <div class="queue-header">
+            <a href="index.html" class="close-btn">
+                <img src="./assets/icons/song-page/Name=Down, Filled=No.svg" alt="close">
+            </a>
+            <img class="line-bar" src="./assets/icons/player/icons big (3).svg" alt="lines">
+            <span>Get Lucky (feat. Pharrell...</span>
+        </div>
+        <div class="mobile-queue">
+            <span class="next-up">Next up:</span>
+
+            <!-- Album info with shuffle and repeat controls -->
+            <div class="album-functions">
+                <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
+                <span>Random Access Memories</span>
+                <button class="shuffle">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="repeat">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+    <!-- Queue song items (repeated) -->
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            
+            <!-- Second album section in queue -->
+            <div class="album-functions">
+                <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
+                <span>Random Access Memories</span>
+                <button class="shuffle">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="repeat">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+    <!-- Queue song items (repeated) -->
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+            <div class="queue-song">
+                <div class="song-content">
+                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                    <div class="name">
+                        <span>Get Lucky (feat. ...</span>
+                        <p>Daft Punk</p>
+                    </div>
+                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
+                </div>
+                <button class="close">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>Remove
+                </button>
+            </div>
+                 
+        </div>
+    
+    </section>
+    <!-- END queue panel -->
+
+
+
 
     <!-- ================================
         MOBILE ONLY SECTION
@@ -198,8 +434,10 @@
         <!-- Progress bar with timestamps -->
         <div class="song-duration">
             <img class="pogress-bar-songpage" src="./assets/icons/song-page/Group 35.svg" alt="progress-bar">
-            <p class="current">2:23</p>
-            <p class="left">-0:45</p>
+            <div class="time-info">
+                <p class="current-time">2:23</p>
+                <p class="left-time">-0:45</p>
+            </div>
         </div>
 
         <!-- Playback control buttons -->
@@ -268,264 +506,99 @@
             <div class="buttons">
 
                 <!-- Lyrics panel toggle -->
-                <a href="#lyrics" class="btn-lyrics">
-                    <input type="checkbox" id="lyrics-toggle" class="toogle-input">
-                    <label for="lyrics-toggle" class="lyrics-btn">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.0864 14.0762H23.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M11.0864 21.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M11.0864 28.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M29.0864 13.0762V22.01M29.0864 22.01V26.6757C29.0864 27.4256 28.5537 28.0748 27.8037 28.0762C26.3223 28.0789 24.0864 27.6431 24.0864 24.9879C24.0864 21.0173 29.0864 22.01 29.0864 22.01Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </label>
-                </a>
+                <label for="lyrics-toggle" class="btn-lyrics">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0864 14.0762H23.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M11.0864 21.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M11.0864 28.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M29.0864 13.0762V22.01M29.0864 22.01V26.6757C29.0864 27.4256 28.5537 28.0748 27.8037 28.0762C26.3223 28.0789 24.0864 27.6431 24.0864 24.9879C24.0864 21.0173 29.0864 22.01 29.0864 22.01Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </label>
 
                 <!-- Queue panel toggle -->
-                <a href="#queue" class="btn-queue">
-                    <input type="checkbox" id="queue-toggle" class="queue-input">
-                    <label for="queue-toggle" class="queue-btn">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <label for="queue-toggle" class="queue-btn">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.7866 14.5915C11.7866 13.0416 13.043 11.7852 14.5929 11.7852H25.8182C27.368 11.7852 28.6245 13.0416 28.6245 14.5915C28.6245 16.1413 27.368 17.3978 25.8182 17.3978H14.5929C13.043 17.3978 11.7866 16.1413 11.7866 14.5915Z" stroke="currentcolor" stroke-width="2.3573"/>
                         <path d="M11.7866 23.0117L28.6245 23.0117" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M11.7866 28.623L28.6245 28.623" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </label>
-                </a>
+                    </svg>
+                </label>
             </div>
             <!-- END buttons -->
 
-            <!-- ================================
-                QUEUE PANEL
-                Slide-up panel showing next tracks
-            ================================ -->
-            <div id="queue" class="panel">
-
-                <!-- Queue panel header with close button -->
-                <div class="queue-header">
-                    <input type="checkbox" id="close-toggle" class="close-input">
-                    <label for="close-toggle" class="close-btn">
-                        <img class="close-btn" src="./assets/icons/song-page/Name=Down, Filled=No.svg" alt="close">
-                    </label>
-                    <img class="line-bar" src="./assets/icons/player/icons big (3).svg" alt="lines">
-                    <span>Get Lucky (feat. Pharrell...</span>
-                </div>
-
-                <span class="next-up">Next up:</span>
-
-                <!-- Album info with shuffle and repeat controls -->
-                <div class="album-functions">
-                    <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
-                    <span>Random Access Memories</span>
-                    <button class="shuffle">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                   <button class="repeat">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Queue song items (repeated) -->
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Second album section in queue -->
-                <div class="album-functions">
-                    <img class="album-icon" src="./assets/icons/player/Property 1=Album.svg" alt="album-icon">
-                    <span>Random Access Memories</span>
-                    <button class="shuffle">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.1027 12.6271C11.6824 12.6271 13.1592 13.4102 14.0456 14.7177L14.8812 15.9503L16.0077 17.612M28.7491 25.92H23.8242C22.5038 25.92 21.236 25.4031 20.2921 24.4798L19.3635 23.5716M28.7491 25.92L25.2568 29.4648M28.7491 25.92L25.2568 22.3752" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10.1027 27.9503C11.6863 27.9503 13.1708 27.18 14.0826 25.8853L20.2554 17.1194C21.2016 15.7758 22.7422 14.9764 24.3855 14.9764H28.7491M28.7491 14.9764L25.2568 11.4316M28.7491 14.9764L25.2568 18.5213" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                   <button class="repeat">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.996 26.0972H13.4703C11.6104 26.0972 10.1027 24.5895 10.1027 22.7297V15.9945C10.1027 14.1347 11.6104 12.627 13.4703 12.627H26.9406C28.8004 12.627 30.3081 14.1347 30.3081 15.9945V22.7297C30.3081 24.5895 28.8004 26.0972 26.9406 26.0972H20.2054M20.2054 26.0972L23.573 22.7297M20.2054 26.0972L23.573 29.4648" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- More queue song items -->
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="queue-song">
-                    <img class="cover" src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="name">
-                        <span>Get Lucky (feat. ...</span>
-                        <small>Daft Punk</small>
-                    </div>
-                    <img class="move" src="./assets/icons/song-page/Name=Move, Filled=No.svg">    
-                    <button class="close">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.257 15.1543L20.2056 20.2056M15.1543 25.257L20.2056 20.2056M20.2056 20.2056L15.1543 15.1543M20.2056 20.2056L25.257 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!-- END queue panel -->
 
             <!-- ================================
                 MORE OPTIONS
                 Checkbox toggle opens popup window
             ================================ -->
-            <div class="more-button">
+            <div class="mobile-more-button">
                 <input type="checkbox" id="more-toggle" class="more-input">
 
                 <!-- More options trigger button -->
                 <label for="more-toggle" class="more-btn">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="11.7866" cy="20.2072" r="1.68378" fill="currentcolor"/>
-                    <circle cx="20.2055" cy="20.2072" r="1.68378" fill="currentcolor"/>
-                    <circle cx="28.6242" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        <circle cx="11.7866" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        <circle cx="20.2055" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        <circle cx="28.6242" cy="20.2072" r="1.68378" fill="currentcolor"/>
                     </svg>
                 </label>
                 <label for="more-toggle" class="more-backdrop"></label>
 
+                <di class="more-btn-wrapper">
                 <!-- Song info inside more window header -->
-                <div class="more-header">
-                    <img src="./assets/photo/player/Rectangle 6.svg" alt="cover">
-                    <div class="more-song-info">
-                        <span class="title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</span>
-                        <p>Daft Punk</p>
-                    </div>
-                </div>    
+                    <div class="more-header">
+                        <img src="./assets/photo/player/Rectangle 6.svg" alt="cover">
+                        <div class="more-song-info">
+                            <span class="title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</span>
+                            <p>Daft Punk</p>
+                        </div>
+                    </div>    
 
-                    <!-- More options list -->
-                <div class="more-window">
-                    <div class="more-list">
-                        <svg class="fav"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                            <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <p>Add to liked songs</p>
+                        <!-- More options list -->
+                    <div class="more-window">
+                        <div class="more-list">
+                            <svg class="fav"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p>Add to liked songs</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
+                            <p>Add to a playlist</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
+                            <p>Hide song</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Timer, Filled=Yes.svg" alt="list">
+                            <p>Sleep timer</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Add to Queue, Filled=No.svg" alt="list">
+                            <p>Add song to queue</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Share, Filled=No.svg" alt="list">
+                            <p>Share song</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Radio, Filled=No.svg" alt="list">
+                            <p>Go to song radio</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Album, Filled=No.svg" alt="list">
+                            <p>View album</p>
+                        </div>
+                        <div class="more-list">
+                            <img src="./assets/icons/player/Name=Artist, Filled=No.svg" alt="list">
+                            <p>View artist</p>
+                            <img class="forward-3" src="./assets/icons/player/Property 1=Right.svg" alt="icon">
+                        </div>
                     </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
-                        <p>Add to a playlist</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
-                        <p>Hide song</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Timer, Filled=Yes.svg" alt="list">
-                        <p>Sleep timer</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Add to Queue, Filled=No.svg" alt="list">
-                        <p>Add song to queue</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Share, Filled=No.svg" alt="list">
-                        <p>Share song</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Radio, Filled=No.svg" alt="list">
-                        <p>Go to song radio</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Album, Filled=No.svg" alt="list">
-                        <p>View album</p>
-                    </div>
-                    <div class="more-list">
-                        <img src="./assets/icons/player/Name=Artist, Filled=No.svg" alt="list">
-                        <p>View artist</p>
-                        <img class="forward-3" src="./assets/icons/player/Property 1=Right.svg" alt="icon">
-                    </div>
-                </div>
+                </di>
             </div>
             <!-- END more-button -->
 
@@ -586,15 +659,6 @@
             Full song lyrics with highlight states
         ================================ -->
         <div class="panel" id="lyrics">
-            <!-- Lyrics panel header with close button -->
-            <div class="lyrics-header">
-                <input type="checkbox" id="close-toggle" class="close-input">
-                <label for="close-toggle" class="close-btn">
-                    <img class="close-btn" src="./assets/icons/song-page/Name=Down, Filled=No.svg" alt="close">
-                </label>
-                <img class="line-bar" src="./assets/icons/player/icons big (3).svg" alt="lines">
-                <span>Get Lucky (feat. Pharrell...</span>
-            </div>
             <pre class="lyrics-marked">
                 Like the legend of the phoenix, huh
                 All ends with beginnings

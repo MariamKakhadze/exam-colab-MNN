@@ -67,3 +67,25 @@
     &:checked ~ label .check {display: none;}
     &:checked ~ label .check-hover {display: block;}
 }
+
+@mixin toggle-panel($panel, $backdrop) {
+    #{$panel} {
+        display: none;
+        z-index: 2;
+    }
+
+    #{$backdrop} {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+    }
+
+    input:checked ~ #{$backdrop} {
+        display: block;
+    }
+
+    input:checked ~ #{$panel} {
+        display: block;
+    }
+}
