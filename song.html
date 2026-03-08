@@ -486,48 +486,38 @@
         <div class="mobile-panel">
 
             <!-- Connect to a device button -->
-            <button class="devices">
-                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="devices" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="17.2587" y="11.3672" width="11.7865" height="17.6797" rx="2.94662" stroke="currentcolor" stroke-width="2.06263"/>
                 <circle cx="23.152" cy="23.1537" r="2.94662" fill="currentcolor"/>
                 <circle cx="23.152" cy="15.7858" r="1.47331" fill="currentcolor"/>
                 <circle cx="12.8389" cy="27.5729" r="1.47331" fill="currentcolor"/>
                 <path d="M13.5755 22.4157H12.8389C12.0252 22.4157 11.3655 21.7561 11.3655 20.9424V15.7858C11.3655 14.9721 12.0252 14.3125 12.8389 14.3125H13.5755" stroke="currentcolor" stroke-width="2.06263" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+            </svg>
 
             <!-- Share button -->
             <label for="share-toggle">
                 <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
                 <img class="share-hover" src="./assets/icons/player/Name=Share, Filled=No (1).svg" alt="share">
             </label>
-
-            <!-- Lyrics and Queue toggle buttons -->
-            <div class="buttons">
-
                 <!-- Lyrics panel toggle -->
-                <label for="lyrics-toggle" class="btn-lyrics">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.0864 14.0762H23.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M11.0864 21.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M11.0864 28.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M29.0864 13.0762V22.01M29.0864 22.01V26.6757C29.0864 27.4256 28.5537 28.0748 27.8037 28.0762C26.3223 28.0789 24.0864 27.6431 24.0864 24.9879C24.0864 21.0173 29.0864 22.01 29.0864 22.01Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </label>
+            <label for="lyrics-toggle" class="btn-lyrics">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0864 14.0762H23.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11.0864 21.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M11.0864 28.0762H19.0864" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M29.0864 13.0762V22.01M29.0864 22.01V26.6757C29.0864 27.4256 28.5537 28.0748 27.8037 28.0762C26.3223 28.0789 24.0864 27.6431 24.0864 24.9879C24.0864 21.0173 29.0864 22.01 29.0864 22.01Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </label>
 
                 <!-- Queue panel toggle -->
-                <label for="queue-toggle" class="queue-btn">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.7866 14.5915C11.7866 13.0416 13.043 11.7852 14.5929 11.7852H25.8182C27.368 11.7852 28.6245 13.0416 28.6245 14.5915C28.6245 16.1413 27.368 17.3978 25.8182 17.3978H14.5929C13.043 17.3978 11.7866 16.1413 11.7866 14.5915Z" stroke="currentcolor" stroke-width="2.3573"/>
-                        <path d="M11.7866 23.0117L28.6245 23.0117" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M11.7866 28.623L28.6245 28.623" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </label>
-            </div>
-            <!-- END buttons -->
-
-
-            <!-- ================================
+            <label for="queue-toggle" class="queue-btn">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.7866 14.5915C11.7866 13.0416 13.043 11.7852 14.5929 11.7852H25.8182C27.368 11.7852 28.6245 13.0416 28.6245 14.5915C28.6245 16.1413 27.368 17.3978 25.8182 17.3978H14.5929C13.043 17.3978 11.7866 16.1413 11.7866 14.5915Z" stroke="currentcolor" stroke-width="2.3573"/>
+                    <path d="M11.7866 23.0117L28.6245 23.0117" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7866 28.623L28.6245 28.623" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </label>
+                   <!-- ================================
                 MORE OPTIONS
                 Checkbox toggle opens popup window
             ================================ -->
@@ -535,16 +525,16 @@
                 <input type="checkbox" id="more-toggle" class="more-input">
 
                 <!-- More options trigger button -->
-                <label for="more-toggle" class="more-btn">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11.7866" cy="20.2072" r="1.68378" fill="currentcolor"/>
-                        <circle cx="20.2055" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                <label for="more-toggle" class="mobile-more-btn">
+                    <svg  width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.7865" cy="20.2072" r="1.68378" fill="currentcolor"/>
+                        <circle cx="20.2054" cy="20.2072" r="1.68378" fill="currentcolor"/>
                         <circle cx="28.6242" cy="20.2072" r="1.68378" fill="currentcolor"/>
                     </svg>
                 </label>
                 <label for="more-toggle" class="more-backdrop"></label>
 
-                <di class="more-btn-wrapper">
+                <div class="more-btn-wrapper">
                 <!-- Song info inside more window header -->
                     <div class="more-header">
                         <img src="./assets/photo/player/Rectangle 6.svg" alt="cover">
@@ -557,19 +547,23 @@
                         <!-- More options list -->
                     <div class="more-window">
                         <div class="more-list">
-                            <svg class="fav"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                <path d="M11.827 11.3301H27.827C27.827 9.67322 26.4839 8.33008 24.827 8.33008H14.827C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                                <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.0693 13.5685L20.2054 15.3745L18.3416 13.5685C16.3872 11.6749 13.2521 11.7794 11.4282 13.7991C9.65847 15.7589 9.41482 18.6943 11.0174 20.793C11.2143 21.0509 11.408 21.2979 11.5922 21.524C12.7587 22.9549 15.3037 25.4539 16.5788 26.7949C17.5209 27.7857 18.3677 28.6121 19.0057 29.214C19.6794 29.8496 20.7194 29.8357 21.3944 29.2014C22.5707 28.0961 24.3747 26.3743 25.6453 25.0379C26.9205 23.6969 27.6522 22.9549 28.8186 21.524C29.0029 21.2979 29.1965 21.0509 29.3935 20.793C30.996 18.6943 30.7524 15.7589 28.9826 13.7991C27.1588 11.7794 24.0236 11.6749 22.0693 13.5685Z" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                             <p>Add to liked songs</p>
                         </div>
                         <div class="more-list">
-                            <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="20" height="20" rx="3" transform="matrix(1 0 0 -1 9.82703 31.3301)" stroke="#898989" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M11.827 11.3301L27.827 11.3301C27.827 9.67322 26.4839 8.33008 24.827 8.33008L14.827 8.33008C13.1702 8.33008 11.827 9.67322 11.827 11.3301Z" stroke="#898989" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M15.827 21.3301H19.827M23.827 21.3301H19.827M19.827 21.3301V17.3301M19.827 21.3301V25.3301" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                             <p>Add to a playlist</p>
                         </div>
                         <div class="more-list">
-                            <img src="./assets/icons/player/Name=Hide, Filled=No.svg" alt="list">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.2052 10.9453C25.3198 10.9453 29.4659 15.0915 29.4659 20.2061C29.4659 22.5553 28.5928 24.699 27.1515 26.332C25.4533 28.256 22.971 29.4668 20.2052 29.4668C15.0907 29.4667 10.9445 25.3206 10.9445 20.2061C10.9445 17.8337 11.836 15.6712 13.3029 14.0322C14.9997 12.1365 17.4628 10.9454 20.2052 10.9453Z" stroke="#898989" stroke-width="1.68378"/>
+                            </svg>
                             <p>Hide song</p>
                         </div>
                         <div class="more-list">
@@ -595,10 +589,9 @@
                         <div class="more-list">
                             <img src="./assets/icons/player/Name=Artist, Filled=No.svg" alt="list">
                             <p>View artist</p>
-                            <img class="forward-3" src="./assets/icons/player/Property 1=Right.svg" alt="icon">
                         </div>
                     </div>
-                </di>
+                </div>
             </div>
             <!-- END more-button -->
 

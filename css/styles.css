@@ -722,49 +722,44 @@ h1, h2, h3 {
   font-family: "satoshi";
   border-radius: 10px;
 }
-
-.lyrics-input, .queue-input {
+.song-page .lyrics-input, .song-page .queue-input {
   display: none;
 }
-
-.song-header {
+.song-page .song-header {
   padding: 57px 18px 53px 18px;
 }
-
-.mobile-header {
+.song-page .mobile-header {
   display: flex;
   flex-direction: row;
 }
-.mobile-header .mobile-album-icon {
+.song-page .mobile-header .mobile-album-icon {
   width: 24px;
   height: 24px;
   margin-top: 8px;
   margin-left: 50px;
 }
-.mobile-header .mobile-album-name {
+.song-page .mobile-header .mobile-album-name {
   margin-top: 10px;
   color: #E0E0E0;
   font-size: 12px;
 }
-
-.cover-bg {
+.song-page .cover-bg {
   width: 100%;
   margin-bottom: 27px;
 }
-
-.song-right {
+.song-page .song-right {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.song-right .mobile-song-info {
+.song-page .song-right .mobile-song-info {
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
   width: 260px;
 }
-.song-right .mobile-song-info::after {
+.song-page .song-right .mobile-song-info::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -775,67 +770,60 @@ h1, h2, h3 {
   right: -2px;
   background: linear-gradient(to left, #333842, transparent);
 }
-.song-right .mobile-song-info h1 {
+.song-page .song-right .mobile-song-info h1 {
   width: max-content;
   color: #E0E0E0;
   font-size: 20px;
   animation: marquee-scroll 10s ease-in-out infinite;
 }
-.song-right .mobile-song-info p {
+.song-page .song-right .mobile-song-info p {
   color: #898989;
   font-size: 18px;
   margin-top: 4px;
 }
-
-.song-information .artist,
-.song-information .artist-icon,
-.song-information .dot,
-.song-information .album-name,
-.song-information .year,
-.song-information .album-icon,
-.song-information .duration,
-.song-information .copies {
+.song-page .song-information .artist,
+.song-page .song-information .artist-icon,
+.song-page .song-information .dot,
+.song-page .song-information .album-name,
+.song-page .song-information .year,
+.song-page .song-information .album-icon,
+.song-page .song-information .duration,
+.song-page .song-information .copies {
   display: none;
 }
-
-.song-nav {
+.song-page .song-nav {
   display: flex;
   flex-direction: row;
   margin-left: 20px;
   margin-top: -5px;
 }
-
-.playback-btn, .list-add-btn, .download-btn, .share, .more-btn {
+.song-page .playback-btn, .song-page .list-add-btn, .song-page .download-btn, .song-page .share, .song-page .more-btn {
   display: none;
 }
-
-.genre, .singers {
+.song-page .genre, .song-page .singers {
   display: none;
 }
-
-.mobile-lyrics-view {
+.song-page .mobile-lyrics-view {
   display: none;
 }
-
-.mobile-lyrics-topbar {
+.song-page .mobile-lyrics-topbar {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
   padding: 57px 18px 0 18px;
 }
-.mobile-lyrics-topbar .line-bar {
+.song-page .mobile-lyrics-topbar .line-bar {
   width: 24px;
   height: 24px;
   margin-top: 8px;
   margin-left: 50px;
 }
-.mobile-lyrics-topbar span {
+.song-page .mobile-lyrics-topbar span {
   margin-top: 10px;
   color: #E0E0E0;
   font-size: 12px;
 }
-
-.mobile-lyrics {
+.song-page .mobile-lyrics {
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -848,50 +836,45 @@ h1, h2, h3 {
   line-height: 180%;
   word-spacing: 3%;
 }
-.mobile-lyrics::-webkit-scrollbar {
+.song-page .mobile-lyrics::-webkit-scrollbar {
   display: none;
 }
-.mobile-lyrics {
+.song-page .mobile-lyrics {
   scrollbar-width: none;
 }
-
-.lyrics-white {
+.song-page .lyrics-white {
   color: #E0E0E0;
 }
-.lyrics-white span {
+.song-page .lyrics-white span {
   background: linear-gradient(to right, #E0E0E0 55%, rgba(219, 219, 219, 0.2) 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-.lyrics-dark {
+.song-page .lyrics-dark {
   color: #898989;
 }
-
-.mobile-queue-view {
+.song-page .mobile-queue-view {
   display: none;
 }
-
-.queue-header {
+.song-page .queue-header {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
   padding: 57px 18px 0 18px;
 }
-.queue-header .line-bar {
+.song-page .queue-header .line-bar {
   width: 24px;
   height: 24px;
   margin-top: 8px;
   margin-left: 50px;
 }
-.queue-header span {
+.song-page .queue-header span {
   margin-top: 10px;
   color: #E0E0E0;
   font-size: 12px;
 }
-
-.mobile-queue {
+.song-page .mobile-queue {
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -900,57 +883,53 @@ h1, h2, h3 {
   overflow-y: auto;
   margin: 0px 18px 23px 18px;
 }
-.mobile-queue::-webkit-scrollbar {
+.song-page .mobile-queue::-webkit-scrollbar {
   display: none;
 }
-.mobile-queue {
+.song-page .mobile-queue {
   scrollbar-width: none;
 }
-
-.next-up {
+.song-page .next-up {
   color: white;
   font-size: 16px;
   font-weight: 700;
 }
-
-.album-functions {
+.song-page .album-functions {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 5px 0;
 }
-.album-functions span {
+.song-page .album-functions span {
   color: white;
   font-size: 16px;
   font-weight: 400;
   margin-right: 40px;
 }
-
-.shuffle, .repeat {
+.song-page .shuffle, .song-page .repeat {
   color: #898989;
   transition: color 0.02s, transform 0.1s;
 }
-.shuffle:hover, .repeat:hover {
+.song-page .shuffle:hover, .song-page .repeat:hover {
   color: #E0E0E0;
   transform: scale(1.04);
 }
-.shuffle, .repeat {
+.song-page .shuffle, .song-page .repeat {
   padding-left: 10px;
 }
-
-.queue-song {
+.song-page .queue-song {
   display: flex;
   flex-direction: row;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
-.queue-song::-webkit-scrollbar {
+.song-page .queue-song::-webkit-scrollbar {
   display: none;
 }
-.queue-song {
+.song-page .queue-song {
   scrollbar-width: none;
 }
-.queue-song .song-content {
+.song-page .queue-song .song-content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -958,36 +937,35 @@ h1, h2, h3 {
   padding: 6px 0;
   scroll-snap-align: start;
 }
-.queue-song .song-content .cover {
+.song-page .queue-song .song-content .cover {
   width: 53px;
   height: 53px;
   margin-right: 12px;
   border-radius: 10px;
   flex-shrink: 0;
 }
-.queue-song .song-content .name {
+.song-page .queue-song .song-content .name {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.queue-song .song-content .name span {
+.song-page .queue-song .song-content .name span {
   color: #E0E0E0;
   font-size: 16px;
   font-weight: 400;
 }
-.queue-song .song-content .name p {
+.song-page .queue-song .song-content .name p {
   color: #898989;
   font-size: 12px;
   font-weight: 400;
   margin-top: 5px;
 }
-.queue-song .song-content .move {
+.song-page .queue-song .song-content .move {
   width: 41px;
   height: 41px;
   flex-shrink: 0;
 }
-
-.close {
+.song-page .close {
   width: 130px;
   margin-left: 5px;
   background-color: #B63F3F;
@@ -1004,40 +982,118 @@ h1, h2, h3 {
   border: none;
   cursor: pointer;
 }
-
-.song-duration {
+.song-page .song-duration {
   margin: 0 18px;
   display: flex;
   flex-direction: column;
 }
-
-.progress-bar-songpage {
+.song-page .progress-bar-songpage {
   justify-content: center;
   margin-top: 21px;
 }
-
-.time-info {
+.song-page .time-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 9px;
 }
-
-.control-btn {
+.song-page .control-btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 11px 18px 37px 18px;
 }
-
-.mobile-panel {
+.song-page .mobile-panel {
   display: flex;
   flex-direction: row;
+  gap: 26px;
   justify-content: space-between;
-  margin-bottom: 57px;
+  margin: 0 18px 57px;
 }
-
-.song-sticky-cont, .song-lyrics {
+.song-page .more-btn-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 609px;
+  z-index: 2;
+  background-color: rgba(32, 32, 32, 0.98);
+  border-radius: 10px;
+  padding: 9px 18px auto 42px;
+}
+.song-page .more-btn-wrapper::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 4px;
+  background: #585858;
+  border-radius: 2px;
+  margin: 12px auto 4px;
+}
+.song-page .more-btn-wrapper .more-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 20px 16px 23px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.song-page .more-btn-wrapper .more-header img {
+  height: 60px;
+  width: 60px;
+}
+.song-page .more-btn-wrapper .more-header .more-song-info {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  overflow: hidden;
+  width: 250px;
+}
+.song-page .more-btn-wrapper .more-header .more-song-info::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  top: 40px;
+  bottom: 0;
+  pointer-events: none;
+  right: 0;
+  background: linear-gradient(to left, rgba(32, 32, 32, 0.98), transparent);
+}
+.song-page .more-btn-wrapper .more-header .more-song-info .title {
+  width: max-content;
+  color: #E0E0E0;
+  font-size: 16px;
+  animation: marquee-scroll 10s ease-in-out infinite;
+}
+.song-page .more-btn-wrapper .more-header .more-song-info p {
+  color: #898989;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.song-page .more-window {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 468px;
+  padding: 23px 0 20px 19px;
+}
+.song-page .more-list {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  align-items: center;
+}
+.song-page .more-list img {
+  width: 41px;
+  height: 41px;
+}
+.song-page .more-list p {
+  color: #E0E0E0;
+  font-size: 16px;
+}
+.song-page .song-sticky-cont, .song-page .song-lyrics {
   display: none;
 }
 
@@ -1436,6 +1492,22 @@ h1, h2, h3 {
 }
 .mobile-more-button input:checked ~ label {
   color: #E0E0E0;
+}
+.mobile-more-button .more-btn-wrapper {
+  display: none;
+  z-index: 2;
+}
+.mobile-more-button .more-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+.mobile-more-button input:checked ~ .more-backdrop {
+  display: block;
+}
+.mobile-more-button input:checked ~ .more-btn-wrapper {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

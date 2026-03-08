@@ -218,6 +218,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    
 }
 
 .lyrics-input:checked ~ .song-page-mobile .btn-lyrics svg {
@@ -233,6 +234,7 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        
 }
 .queue-input:checked ~ .song-page-mobile .queue-btn svg {
         color: $primary-text-color;
@@ -240,7 +242,23 @@
 
 .mobile-more-button {
     @include toggle-btn;
+    .more-btn-wrapper {
+        display: none;
+        z-index: 2;
+    }
+    .more-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+    }
+    input:checked ~ .more-backdrop {
+        display: block;
+    }
 
+    input:checked ~ .more-btn-wrapper {
+        display: block;
+    }
 }
 
 

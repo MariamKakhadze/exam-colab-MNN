@@ -13,300 +13,389 @@
     font-family: 'satoshi';
     border-radius: $radius-main;
     
-}
-.lyrics-input, .queue-input{
-    display: none;
-}
-
-.song-header {
-
-    padding: 57px 18px 53px 18px;
-}
-.mobile-header {
-    display: flex;
-    flex-direction: row;
-
-    .mobile-album-icon {
-        width: 24px;
-        height: 24px;
-        margin-top: 8px;
-        margin-left:50px;
-    }
-    .mobile-album-name {
-        margin-top: 10px;
-        color: $primary-text-color;
-        font-size: $font-size-small;
-    }
-
-}
-.cover-bg {
-    width: 100%;
-    margin-bottom: 27px;
-}
-.song-right{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    .mobile-song-info {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        overflow: hidden;
-        width: 260px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 30px;
-            top: 0;
-            bottom: 0;
-            pointer-events: none;
-            right: -2px;
-            background: linear-gradient(to left, #333842, transparent); 
-        }
-        h1 {
-            width: max-content;
-            color: $primary-text-color;
-            font-size: 20px;
-            animation: marquee-scroll 10s ease-in-out infinite;
-        }
-        p {
-            color: $secondary-text-color;
-            font-size: 18px;
-            margin-top: 4px;
-        }
-    }
-}
-.song-information {
-    .artist,
-    .artist-icon,
-    .dot,
-    .album-name,
-    .year,
-    .album-icon, 
-    .duration,
-    .copies {
+    .lyrics-input, .queue-input{
         display: none;
     }
-}
-.song-nav{
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    margin-top: -5px;
-}
-.playback-btn, .list-add-btn, .download-btn, .share, .more-btn {
-    display: none;
-}
-.genre, .singers {
-    display: none;
-}
 
-.mobile-lyrics-view {
-    display: none;
-}
-.mobile-lyrics-topbar{
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    padding: 57px 18px 0 18px;
+    .song-header {
 
-    .line-bar {
-        width: 24px;
-        height: 24px;
-        margin-top: 8px;
-        margin-left:50px;
+        padding: 57px 18px 53px 18px;
     }
-    span {
-        margin-top: 10px;
+    .mobile-header {
+        display: flex;
+        flex-direction: row;
+
+        .mobile-album-icon {
+            width: 24px;
+            height: 24px;
+            margin-top: 8px;
+            margin-left:50px;
+        }
+        .mobile-album-name {
+            margin-top: 10px;
+            color: $primary-text-color;
+            font-size: $font-size-small;
+        }
+
+    }
+    .cover-bg {
+        width: 100%;
+        margin-bottom: 27px;
+    }
+    .song-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .mobile-song-info {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            width: 260px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 30px;
+                top: 0;
+                bottom: 0;
+                pointer-events: none;
+                right: -2px;
+                background: linear-gradient(to left, #333842, transparent); 
+            }
+            h1 {
+                width: max-content;
+                color: $primary-text-color;
+                font-size: 20px;
+                animation: marquee-scroll 10s ease-in-out infinite;
+            }
+            p {
+                color: $secondary-text-color;
+                font-size: 18px;
+                margin-top: 4px;
+            }
+        }
+    }
+    .song-information {
+        .artist,
+        .artist-icon,
+        .dot,
+        .album-name,
+        .year,
+        .album-icon, 
+        .duration,
+        .copies {
+            display: none;
+        }
+    }
+    .song-nav{
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+        margin-top: -5px;
+    }
+    .playback-btn, .list-add-btn, .download-btn, .share, .more-btn {
+        display: none;
+    }
+    .genre, .singers {
+        display: none;
+    }
+
+    .mobile-lyrics-view {
+        display: none;
+    }
+    .mobile-lyrics-topbar{
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        padding: 57px 18px 0 18px;
+
+        .line-bar {
+            width: 24px;
+            height: 24px;
+            margin-top: 8px;
+            margin-left:50px;
+        }
+        span {
+            margin-top: 10px;
+            color: $primary-text-color;
+            font-size: $font-size-small;
+        }
+    }
+
+    .mobile-lyrics {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        max-height: 473px; 
+        flex: 1;
+        overflow-y: auto;
+        margin: 0px 18px 23px 18px;
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+        line-height: 180%;
+        word-spacing: 3%;
+
+        &::-webkit-scrollbar { display: none; }
+        scrollbar-width: none;
+    }
+    .lyrics-white {
         color: $primary-text-color;
-        font-size: $font-size-small;
+        span {
+            background: linear-gradient(to right, $primary-text-color 55%, rgba(219, 219, 219, 0.2) 20%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+        }
     }
-}
-
-.mobile-lyrics {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    max-height: 473px; 
-    flex: 1;
-    overflow-y: auto;
-    margin: 0px 18px 23px 18px;
-    font-size: $font-size-large;
-    font-weight: $font-weight-bold;
-    line-height: 180%;
-    word-spacing: 3%;
-
-    &::-webkit-scrollbar { display: none; }
-    scrollbar-width: none;
-}
-.lyrics-white {
-    color: $primary-text-color;
-    span {
-        background: linear-gradient(to right, $primary-text-color 55%, rgba(219, 219, 219, 0.2) 20%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        background-clip: text; 
+    .lyrics-dark {
+        color: $secondary-text-color;
     }
-}
-.lyrics-dark {
-    color: $secondary-text-color;
-}
 
-.mobile-queue-view {
-    display: none;
-}
-.queue-header {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    padding: 57px 18px 0 18px;
-
-    .line-bar {
-        width: 24px;
-        height: 24px;
-        margin-top: 8px;
-        margin-left:50px;
+    .mobile-queue-view {
+        display: none;
     }
-    span {
-        margin-top: 10px;
-        color: $primary-text-color;
-        font-size: $font-size-small;
+    .queue-header {
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        padding: 57px 18px 0 18px;
+
+        .line-bar {
+            width: 24px;
+            height: 24px;
+            margin-top: 8px;
+            margin-left:50px;
+        }
+        span {
+            margin-top: 10px;
+            color: $primary-text-color;
+            font-size: $font-size-small;
+        }
     }
-}
-.mobile-queue {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    max-height: 473px; 
-    flex: 1;
-    overflow-y: auto;
-    margin: 0px 18px 23px 18px;
+    .mobile-queue {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        max-height: 473px; 
+        flex: 1;
+        overflow-y: auto;
+        margin: 0px 18px 23px 18px;
 
-    &::-webkit-scrollbar { display: none; }
-    scrollbar-width: none;
-}
-.next-up {
-    color:white;
-    font-size: 16px;
-    font-weight: $font-weight-bold;
-}
-.album-functions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 5px 0;
-
-    span{
+        &::-webkit-scrollbar { display: none; }
+        scrollbar-width: none;
+    }
+    .next-up {
         color:white;
         font-size: 16px;
-        font-weight: $font-weight-regular;
-        margin-right: 40px;
+        font-weight: $font-weight-bold;
     }
-}
-.shuffle, .repeat {
-    @include icon-btn;
-    padding-left: 10px;
-}
-.queue-song {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    
-    &::-webkit-scrollbar { display: none; }
-    scrollbar-width: none;
-
-    .song-content {
+    .album-functions {
         display: flex;
         flex-direction: row;
         align-items: center;
-        min-width: 100%;     
-        padding: 6px 0;   
-        scroll-snap-align: start;
-        
-        .cover {
-            width: 53px;
-            height: 53px;
-            margin-right: 12px;
-            border-radius:$radius-main ;
-            flex-shrink: 0;
-        }
+        margin: 5px 0;
 
-        .name {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            
-            span {
-                color:$primary-text-color;
-                font-size: 16px;
-                font-weight: $font-weight-regular;
-            }
-
-            p{
-                color:$secondary-text-color;
-                font-size: $font-size-small;
-                font-weight: $font-weight-regular;
-                margin-top: 5px;
-            }
-
-        }
-        .move {
-            width: 41px;
-            height: 41px;
-            flex-shrink: 0;
+        span{
+            color:white;
+            font-size: 16px;
+            font-weight: $font-weight-regular;
+            margin-right: 40px;
         }
     }
-}
-.close {
-        width: 130px;
-        margin-left: 5px;
-        background-color: #B63F3F;
-        color:$primary-text-color;
+    .shuffle, .repeat {
+        @include icon-btn;
+        padding-left: 10px;
+    }
+    .queue-song {
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        
+        &::-webkit-scrollbar { display: none; }
+        scrollbar-width: none;
+
+        .song-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            min-width: 100%;     
+            padding: 6px 0;   
+            scroll-snap-align: start;
+            
+            .cover {
+                width: 53px;
+                height: 53px;
+                margin-right: 12px;
+                border-radius:$radius-main ;
+                flex-shrink: 0;
+            }
+
+            .name {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                
+                span {
+                    color:$primary-text-color;
+                    font-size: 16px;
+                    font-weight: $font-weight-regular;
+                }
+
+                p{
+                    color:$secondary-text-color;
+                    font-size: $font-size-small;
+                    font-weight: $font-weight-regular;
+                    margin-top: 5px;
+                }
+
+            }
+            .move {
+                width: 41px;
+                height: 41px;
+                flex-shrink: 0;
+            }
+        }
+    }
+    .close {
+            width: 130px;
+            margin-left: 5px;
+            background-color: #B63F3F;
+            color:$primary-text-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-family: 'satoshi';
+            font-size: $font-size-small;
+            font-weight: 500;
+            scroll-snap-align: end;
+            flex-shrink: 0;
+            border: none;
+            cursor: pointer;
+    }
+
+
+    .song-duration {
+        margin: 0 18px;
+        display: flex;
+        flex-direction: column;
+    }
+    .progress-bar-songpage {
         justify-content: center;
-        gap: 6px;
-        font-family: 'satoshi';
-        font-size: $font-size-small;
-        font-weight: 500;
-        scroll-snap-align: end;
-        flex-shrink: 0;
-        border: none;
-        cursor: pointer;
-}
+        margin-top: 21px;
+    }
+    .time-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 9px;
+    }
+    .control-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 11px 18px 37px 18px ;
+    }
+    .mobile-panel {
+        display: flex;
+        flex-direction: row;
+        gap: 26px;
+        justify-content: space-between;
+        margin:0 18px 57px;
 
+        
+    }
+    .more-btn-wrapper {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 609px;
+        z-index: 2;
+        background-color:  rgba(32, 32, 32, 0.98);
+        border-radius:$radius-main;
+        padding: 9px 18px auto 42px;
 
-.song-duration {
-    margin: 0 18px;
-    display: flex;
-    flex-direction: column;
-}
-.progress-bar-songpage {
-    justify-content: center;
-    margin-top: 21px;
-}
-.time-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 9px;
-}
-.control-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 11px 18px 37px 18px ;
-}
-.mobile-panel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 57px;
-}
-.song-sticky-cont, .song-lyrics {
-    display: none;
+        &::before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 4px;
+            background: #585858;
+            border-radius: 2px;
+            margin: 12px auto 4px;  
+        }
+
+        .more-header {
+            @include flex-center(row, 12px); 
+            padding: 20px 16px 23px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            img {
+                height: 60px;
+                width: 60px;
+            }
+            .more-song-info {
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                overflow: hidden;
+                width: 250px;
+                
+                &::after {
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 30px;
+                top: 40px;
+                bottom: 0;
+                pointer-events: none;
+                right: 0;
+                background: linear-gradient(to left, rgba(32, 32, 32, 0.98), transparent); 
+                }
+                .title {
+                    width: max-content;
+                    color: $primary-text-color;
+                    font-size: 16px;
+                    animation: marquee-scroll 10s ease-in-out infinite;
+                }
+                p{
+                    color: $secondary-text-color;
+                    font-size: $font-size-small;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+    .more-window {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: 468px;
+        padding: 23px 0 20px 19px;
+    }
+    .more-list {
+        display: flex;
+        flex-direction: row;
+        gap: 11px;
+        align-items: center;
+
+        img{
+            width: 41px;
+            height: 41px;
+        }
+        p{
+            color: $primary-text-color;
+            font-size: 16px;
+        }
+    }
+
+    .song-sticky-cont, .song-lyrics {
+        display: none;
+    }
 }
