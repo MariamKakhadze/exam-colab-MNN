@@ -249,78 +249,86 @@
         <section class="filters">
             <div class="filter-wrapper">
                 <div class="filter-btn-wrapper">
-                <button>All</button>
-                <button>Music</button>
-                <button>Podcasts</button>
-                <button>Audiobooks</button>
+                <button class="filter-btn filter-all">All</button>
+                <button class="filter-btn">Music</button>
+                <button class="filter-btn">Podcasts</button>
+                <button class="filter-btn">Audiobooks</button>
                 </div>
-                <img src="assets/icons/main-cont/filter-icon.png" alt="icon" class="filter-icon">
+
+                <div  class="filter-icon">
+                    <img src="assets/icons/main-cont/filter-icon.png" alt="icon">
+                </div>
+                
             </div>
         </section>
 
          <!--this the main btn for playlists for moibile-->
         <section class="playlist-btns-mobile">
+            <div class="playlist-grid-container" >
             <button class="playlist-btn">
-                <div>
+                <div class="btn-cont-wrapper">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="btn-txt-wrapper">
-                        <p>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
-                        <p>Daft Punk</p>
-                    </div>
-                </div>
-            </button>
-
-            <button class="playlist-btn">
-                <div>
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
-                    <div class="btn-txt-wrapper">
-                        <p>Daily Mix 2</p>
+                        <p class="btn-head">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                        <p class="btn-txt">Daft Punk</p>
                     </div>
                 </div>
             </button>
 
             <button class="playlist-btn">
-                <div>
+                <div class="btn-cont-wrapper">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="btn-txt-wrapper">
-                        <p>Daily Mix 2</p>
+                        <p class="btn-head">Daily Mix 2</p>
                     </div>
                 </div>
             </button>
 
-            <button>
-                 <div>
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="btn-txt-wrapper">
-                        <p>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
-                        <p>Daft Punk</p>
+                        <p class="btn-head">Daily Mix 2</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                 <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                        <p class="btn-txt">Daft Punk</p>
                     </div>
                 </div>
 
             </button>
 
-            <button>
-                 <div>
+            <button class="playlist-btn">
+                 <div class="btn-cont-wrapper">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="btn-txt-wrapper">
-                        <p>Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
-                        <p>Daft Punk</p>
+                        <p class="btn-head">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                        <p class="btn-txt">Daft Punk</p>
                     </div>
                 </div>
             </button>
 
-            <button>
-                <div>
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="btn-txt-wrapper">
-                        <p>Daily Mix 2</p>
+                        <p class="btn-head">Daily Mix 2</p>
                     </div>
                 </div>
             </button>
+
+            </div>
 
         </section>
 
         <section class="content-container">
+            
             <div class="header-with-arrows">
                 <h3>Made For You</h3>
                 <div class="arrow-controls">
@@ -330,12 +338,13 @@
             </div>
             <div class="cards-wrapper-grid" id="scroll-container">
                 <div class="card card-stacked">
+                
                     <img src="assets/pictures/main/Frame 8.png" alt="pic">
                     <div class="card-title-cont">
                         <span>Discover Weekly</span>
                         <span>50</span>
                     </div>
-                    <p>Your weekly mixtape of fresh music.</p>
+                    <p class="card-main-txt">Your weekly mixtape of fresh music.</p>
                 </div>
 
                 <div class="card card-stacked"> 
@@ -344,7 +353,7 @@
                         <span>Daily Mix 1</span>
                         <span>50</span>
                     </div>
-                    <p>Linkin Park, System Of A Down, Coal Chamber...</p>
+                    <p class="card-main-txt">Linkin Park, System Of A Down, Coal Chamber...</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -353,7 +362,7 @@
                         <span>Daily Mix 2</span>
                         <span>50</span>
                     </div>
-                    <p>Avril Lavigne, Lorde, Charli XCX and more</p>
+                    <p class="card-main-txt">Avril Lavigne, Lorde, Charli XCX and more</p>
                 </div>
             
                 <div class="card card-stacked">
@@ -362,7 +371,7 @@
                         <span>Daily Mix 3</span>
                         <span>50</span>
                     </div>
-                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                    <p class="card-main-txt">The Strokes, Martin Garrix, MGMT and more</p>
                 </div>
                
                 <div class="card card-stacked">
@@ -371,7 +380,7 @@
                         <span>Daily Mix 4</span>
                         <span>50</span>
                     </div>
-                    <p>Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+                    <p class="card-main-txt">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -380,7 +389,7 @@
                         <span>Daily Mix 5</span>
                         <span>50</span>
                     </div>
-                    <p>Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
+                    <p class="card-main-txt"> Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
                 </div>
                
                 <div class="card card-stacked">
@@ -389,7 +398,7 @@
                         <span>Nirvana Radio</span>
                         <span>50</span>
                     </div>
-                    <p>The Strokes, Martin Garrix, MGMT and more</p>
+                    <p class="card-main-txt">The Strokes, Martin Garrix, MGMT and more</p>
                 </div>
               
                 <div class="card card-stacked">
@@ -398,7 +407,7 @@
                         <span>Fall Out Boy Radio</span>
                         <span>50</span>
                     </div>
-                    <p>With Panic! At The Disco, The All-American Rejects,...</p>
+                    <p class="card-main-txt"> With Panic! At The Disco, The All-American Rejects,...</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -407,7 +416,7 @@
                         <span>Adele Radio</span>
                         <span>50</span>
                     </div>
-                    <p>With Sia, Sam Smith, P!nk and more</p>
+                    <p class="card-main-txt">With Sia, Sam Smith, P!nk and more</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -416,7 +425,7 @@
                         <span>Daft Punk Radio</span>
                         <span>50</span>
                     </div>
-                    <p>With Justice, The Chemical Brothers, ...</p>
+                    <p class="card-main-txt">With Justice, The Chemical Brothers, ...</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -425,7 +434,7 @@
                         <span>ABBA Radio</span>
                         <span>50</span>
                     </div>
-                    <p>With Honey M., Bee Gees, Bonnie Tyler, and more</p>
+                    <p class="card-main-txt">With Honey M., Bee Gees, Bonnie Tyler, and more</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -434,7 +443,7 @@
                         <span>Daily Mix 6</span>
                         <span>50</span>
                     </div>
-                    <p>One Direction, Avril Lavigne, Lorde, and more</p>
+                    <p class="card-main-txt">One Direction, Avril Lavigne, Lorde, and more</p>
                 </div>
                 
                 
@@ -457,7 +466,7 @@
                         <span>Rock Mix</span>
                         <span>50</span>
                     </div>
-                    <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                    <p class="card-main-txt">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
                 </div>
 
                 <div class="card card-stacked"> 
@@ -466,7 +475,7 @@
                         <span>Chill Mix</span>
                         <span>50</span>
                     </div>
-                    <p>MF DOOM, Daft Punk, The Chainsmokers, and more</p>
+                    <p class="card-main-txt">MF DOOM, Daft Punk, The Chainsmokers, and more</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -475,7 +484,7 @@
                         <span>Pop Mix</span>
                         <span>50</span>
                     </div>
-                    <p>Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
+                    <p class="card-main-txt">Red Hot Chili Peppers, R.E.M., Guns N’ Roses...</p>
                 </div>
             
                 <div class="card card-stacked">
@@ -484,7 +493,7 @@
                         <span>Daft Punk Mix</span>
                         <span>50</span>
                     </div>
-                    <p>Daft Punk, MGMT, Muse, and more</p>
+                    <p class="card-main-txt">Daft Punk, MGMT, Muse, and more</p>
                 </div>
                
                 <div class="card card-stacked">
@@ -493,7 +502,7 @@
                         <span>Happy Mix</span>
                         <span>50</span>
                     </div>
-                    <p>The Turtles, Van Morrison, ABBA and more</p>
+                    <p class="card-main-txt">The Turtles, Van Morrison, ABBA and more</p>
                 </div>
 
                 <div class="card card-stacked">
@@ -502,7 +511,7 @@
                         <span>David Bowie Mix</span>
                         <span>50</span>
                     </div>
-                    <p>Soft Cell, The Who and The Clash</p>
+                    <p class="card-main-txt">Soft Cell, The Who and The Clash</p>
                 </div>
                
                 <div class="card card-stacked">
@@ -511,7 +520,7 @@
                         <span>Upbeat Mix</span>
                         <span>50</span>
                     </div>
-                    <p>Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
+                    <p class="card-main-txt">Kylie Minogue, Charli XCX, Cage The Elephant and...</p>
                 </div>
               
                 <div class="card card-stacked">
@@ -520,7 +529,7 @@
                         <span>60s Mix</span>
                         <span>50</span>
                     </div>
-                    <p>Chuck Berry, Skeeter David, Van Morrison and...</p>
+                    <p class="card-main-txt">Chuck Berry, Skeeter David, Van Morrison and...</p>
                 </div>
 
             </div>
@@ -540,12 +549,12 @@
                
                 <div class="card">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
-                    <p>Daft Punk</p>
+                    <p class="card-main-txt">Daft Punk</p>
                 </div>
               
                 <div class="card">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
-                    <p>David Bowie</p>
+                    <p class="card-main-txt">David Bowie</p>
                 </div>
             </div>
 
@@ -563,7 +572,7 @@
                         <span>Meteora</span>
                         <span>13</span>
                     </div>
-                    <p>Linkin Park</p>
+                    <p class="card-main-txt">Linkin Park</p>
                 </div>
                
                 <div class="card">
@@ -572,7 +581,7 @@
                         <span>Random Access Memories</span>
                         <span>13</span>
                     </div>
-                    <p>Daft Punk</p>
+                    <p class="card-main-txt">Daft Punk</p>
                 </div>
               
                 <div class="card">
@@ -581,7 +590,7 @@
                         <span>Abbey Road</span>
                         <span>13</span>
                     </div>
-                    <p>The Beatles</p>
+                    <p class="card-main-txt">The Beatles</p>
                 </div>
 
                 <div class="card">
@@ -590,7 +599,7 @@
                         <span>Black Holes and Revelations</span>
                         <span>13</span>
                     </div>
-                    <p>Muse</p>
+                    <p class="card-main-txt">Muse</p>
                 </div>
 
             </div>
@@ -608,7 +617,7 @@
                     <div class="card-title-cont">
                         <span>Halo: The Flood</span>
                     </div>
-                    <p>William C. Dietz</p>
+                    <p class="card-main-txt">William C. Dietz</p>
                 </div>
               
                 <div class="card">
@@ -616,7 +625,7 @@
                     <div class="card-title-cont">
                         <span>Halo: The Flood</span>
                     </div>
-                    <p>William C. Dietz</p>
+                    <p class="card-main-txt">William C. Dietz</p>
                 </div>
 
                 <div class="card">
@@ -624,7 +633,7 @@
                     <div class="card-title-cont">
                         <span>Halo: Ghosts of Onyx</span>
                     </div>
-                    <p>Eric Nylund</p>
+                    <p class="card-main-txt">Eric Nylund</p>
                 </div>
             </div>
 
@@ -642,15 +651,16 @@
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="card-title-cont">
                         <span>anything goes...</span>
-                        <p>emma chamberlain</p>
+                        <p class="card-main-txt">emma chamberlain</p>
                     </div>
                 </div>
               
                 <div class="card">
                     <img src="assets/pictures/main/Frame 8.png" alt="">
+                    
                     <div class="card-title-cont">
                         <span>The Joe Rogan...</span>
-                        <p>Joe Rogan</p>
+                        <p class="card-main-txt"> Joe Rogan</p>
                     </div>
                     
                 </div>
@@ -659,7 +669,7 @@
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="card-title-cont">
                         <span>The Journal</span>
-                        <p>The Wall Street Journal</p>
+                        <p class="card-main-txt">The Wall Street Journal</p>
                     </div>
                 </div>
 
@@ -680,7 +690,7 @@
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="card-title-cont">
                         <span>anything goes...</span>
-                        <p>emma chamberlain</p>
+                        <p class="card-main-txt">emma chamberlain</p>
                     </div>
                 </div>
               
@@ -688,7 +698,7 @@
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="card-title-cont">
                         <span>The Joe Rogan...</span>
-                        <p>Joe Rogan</p>
+                        <p class="card-main-txt">Joe Rogan</p>
                     </div>
                     
                 </div>
@@ -697,7 +707,7 @@
                     <img src="assets/pictures/main/Frame 8.png" alt="">
                     <div class="card-title-cont">
                         <span>The Journal</span>
-                        <p>The Wall Street Journal</p>
+                        <p class="card-main-txt">The Wall Street Journal</p>
                     </div>
                 </div>
 
