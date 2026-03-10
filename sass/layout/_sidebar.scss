@@ -68,6 +68,33 @@
             
         }
 
+        .library-header {
+        display: flex;
+        align-items: center;
+        gap: 12px; // Controls space between icon and text
+        text-decoration: none;
+        color: v.$secondary-text-color;
+        font-size: v.$font-size-medium;
+        font-weight: v.$font-weight-regular;
+        padding-left: 22px;
+
+        .icon-box {
+            width: 24px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            color: v.$primary-text-color;
+        }
+}
+
+.library-header {
+    margin-bottom: 16px; // Adjusts spacing below the header
+      // Matches the bolder look of the header
+}
+
         .sidebar{
             display: flex;
             flex-direction: column;
@@ -75,14 +102,14 @@
             font-size: v.$font-size-medium;
             font-weight: v.$font-weight-regular;
         }
-        
+
 
         .sidebar-nav-list{
             display: flex;
             flex-direction: column;
             gap: 11px;
             padding-left: 17px;
-            padding-top: 14px;
+            
         }
         .sidebar-item{
            @include m.flex-center;
@@ -96,8 +123,8 @@
                 }
 
     }
-   
 
+    
 
 
  

@@ -3,9 +3,7 @@
  
 
  
- .navbar{
-    display: none;
- }
+ 
  .player{
     display: none;
  }
@@ -62,8 +60,8 @@
     font-weight: v.$font-weight-regular;
 
     &:focus {
-        background-color: white; // Your accent green
-        color: black;              // Contrast text for the green background
+        background-color: white; 
+        color: black;              
     }
    
  }
@@ -141,29 +139,30 @@
     &::-webkit-scrollbar { display: none; }
 }
 
-.header-with-arrows{
-    padding: 0 15px 15px; 
-    
-    .arrow-controls{
-        display: none;
-    }
-    h3{
+.header-with-arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // This perfectly centers items vertically
+    padding: 0 15px 15px;
+    margin-top: 30px; // Spacing for the whole header block
+
+    h3 {
         font-size: v.$font-size-large;
         font-weight: v.$font-weight-bold;
-        padding-top: 30px;
-
         
+    }
+
+    .controls-container {
         display: flex;
-        justify-content: space-between; // Text left, pseudo-element right
         align-items: center;
+        gap: 15px; // Space between dots and arrows
+    }
 
-
-        &::after {
-            content: "• • •"; 
-            font-size: 14px;
-            color: #b3b3b3; 
-            padding-right: 15px;
-        }
+    // Ensure the dots and buttons are treated equally
+    .mobile-dots {
+       display: block;
+        line-height: 1; 
+        margin-bottom: 8px;
     }
 }
 
@@ -241,3 +240,120 @@ font-size: v.$font-size-small;
 .num-electropurple { @include m.num-color(#6F86FF); }
 .num-darkgreen { @include m.num-color(#27856B); }
 .num-fiusa { @include m.num-color(#DD138B); }
+
+@media (min-width:768px){
+    
+// for the content to scroll we need this
+    .app-container {
+    display: grid;
+    
+    
+    grid-template-columns: 250px 1fr; 
+    grid-template-rows: auto 1fr;    
+    height: 100vh;
+    overflow: hidden;                
+}
+
+.navbar {
+    grid-column: 1 / -1;             
+}
+
+.sidebar {
+    grid-row: 2;
+    overflow-y: auto;                
+}
+
+
+//main styling
+.playlist-btns-mobile{
+        display: none;
+    }
+
+.main-content {
+    grid-row: 2;
+    overflow-y: auto; 
+    padding: 20px;
+    
+   
+    border: 1px solid #282828; 
+    border-radius: 10px;       
+    
+    
+}
+.filters {
+    position: sticky;
+    top: -20px;
+    z-index: 1000;
+    
+    margin: -20px -20px 20px -20px;
+
+    background-color: rgba(18, 18, 18, 0.85); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    
+    width: calc(100% + 40px); 
+}
+.filter-wrapper {
+    background-color: transparent;
+    
+        .filter-all {
+            display: block; 
+        }
+
+        .filter-btn{
+            font-size: v.$font-size-medium;
+        }
+    }
+
+    .card {
+       
+        flex: 0 0 calc(100% / 8 - 20px); 
+        max-width: calc(100% / 8 - 20px);
+        
+        
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        padding: 10px;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: #282828; 
+            transform: translateY(-5px);
+        }
+    }
+
+    .header-with-arrows {
+        .arrow-controls {
+            display: flex; // Explicitly showing on desktop
+            gap: 10px;
+        }
+    }
+
+    .scroll-btn {
+    background: transparent;
+    border: none;
+    transition: transform 0.1s ease;
+
+    &:active img {
+        filter: brightness(0) invert(1) !important;
+    }
+}
+
+.card-title-cont {
+        
+        font-size: v.$font-size-medium; 
+    }
+
+    .card-main-txt {
+       
+        font-size: v.$font-size-small;
+    }
+    .popular-almubs{
+        display: none;
+
+   }
+    
+
+   
+
+}
