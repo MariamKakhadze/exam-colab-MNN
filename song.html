@@ -7,7 +7,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="song-page-body">
      <header class="navbar">
         <div class="navbar-container">
            <!-- Left Section   -->
@@ -87,7 +87,7 @@
 
       
      <!-- Header Section  Nino Gogoberidze   -->
-    <main>
+    <main class="song-page-main">
             <!--this is a sidebar library for desktop-->
         <aside class="sidebar">
             <nav class="sidebar-nav">
@@ -242,18 +242,14 @@
 
 
 
-
+        <!-- ================================
+                    SONG PAGE
+        ================================ -->
 
         <section  class="song-page">
             <input type="checkbox" id="song-lyrics-toggle" class="lyrics-input">
             <input type="checkbox" id="song-queue-toggle" class="queue-input">
 
-                <!-- ================================
-                SONG HEADER
-                Contains: album cover + song info
-                Mobile: cover on top, info below
-                Desktop: cover left, info right
-            ================================ -->
             <section class="song-header">
                 <!-- Mobile header-close, album -->
                 <div class="mobile-header">
@@ -283,30 +279,17 @@
                     </div>
                     <h1 class="song-title">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</h1>
                     <div class="song-information">
-
-                        <!-- Artist icon and name -->
                         <img class="artist-icon" src="./assets/icons/song-page/icons.svg" alt="artist">
                         <a href="" class="artist">Daft Punk</a>
 
                         <img class="dot" src="./assets/icons/song-page/Ellipse 29.svg" alt="dot">
-
-                        <!-- Album icon and name -->
                         <img class="album-icon" src="./assets/icons/song-page/icons (1).svg" alt="album">
                         <a href="" class="album-name">Random Access Memories</a>
-
                         <img class="dot" src="./assets/icons/song-page/Ellipse 29.svg" alt="dot">
-
-                        <!-- Release year -->
                         <p class="year">2013</p>
-
                         <img class="dot" src="./assets/icons/song-page/Ellipse 29.svg" alt="dot">
-
-                        <!-- Song duration -->
                         <p class="duration">6:09</p>
-
                         <img class="dot" src="./assets/icons/song-page/Ellipse 29.svg" alt="dot">
-
-                        <!-- Total play count -->
                         <p class="copies">489,691,133</p>
                     </div>
                     
@@ -347,13 +330,11 @@
                         </svg>
 
                         <!-- Download song button -->
-                       
                         <svg class="download-desktop"width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.2053 15.1543V25.0165M20.2053 25.0165L23.5729 21.6489M20.2053 25.0165L16.8378 21.6489" stroke="#898989" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="20.2054" cy="20.2062" r="9.26081" stroke="#898989" stroke-width="1.68378"/>
                         </svg>
                    
-
                         <!-- Share song button -->
                         <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
 
@@ -383,26 +364,20 @@
                         Hidden on mobile, visible on desktop
                     ================================ -->
                     <div class="singers">
-
-                        <!-- Main artist — Daft Punk -->
                         <div class="daft">
                             <a href="" target=""><img src="./assets/photo/song-page/Frame 145.svg" alt="daft"></a>
                             <div class="singers-info-link">
-                                <a href="" target="" <p>Daft Punk</p></a>
+                                <a href="" target="">Daft Punk</a>
                                 <span>Main artist</span>
                             </div>
                         </div>
-
-                        <!-- Featured artist — Pharrell Williams -->
                         <div class="pharrell">
                             <img src="./assets/photo/song-page/Frame 145 (1).svg" alt="pharrel">
                             <div class="singers-info">
                                 <p>Pharrell Williams</p>
                                 <span>Main artist, Composer, Lyricist</span>
-                            <div class="singers-info"></div>
+                            </div>
                         </div>
-
-                        <!-- Featured artist — Nile Rodgers -->
                         <div class="nile">
                             <img src="./assets/photo/song-page/Frame 145 (2).svg" alt="nile">
                             <div class="singers-info">
@@ -418,6 +393,11 @@
 
             </section>
             <!-- END song-header -->
+
+            <!-- ================================
+                LYRICS
+                Hidden on desktop, visible on mobile
+             ================================ -->
             <section class="mobile-lyrics-view">
                 
                 <div class="mobile-lyrics-topbar">
@@ -474,6 +454,11 @@
                     </p>
                 </div>
             </section>
+
+            <!-- ================================
+                QUEUE/PLAYLIST
+                Hidden on desktop, visible on mobile
+             ================================ -->
             <section class="mobile-queue-view">
                 <div class="song-queue-header">
                     <a href="index.html" class="song-close-btn">
@@ -661,7 +646,7 @@
 
                 <!-- Progress bar with timestamps -->
                 <div class="song-duration">
-                    <img class="pogress-bar-songpage" src="./assets/icons/song-page/Group 35.svg" alt="progress-bar">
+                    <img class="progress-bar-songpage" src="./assets/icons/song-page/Group 35.svg" alt="progress-bar">
                     <div class="time-info">
                         <p class="current-time">2:23</p>
                         <p class="left-time">-0:45</p>
@@ -701,15 +686,9 @@
                         </svg>
                     </button>
                 </div>
-                <!-- END control-btn -->
 
-                <!-- ================================
-                    MOBILE PANEL
-                    Device, share, lyrics, queue, more
-                ================================ -->
                 <div class="mobile-panel">
 
-                    <!-- Connect to a device button -->
                     <svg class="devices" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="17.2587" y="11.3672" width="11.7865" height="17.6797" rx="2.94662" stroke="#898989" stroke-width="2.06263"/>
                         <circle cx="23.152" cy="23.1537" r="2.94662" fill="#898989"/>
@@ -718,8 +697,7 @@
                         <path d="M13.5755 22.4157H12.8389C12.0252 22.4157 11.3655 21.7561 11.3655 20.9424V15.7858C11.3655 14.9721 12.0252 14.3125 12.8389 14.3125H13.5755" stroke="#898989" stroke-width="2.06263" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
 
-                    <!-- Share button -->
-                    <img class="share" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
+                    <img class="share-mobile" src="./assets/icons/player/Name=Share, Filled=No.svg" alt="Share">
                         <!-- Lyrics panel toggle -->
                     <label for="song-lyrics-toggle" class="btn-lyrics">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -738,9 +716,13 @@
                             <path d="M11.7866 28.623L28.6245 28.623" stroke="currentcolor" stroke-width="2.3573" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </label>
+
+                    <!-- END control-btn -->
+
                         <!-- ================================
                         MORE OPTIONS
                         Checkbox toggle opens popup window
+                        hidden on desktop
                     ================================ -->
                     <div class="mobile-more-button">
                         <input type="checkbox" id="song-more-toggle" class="more-input">
@@ -817,7 +799,6 @@
                     <!-- END more-button -->
 
                 </div>
-                <!-- END mobile-panel -->
 
             </section>
             <!-- END song-page-mobile -->
@@ -829,7 +810,7 @@
             ================================ -->
             <section class="song-sticky-cont">
                 <nav class="horizontal-cont">
-                    <span>Lyrics</span>
+                    <span class="song-sticky-cont-lyrics">Lyrics</span>
                     <span>Credits</span>
                     <span>More like this</span>
                 </nav>
@@ -838,11 +819,11 @@
             <!-- ================================
                 LYRICS SECTION
                 Aside: sync, translate, notes, font
-                Panel: full lyrics text
-                Popup: Genius annotation
+                full lyrics text
             ================================ -->
-            <section class="song-lyrics">
-
+            
+            <section class="song-lyrics-desktop">
+                
                 <!-- Lyrics control buttons sidebar -->
                 <aside>
                     <input class="sync-btn" type="checkbox"  id="song-sync-toggle">
@@ -851,91 +832,72 @@
                         <img class="sync-hover" src="./assets/icons/player/Name=Synced Lyrics, Filled=Yes.svg" alt="sync">
                     </label>
                     <input class="translate-btn" type="checkbox"  id="language-toggle">
-                    <label for="translate-toggle">
+                    <label for="language-toggle">
                         <img class="translate" src="./assets/icons/song-page/Name=Translate, Filled=No.svg" alt="translate">
                         <img class="translate-hover" src="./assets/icons/song-page/Name=Translate, Filled=Yes.svg" alt="translate">
                     </label>
-                    <input class="note-btn" type="checkbox"  id="text-info-toggle">
-                    <label for="note-toggle">
+                    <input class="note-btn" type="checkbox"  id="note-input">
+                    <label for="note-input">
                         <img class="note" src="./assets/icons/song-page/Name=Notes, Filled=No.svg" alt="note-info">
                         <img class="note-hover" src="./assets/icons/song-page/Name=Notes, Filled=Yes.svg" alt="note-info">
                     </label>
-                    <label for="font-toggle">
-                        <svg class="font" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.8252 27.2489C11.6331 27.7993 11.1139 28.1679 10.531 28.1679C9.58092 28.1679 8.91891 27.225 9.24162 26.3314L13.9094 13.4066C14.1956 12.6141 14.9479 12.0859 15.7905 12.0859H15.8642C16.7069 12.0859 17.4591 12.6141 17.7453 13.4066L22.4031 26.3038C22.7307 27.2108 22.0587 28.1679 21.0944 28.1679C20.5027 28.1679 19.9757 27.7937 19.7807 27.2351L19.0424 25.1203C18.9023 24.7189 18.5235 24.4499 18.0983 24.4499H13.5124C13.0872 24.4499 12.7085 24.7189 12.5683 25.1203L11.8252 27.2489ZM15.4644 16.8819L13.8726 21.4081C13.7582 21.7333 13.9995 22.0739 14.3442 22.0739H17.2857C17.6312 22.0739 17.8726 21.7318 17.7567 21.4063L16.1464 16.8819C16.0715 16.6449 15.5465 16.6473 15.4644 16.8819Z" fill="currentcolor"/>
-                            <path d="M25.1357 27.609C25.0244 27.8965 24.7478 28.0859 24.4396 28.0859C23.9113 28.0859 23.5502 27.5523 23.7467 27.0619L26.2456 20.8241C26.4242 20.3782 26.8561 20.0859 27.3364 20.0859C27.8167 20.0859 28.2487 20.3782 28.4273 20.8241L30.92 27.0465C31.1194 27.5442 30.7529 28.0859 30.2167 28.0859C29.9038 28.0859 29.6231 27.8936 29.5101 27.6019L29.2201 26.8529C29.0762 26.4813 28.7187 26.2364 28.3202 26.2364H26.3284C25.9299 26.2364 25.5724 26.4813 25.4285 26.8529L25.1357 27.609ZM27.1361 22.4717L26.1285 25.0545H28.5322L27.5125 22.4717C27.4676 22.3437 27.1852 22.3453 27.1361 22.4717Z" fill="currentcolor"/>
-                        </svg>
-                    </label>
+                    <svg class="font" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.8252 27.2489C11.6331 27.7993 11.1139 28.1679 10.531 28.1679C9.58092 28.1679 8.91891 27.225 9.24162 26.3314L13.9094 13.4066C14.1956 12.6141 14.9479 12.0859 15.7905 12.0859H15.8642C16.7069 12.0859 17.4591 12.6141 17.7453 13.4066L22.4031 26.3038C22.7307 27.2108 22.0587 28.1679 21.0944 28.1679C20.5027 28.1679 19.9757 27.7937 19.7807 27.2351L19.0424 25.1203C18.9023 24.7189 18.5235 24.4499 18.0983 24.4499H13.5124C13.0872 24.4499 12.7085 24.7189 12.5683 25.1203L11.8252 27.2489ZM15.4644 16.8819L13.8726 21.4081C13.7582 21.7333 13.9995 22.0739 14.3442 22.0739H17.2857C17.6312 22.0739 17.8726 21.7318 17.7567 21.4063L16.1464 16.8819C16.0715 16.6449 15.5465 16.6473 15.4644 16.8819Z" fill="#898989"/>
+                        <path d="M25.1357 27.609C25.0244 27.8965 24.7478 28.0859 24.4396 28.0859C23.9113 28.0859 23.5502 27.5523 23.7467 27.0619L26.2456 20.8241C26.4242 20.3782 26.8561 20.0859 27.3364 20.0859C27.8167 20.0859 28.2487 20.3782 28.4273 20.8241L30.92 27.0465C31.1194 27.5442 30.7529 28.0859 30.2167 28.0859C29.9038 28.0859 29.6231 27.8936 29.5101 27.6019L29.2201 26.8529C29.0762 26.4813 28.7187 26.2364 28.3202 26.2364H26.3284C25.9299 26.2364 25.5724 26.4813 25.4285 26.8529L25.1357 27.609ZM27.1361 22.4717L26.1285 25.0545H28.5322L27.5125 22.4717C27.4676 22.3437 27.1852 22.3453 27.1361 22.4717Z" fill="#898989"/>
+                    </svg>
                 </aside>
 
                 <!-- ================================
                     LYRICS PANEL
-                    Full song lyrics with highlight states
+                    Full song lyrics 
                 ================================ -->
-                <div class="panel" id="lyrics">
-                    <pre class="lyrics-marked">
-                        Like the legend of the phoenix, huh
-                        All ends with beginnings
-                    </pre>
-                    <pre class="lyrics-white">
-                        What keeps the planet spinning, ah
-                        The force from the beginning, hm, look
-                        We've come too far
-                    </pre>
-                    <pre class="lyrics-dark">
-                        To give up who we are
-                        So let's raise the bar
-                        And our cups to the stars
-                        She's up all night 'til the sun
-                        I'm up all night to get some
-                        She’s up all night for good fun
-                        I’m up all night to get lucky
-                        We’re up all night ‘til the sun
-                        We’re up all night to get some
-                        We’re up all night for good fun
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        The present has no rhythm
-                        Your gift keeps on giving
-                        What is this I’m feeling?
-                        If you want to leave, I’m with it
-                        We’ve come too far
-                        To give up who we are
-                        So let’s raise the bar
-                        And our cups to the stars
-                        She's up all night 'til the sun
-                        I'm up all night to get some
-                        She’s up all night for good fun
-                        I’m up all night to get lucky
-                        We’re up all night ‘til the sun
-                        We’re up all night to get some
-                        We’re up all night for good fun
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                        We’re up all night to get lucky
-                    </pre>
+                <div class="lyrics-desktop">
+                    
+                    <p class="lyrics-white">
+                        Like the legend of the phoenix, huh<br>
+                        All ends with beginnings<br>
+                        What keeps the planet spinning, ah<br>
+                        The force from the beginning, hm, look<br>
+                        <span>We've come too far</span><br>
+                    </p>
+                    <p class="lyrics-dark">
+                        To give up who we are<br>
+                        So let's raise the bar<br>
+                        And our cups to the stars<br>
+                        She's up all night 'til the sun<br>
+                        I'm up all night to get some<br>
+                        She’s up all night for good fun<br>
+                        I’m up all night to get lucky<br>
+                        We’re up all night ‘til the sun<br>
+                        We’re up all night to get some<br>
+                        We’re up all night for good fun<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        The present has no rhythm<br>
+                        Your gift keeps on giving<br>
+                        What is this I’m feeling?<br>
+                        If you want to leave, I’m with it<br>
+                        We’ve come too far<br>
+                        To give up who we are<br>
+                        So let’s raise the bar<br>
+                        And our cups to the stars<br>
+                        She's up all night 'til the sun<br>
+                        I'm up all night to get some<br>
+                        She’s up all night for good fun<br>
+                        I’m up all night to get lucky<br>
+                        We’re up all night ‘til the sun<br>
+                        We’re up all night to get some<br>
+                        We’re up all night for good fun<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                        We’re up all night to get lucky<br>
+                    </p>
                 </div>
-
-                <!-- END lyrics panel -->
-
-                <!-- ================================
-                    GENIUS POPUP
-                    Song annotation from Genius
-                ================================ -->
-                <div class="pop-up-window">
-                    <div class="genius-header">
-                        <p>From Genius</p>
-                        <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
-                    </div>
-                    <span>The Phoenix is a mythological bird that bursts into flames upon death. However, it is reborn from the ashes, making it a symbol of rebirth and new beginnings.</span>
-                </div>
-                <!-- END pop-up-window -->
-
             </section>
             <!-- END song-lyrics -->
         </section>

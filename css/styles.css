@@ -716,13 +716,13 @@ h1, h2, h3 {
     transform: translateX(-50%);
   }
 }
-.navbar, .sidebar, .mobile-library, .player {
+.song-page-body .navbar, .song-page-body .sidebar, .song-page-body .mobile-library, .song-page-body .player {
   display: none;
 }
 
 .song-page {
-  background: linear-gradient(to bottom, rgb(59, 65, 77) 0%, rgb(39, 43, 51) 100%);
   height: 100vh;
+  background: linear-gradient(to bottom, rgb(59, 65, 77) 0%, rgb(39, 43, 51) 100%);
   font-family: "satoshi";
   border-radius: 10px;
 }
@@ -754,7 +754,7 @@ h1, h2, h3 {
 .song-page .song-right {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .song-page .song-right .mobile-song-info {
   display: flex;
@@ -996,7 +996,6 @@ h1, h2, h3 {
 }
 .song-page .progress-bar-songpage {
   justify-content: center;
-  margin-top: 21px;
 }
 .song-page .time-info {
   display: flex;
@@ -1100,32 +1099,29 @@ h1, h2, h3 {
   color: #E0E0E0;
   font-size: 16px;
 }
-.song-page .song-sticky-cont, .song-page .song-lyrics {
+.song-page .song-sticky-cont, .song-page .song-lyrics-desktop {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .navbar, .player, .sidebar {
-    display: block;
-  }
-  body {
+  body.song-page-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
     padding: 3px 7px 10px 7px;
   }
-  body .player, body .navbar {
+  body.song-page-body .player, body.song-page-body .navbar {
     display: flex;
     flex: 1;
   }
-  main {
+  .song-page-main {
     display: flex;
     flex-direction: row;
     flex: 1;
     overflow: hidden;
   }
-  main .sidebar {
+  .song-page-main .sidebar {
     display: block;
     width: 260px;
     flex-shrink: 0;
@@ -1140,6 +1136,21 @@ h1, h2, h3 {
     margin: 4px 0 5px 7px;
     background: linear-gradient(to bottom, rgba(138, 157, 187, 0.18) 0%, rgb(6, 6, 6) 100%);
     border: 1px solid rgb(32, 32, 32);
+  }
+  .song-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/photo/player/Rectangle 6.svg");
+    background-size: cover;
+    background-position: bottom right;
+    filter: blur(120px);
+    opacity: 0.2;
+    z-index: 0;
+  }
+  .song-page > * {
+    position: relative;
+    z-index: 1;
   }
   .song-page::-webkit-scrollbar {
     display: none;
@@ -1275,6 +1286,54 @@ h1, h2, h3 {
   }
   .song-page .song-header .song-right .pharrell .singers-info span, .song-page .song-header .song-right .nile .singers-info span {
     color: #898989;
+  }
+  .song-page .song-sticky-cont {
+    position: sticky;
+    top: 0;
+    display: block;
+    margin-left: 37px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .song-page .song-sticky-cont .horizontal-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    max-width: 1490px;
+    height: 49px;
+    border-bottom: 1px solid rgba(137, 137, 137, 0.2);
+    font-size: 14px;
+    font-weight: 500;
+    color: #898989;
+  }
+  .song-page .song-sticky-cont .horizontal-cont .song-sticky-cont-lyrics {
+    color: #E0E0E0;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 215, 96);
+    text-underline-offset: 16px;
+    text-decoration-thickness: 2px;
+  }
+  .song-page .song-lyrics-desktop {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 32px auto 40px 36px;
+  }
+  .song-page .song-lyrics-desktop aside {
+    position: sticky;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-right: 210px;
+  }
+  .song-page .song-lyrics-desktop .lyrics-desktop {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 180%;
   }
 }
 .player .add-sm {
@@ -1699,6 +1758,52 @@ h1, h2, h3 {
 .genre button:hover {
   color: #E0E0E0;
   transform: scale(1.1);
+}
+
+.song-lyrics-desktop .sync-btn {
+  display: none;
+}
+.song-lyrics-desktop .sync-btn ~ label .sync {
+  display: block;
+}
+.song-lyrics-desktop .sync-btn ~ label .sync-hover {
+  display: none;
+}
+.song-lyrics-desktop .sync-btn:checked ~ label .sync {
+  display: none;
+}
+.song-lyrics-desktop .sync-btn:checked ~ label .sync-hover {
+  display: block;
+}
+.song-lyrics-desktop .translate-btn {
+  display: none;
+}
+.song-lyrics-desktop .translate-btn ~ label .translate {
+  display: block;
+}
+.song-lyrics-desktop .translate-btn ~ label .translate-hover {
+  display: none;
+}
+.song-lyrics-desktop .translate-btn:checked ~ label .translate {
+  display: none;
+}
+.song-lyrics-desktop .translate-btn:checked ~ label .translate-hover {
+  display: block;
+}
+.song-lyrics-desktop .note-btn {
+  display: none;
+}
+.song-lyrics-desktop .note-btn ~ label .note {
+  display: block;
+}
+.song-lyrics-desktop .note-btn ~ label .note-hover {
+  display: none;
+}
+.song-lyrics-desktop .note-btn:checked ~ label .note {
+  display: none;
+}
+.song-lyrics-desktop .note-btn:checked ~ label .note-hover {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

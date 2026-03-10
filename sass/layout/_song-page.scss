@@ -6,13 +6,19 @@
   0%    { transform: translateX(0); }        
   85%, 100% { transform: translateX(-50%); }        
 }
-.navbar, .sidebar, .mobile-library, .player {display: none;}
+
+// Mobile-only: hide desktop layout elements
+.song-page-body{
+    .navbar, .sidebar, .mobile-library, .player {display: none;}
+}
+
 .song-page {
-    background: linear-gradient(to bottom, rgba(59, 65, 77, 1) 0%, rgba(39, 43, 51, 1) 100%);
     height: 100vh;
+    background: linear-gradient(to bottom, rgba(59, 65, 77, 1) 0%, rgba(39, 43, 51, 1) 100%);
     font-family: 'satoshi';
     border-radius: $radius-main;
     
+    // Hide checkbox inputs used for lyrics/queue toggling
     .lyrics-input, .queue-input{
         display: none;
     }
@@ -44,7 +50,7 @@
     .song-right{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         
         .mobile-song-info {
             display: flex;
@@ -53,6 +59,7 @@
             overflow: hidden;
             width: 260px;
 
+            // Fade edge for overflowing title text
             &::after {
                 content: '';
                 position: absolute;
@@ -76,8 +83,11 @@
                 margin-top: 4px;
             }
         }
+        // Hidden on mobile, shown on desktop
         .song-title {display: none;}
     }
+
+    // Hidden on mobile, shown on desktop
     .song-information {
         .artist,
         .artist-icon,
@@ -96,6 +106,8 @@
         margin-left: 20px;
         margin-top: -5px;
     }
+
+    // Hidden on mobile, shown on desktop
     .playback-button, .list-add-desktop, .download-desktop, .share, .more-btn {
         display: none;
     }
@@ -103,6 +115,7 @@
         display: none;
     }
 
+    // Shown when lyrics toggle is checked
     .mobile-lyrics-view {
         display: none;
     }
@@ -143,6 +156,8 @@
     }
     .lyrics-white {
         color: $primary-text-color;
+
+        // Gradient highlight for the currently playing lyric line
         span {
             background: linear-gradient(to right, $primary-text-color 55%, rgba(219, 219, 219, 0.2) 20%);
             -webkit-background-clip: text;
@@ -209,6 +224,8 @@
         @include icon-btn;
         padding-left: 10px;
     }
+
+    // Swipe-to-remove: horizontal scroll snap on each queue row
     .queue-song {
         display: flex;
         flex-direction: row;
@@ -286,7 +303,7 @@
     }
     .progress-bar-songpage {
         justify-content: center;
-        margin-top: 21px;
+
     }
     .time-info {
         display: flex;
@@ -309,6 +326,7 @@
 
         
     }
+    // pop-up for mobile more-options
     .more-btn-wrapper {
         position: fixed;
         left: 0;
@@ -319,7 +337,7 @@
         background-color:  rgba(32, 32, 32, 0.98);
         border-radius:$radius-main;
         padding: 9px 18px auto 42px;
-
+        
         &::before {
             content: '';
             display: block;
@@ -346,6 +364,7 @@
                 overflow: hidden;
                 width: 250px;
                 
+                // Fade edge mask for overflowing title tex
                 &::after {
                 content: '';
                 position: absolute;
@@ -395,25 +414,30 @@
         }
     }
 
-    .song-sticky-cont, .song-lyrics {
+    // Hidden on mobile, shown on desktop
+    .song-sticky-cont, .song-lyrics-desktop {
         display: none;
     }
 }
+
+// ───────────────────────────
+// DESKTOP
+//  ───────────────────────────
+
 @media (min-width: 768px) {
-    .navbar, .player, .sidebar {display: block};
-    body {
+    body.song-page-body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         overflow: hidden;
         padding: 3px 7px 10px 7px;
-
+        
         .player, .navbar {       
             display: flex;     
             flex: 1;
         }
     }
-    main {
+    .song-page-main {
         display: flex;
         flex-direction: row;
         flex: 1;
@@ -436,6 +460,23 @@
         background:linear-gradient(to bottom, rgba(138, 157, 187, 0.18) 0%,rgba(6, 6, 6, 1) 100%);
         border: 1px solid rgba(32, 32, 32, 1);
 
+        // Blurred background effect
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('../assets/photo/player/Rectangle 6.svg');
+            background-size: cover;
+            background-position: bottom right;
+            filter: blur(120px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        & > * {
+            position: relative;
+            z-index: 1;
+        }
         &::-webkit-scrollbar { display: none; }
 
         .mobile-lyrics-view,
@@ -468,7 +509,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-
+        
             .mobile-song-info { display: none;}
             .song-title {
                 display: block;
@@ -561,6 +602,62 @@
             }
         }
 
+    }
+
+    // Sticks tab nav to top while lyrics scroll
+    .song-sticky-cont {
+        position: sticky;
+        top: 0;
+        display: block;
+        margin-left: 37px;
+        background-color:rgba(255, 255, 255, 0);
+
+        .horizontal-cont{
+            display: flex;
+            flex-direction: row;
+            gap:50px ;
+            align-items: center;
+            max-width: 1490px;
+            height: 49px;
+            border-bottom: 1px solid rgba(137, 137, 137, 0.2);
+            font-size: $font-size-medium;
+            font-weight: $font-weight-medium;
+            color: $secondary-text-color;
+
+            .song-sticky-cont-lyrics{
+                color: $primary-text-color;
+                text-decoration: underline;
+                text-decoration-color: rgba(30, 215, 96, 1);
+                text-underline-offset: 16px; 
+                text-decoration-thickness: 2px;
+            }
+        
+        }
+    }
+    .song-lyrics-desktop{
+        display: flex;
+        align-items: flex-start; 
+        flex-direction: row;
+        margin: 32px auto 40px 36px;
+
+        // Keeps controls visible while lyrics scroll
+        aside{
+            position: sticky;
+            top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            margin-right: 210px;
+        }
+        .lyrics-desktop {
+            display: flex;
+            flex-direction: column;
+            font-size: 28px;
+            font-weight:$font-weight-bold ;
+            line-height: 180%;
+        
+        }
     }
 }
 }

@@ -187,6 +187,10 @@
     }
 }
 
+
+// SONG PAGE//
+
+
 .song-page {
     .close-btn {
         width: 40.41px;
@@ -227,6 +231,7 @@
 
 }
 
+//  Queue button
 .queue-input:checked ~ .song-header {
     display: none;
 }
@@ -240,6 +245,8 @@
 .queue-input:checked ~ .song-page-mobile .queue-btn svg {
         color: $primary-text-color;
 }
+
+// More option button//
 
 .mobile-more-button {
     @include toggle-btn;
@@ -273,6 +280,32 @@
             transform: scale(1.1);
         }
     }
+}
+
+//Icons for desktop lyrics controls
+.song-lyrics-desktop{
+    .sync-btn {
+        display: none;
+        & ~ label .sync {display: block;}
+        & ~ label .sync-hover {display: none;}
+        &:checked ~ label .sync {display: none;}
+        &:checked ~ label .sync-hover {display: block;}
+    }
+    .translate-btn{
+         display: none;
+        & ~ label .translate {display: block;}
+        & ~ label .translate-hover{display: none;}
+        &:checked ~ label .translate {display: none;}
+        &:checked ~ label .translate-hover {display: block;}
+    }
+    .note-btn{
+         display: none;
+        & ~ label .note {display: block;}
+        & ~ label .note-hover{display: none;}
+        &:checked ~ label .note {display: none;}
+        &:checked ~ label .note-hover {display: block;}
+    }
+
 }
 
 
