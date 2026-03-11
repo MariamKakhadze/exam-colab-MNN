@@ -1,0 +1,54 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.search-page-body{
+    .sidebar, .mobile-library {display:none;}
+    background-color: rgba(17, 17, 17, 1);
+    
+    
+    .player {display: block;}
+    .navbar {display: none;}
+
+
+}
+.search-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 13px 15px;
+}
+.search-page-header-mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+.search-container-mobile{
+    @include flex-center (row, 76px, center);
+    margin-top: 3px;
+    min-width: 306px;
+    min-height: 35.41px;
+    background-color: rgba(32, 32, 32, 0.5);
+    border-radius: $radius-main;
+
+    input {
+        color:rgba(137, 137, 137, 0.7) ;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    img {
+        width: 35.41px;
+        height: 35.41px;
+    }
+}
+.search-camera{
+    color: $secondary-text-color;
+   
+    &:hover {
+        color: $primary-text-color;
+    }
+}
+.recent-searches {display: none;}

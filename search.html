@@ -237,94 +237,179 @@
             </ul>
         </section>
 
-        <!-- Search input visible on mobile, hidden on desktop-->
-        <section class="search-page-header-mobile">
-            <div class="search-container-mobile">
-                <input type="text" placeholder="What do you want to play?" class="Search-input-mobile">
-                <img class="search-icon-mobile" src="./assets/icons/nav-library/icons big (2).svg" alt="Search">
-            </div>
-            <img src="" alt="Camera">
-        </section>
 
-        <!-- Search history visible on desktop, hidden on mobile-->
-        <section class="recent-searches">
-            <h3>Recent searches</h3>
-            <div class="recent-search-cards">
-                <div class="search-daft-punk">
-                    <img class="name" src="" alt="Daft Punk">
-                    <img class="search-close-icon" src="" alt="Close">
-                    <span>Daft Punk</span>
+        <!-- ================================
+             Search scrollable content
+        ================================ -->
+        <section class="search-page">
+            <!-- Search input visible on mobile, hidden on desktop-->
+            <section class="search-page-header-mobile">
+                <div class="search-container-mobile">
+                    <input type="text" placeholder="What do you want to play?" class="Search-input-mobile">
+                    <img class="search-icon-mobile" src="./assets/icons/nav-library/icons big (2).svg" alt="Search">
                 </div>
-                <div class="search-david-bowie">
-                    <img class="name" src="" alt="David Bowie">
-                    <img class="search-close-icon" src="" alt="Close">
-                    <span>David Bowie</span>
+                <svg class="search-camera" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.57837 16.8346V26.3254C7.57837 27.8595 8.82202 29.1032 10.3561 29.1032H29.8006C31.3347 29.1032 32.5784 27.8595 32.5784 26.3254V16.8346C32.5784 15.3005 31.3347 14.0569 29.8006 14.0569H28.3507C27.8169 14.0569 27.3091 13.8266 26.9575 13.425L25.0236 11.2165C24.6719 10.815 24.1641 10.5846 23.6304 10.5846H16.1885C15.6548 10.5846 15.147 10.815 14.7953 11.2165L12.8614 13.425C12.5098 13.8266 12.002 14.0569 11.4682 14.0569H10.3561C8.82202 14.0569 7.57837 15.3005 7.57837 16.8346Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20.0783" cy="20.306" r="4.16667" stroke="currentcolor" stroke-width="2"/>
+                </svg>
+
+            </section>
+
+            <!-- Search history visible on desktop, hidden on mobile-->
+            <section class="recent-searches">
+                <div class="recent-searches-header">
+                    <h3>Recent searches</h3>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.7863" cy="20.2056" r="1.68378" fill="currentcolor"/>
+                    <circle cx="20.2053" cy="20.2056" r="1.68378" fill="currentcolor"/>
+                    <circle cx="28.6242" cy="20.2056" r="1.68378" fill="currentcolor"/>
+                    </svg>
                 </div>
-                <div class="search-black-holes">
-                    <img class="name" src="" alt="Black Holes..">
-                    <img class="search-close-icon" src="" alt="Close">
-                    <span>Black Holes..</span>
-                    <span class="song-title">Muse</span>
+                <div class="recent-search-cards">
+                    <div class="search-daft-punk">
+                        <img class="name" src="./assets/photo/search-page/image 3.svg" alt="Daft Punk">
+                        <svg class="search-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Daft Punk</span>
+                    </div>
+                    <div class="search-david-bowie">
+                        <img class="name" src="./assets/photo/search-page/image 4.svg" alt="David Bowie">
+                        <svg class="search-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>David Bowie</span>
+                    </div>
+                    <div class="search-black-holes">
+                        <img class="name" src="./assets/photo/search-page/Frame 8.svg" alt="Black Holes..">
+                        <svg class="search-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Black Holes..</span>
+                        <span class="song-title">Muse</span>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="search-browse-section">
-            <h3>Browse all</h3>
-            <div class="search-cards-row">
-                <p>Discover</p>
-                <img src="" alt="Made For You">
-                <img src="" alt="New Releases">
-                <img src="" alt="Spotify Classics">
-                <img src="" alt="Charts">
-                <img src="" alt="Trending">
-                <img src="" alt="Discover">
-                <img src="" alt="Spotify Singles">
-                <img src="" alt="Decades">
-            </div>
-            <div class="search-cards-row">
-                <p>Genres</p>
-                <img src="" alt="Pop">
-                <img src="" alt="Country">
-                <img src="" alt="Hip-Hop">
-                <img src="" alt="Rock">
-                <img src="" alt="Indie">
-                <img src="" alt="Punk">
-                <img src="" alt="Metal">
-                <img src="" alt="Instrumental">
-            </div>
-            <div class="search-cards-row">
-                <p>Mood & Activity</p>
-                <img src="" alt="In the car?">
-                <img src="" alt="Mood">
-                <img src="" alt="Workout">
-                <img src="" alt="Chill">
-                <img src="" alt="Sleep">
-                <img src="" alt="Party">
-                <img src="" alt="AT Home">
-                <img src="" alt="Focus">
-            </div>
-            <div class="search-cards-row">
-                <p>Entertainment</p>
-                <img src="" alt="Netflix">
-                <img src="" alt="Anime">
-                <img src="" alt="Disney">
-                <img src="" alt="Gaming">
-            </div>
-            <div class="search-cards-row">
-                <p>Podcasts</p>
-                <img src="" alt="Podcasts">
-                <img src="" alt="Podcast Charts">
-                <img src="" alt="Podcast New Releases">
-                <img src="" alt="Video">
-            </div>
-            <div class="search-cards-row">
-                <p>Audiobooks</p>
-                <img src="" alt="Audiobooks">
-                <img src="" alt="Sci-Fi & Fantasy Essential">
-                <img src="" alt="Fiction & Literature">
-                <img src="" alt="Mystery & Thriller">
-                <img src="" alt="Self-Help">
-            </div>
+            </section>
+
+            <!-- Search Menu-->
+            <section class="search-browse-section">
+                <h3>Browse all</h3>
+                <div class="search-cards-row">
+                    <div class="search-cards-header">
+                        <p>Discover</p>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="search-card-cont">
+                        <img src="" alt="Made For You">
+                        <img src="" alt="New Releases">
+                        <img src="" alt="Spotify Classics">
+                        <img src="" alt="Charts">
+                        <img src="" alt="Trending">
+                        <img src="" alt="Discover">
+                        <img src="" alt="Spotify Singles">
+                        <img src="" alt="Decades">
+                    </div>
+                </div>
+                <div class="search-cards-row">
+                    <div class="search-cards-header">
+                        <p>Genres</p>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="search-card-cont">
+                        <img src="" alt="Pop">
+                        <img src="" alt="Country">
+                        <img src="" alt="Hip-Hop">
+                        <img src="" alt="Rock">
+                        <img src="" alt="Indie">
+                        <img src="" alt="Punk">
+                        <img src="" alt="Metal">
+                        <img src="" alt="Instrumental">
+                    </div>
+                </div>
+                <div class="search-cards-row">
+                    <div class="search-cards-header">
+                        <p>Mood & Activity</p>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="search-card-cont">
+                        <img src="" alt="In the car?">
+                        <img src="" alt="Mood">
+                        <img src="" alt="Workout">
+                        <img src="" alt="Chill">
+                        <img src="" alt="Sleep">
+                        <img src="" alt="Party">
+                        <img src="" alt="AT Home">
+                        <img src="" alt="Focus">
+                    </div>
+                </div>
+                <div class="search-cards-row">
+                    <div class="search-cards-header">
+                        <p>Entertainment</p>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="search-card-cont">
+                        <img src="" alt="Netflix">
+                        <img src="" alt="Anime">
+                        <img src="" alt="Disney">
+                        <img src="" alt="Gaming">
+                    </div>
+                </div>
+                <div class="search-cards-row">
+                    <div class="search-cards-header">
+                        <p>Podcasts</p>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="search-card-cont">
+                        <img src="" alt="Podcasts">
+                        <img src="" alt="Podcast Charts">
+                        <img src="" alt="Podcast New Releases">
+                        <img src="" alt="Video">
+                    </div>
+                </div>
+                <div class="search-cards-row">
+                    <div class="search-cards-header">
+                        <p>Audiobooks</p>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="search-card-cont">
+                        <img src="" alt="Audiobooks">
+                        <img src="" alt="Sci-Fi & Fantasy Essential">
+                        <img src="" alt="Fiction & Literature">
+                        <img src="" alt="Mystery & Thriller">
+                        <img src="" alt="Self-Help">
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 

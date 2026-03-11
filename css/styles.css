@@ -288,7 +288,6 @@ h1, h2, h3 {
   justify-content: space-between;
   gap: 15px;
   padding: 13px 15px 9px 15px;
-  background-color: #060606;
 }
 .filter-wrapper .filter-all {
   display: none;
@@ -1725,6 +1724,68 @@ h1, h2, h3 {
     line-height: 180%;
   }
 }
+.search-page-body .sidebar, .search-page-body .mobile-library {
+  display: none;
+}
+.search-page-body {
+  background-color: rgb(17, 17, 17);
+}
+.search-page-body .player {
+  display: block;
+}
+.search-page-body .navbar {
+  display: none;
+}
+
+.search-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 13px 15px;
+}
+
+.search-page-header-mobile {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.search-container-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 76px;
+  margin-top: 3px;
+  min-width: 306px;
+  min-height: 35.41px;
+  background-color: rgba(32, 32, 32, 0.5);
+  border-radius: 10px;
+}
+.search-container-mobile input {
+  color: rgba(137, 137, 137, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.search-container-mobile img {
+  width: 35.41px;
+  height: 35.41px;
+}
+
+.search-camera {
+  color: #898989;
+}
+.search-camera:hover {
+  color: #E0E0E0;
+}
+
+.recent-searches {
+  display: none;
+}
+
 .player .add-sm {
   margin-left: 10px;
   color: #898989;
