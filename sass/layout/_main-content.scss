@@ -2,11 +2,6 @@
 @use '../abstract/mixins' as m;
  
 
- 
- 
- .player{
-    display: none;
- }
  .mobile-library{
     display: none;
  }
@@ -132,10 +127,12 @@
     display: flex;
     gap: 16px;
     overflow-x: auto;
-    padding: 0 15px; 
+    padding: 20px 15px 10px 15px; // Added 20px to the top!
     -webkit-overflow-scrolling: touch;
     
-    // Hide scrollbar
+    // Ensure the container doesn't clip the vertical "peek"
+    overflow-y: visible; 
+
     &::-webkit-scrollbar { display: none; }
 }
 
@@ -167,11 +164,13 @@
 }
 
 .card {
-    
     flex: 0 0 38%; 
     max-width: 38%;
-    
+    position: relative; // MUST be relative for the mixin to work!
+
     img {
+        position: relative; // Required for z-index
+        z-index: 3;        // Sits on top of the stack
         width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: cover;
@@ -240,6 +239,31 @@ font-size: v.$font-size-small;
 .num-electropurple { @include m.num-color(#6F86FF); }
 .num-darkgreen { @include m.num-color(#27856B); }
 .num-fiusa { @include m.num-color(#DD138B); }
+
+
+/* --- Made For You Section --- */
+.card-stacked-pink        { @include m.stacked-card(#CE6E9A); }
+.card-stacked-green       { @include m.stacked-card(#95E6D3); }
+.card-stacked-babypink    { @include m.stacked-card(#F4B8BD); }
+.card-stacked-saladgreen  { @include m.stacked-card(#C3E7B7); }
+.card-stacked-rouge       { @include m.stacked-card(#F37FA6); }
+.card-stacked-blue        { @include m.stacked-card(#A0BEC8); }
+.card-stacked-yellow      { @include m.stacked-card(#FDD87D); }
+.card-stacked-olive       { @include m.stacked-card(#D4B2A9); }
+.card-stacked-darkyellow  { @include m.stacked-card(#D4B2A9); } // Shared with olive? check variables
+.card-stacked-darkgreen   { @include m.stacked-card(#8DC3B5); }
+.card-stacked-purple      { @include m.stacked-card(#A6BAD3); }
+.card-stacked-neongreen   { @include m.stacked-card(#C3E7B7); }
+
+/* --- Your Top Mixes Section --- */
+.card-stacked-electricgreen  { @include m.stacked-card(#CCF665); }
+.card-stacked-electricyellow { @include m.stacked-card(#F9E72C); }
+.card-stacked-cyan           { @include m.stacked-card(#9BF0E2); }
+.card-stacked-deeppurple     { @include m.stacked-card(#6F86FF); }
+.card-stacked-whitepink      { @include m.stacked-card(#F4B8BD); }
+.card-stacked-babyyellow     { @include m.stacked-card(#FDD87D); }
+.card-stacked-deepgreen      { @include m.stacked-card(#27856B); }
+.card-stacked-hotpink        { @include m.stacked-card(#DD138B); }
 
 @media (min-width:768px){
     
@@ -316,16 +340,23 @@ font-size: v.$font-size-small;
         padding: 10px;
         border-radius: 8px;
 
+       
+
         &:hover {
             background-color: #282828; 
             transform: translateY(-5px);
         }
     }
 
+    
+
     .header-with-arrows {
         .arrow-controls {
             display: flex; // Explicitly showing on desktop
             gap: 10px;
+        }
+        h3{
+            padding-left: 7px;
         }
     }
 
@@ -352,8 +383,23 @@ font-size: v.$font-size-small;
         display: none;
 
    }
-    
-
-   
+   .albums-for-you {
+        display: flex;        
+        flex-direction: column; 
+        gap: 20px;
+        width: 100%;
+        padding-left: 15px;
+        
+        
+        .cards-wrapper-grid {
+            display: flex;
+            padding: 0; 
+            gap: 16px;
+            overflow-x: auto;
+            scrollbar-width: none; 
+            
+           
+        }
+    }
 
 }
