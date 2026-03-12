@@ -1,6 +1,48 @@
 @use '../abstract/variables' as v;
 @use '../abstract/mixins' as m;
 
+.desktop-version{
+    display: none;
+}
+/* =====================
+   Mobile Navigation Bar
+===================== */
+
+.mobile-version {
+   position: fixed;   
+    bottom: 0;         
+    left: 0;
+    width: 100%;       
+    z-index: 9999;     
+    background-color: rgba(17, 17, 17, 0.9);
+    display: flex;     
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .mobile-icon {
+        background: transparent;
+        border: none;
+        padding: 5px;
+        
+        img {
+            width: 40px;
+            height: 40px;  
+        }
+    }
+}
+
+
+
+
+@media (min-width: 768px){
+    .mobile-version{
+        display: none;
+    }
+
+
 .navbar {
     grid-area: nav;
     height: 60px;
@@ -12,18 +54,14 @@
     
    
     .navbar-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; 
-        width: 100%; 
-    }
+    @include m.flex-center($justify: space-between);
+    width: 100%;
+}
 
     .nav-group {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-shrink: 0; 
-    }
+    @include m.flex-center($gap: 20px);
+    flex-shrink: 0; // Keep this manual as it's not in your mixin
+}
 }
 
 
@@ -31,16 +69,15 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding-left: 15px;
-    padding-right: 105px;
-    border-radius: 8px;
-    color: #898989;
+    padding: 0 105px 0 15px;
+    border-radius: v.$radius-small;
+    color: v.$secondary-text-color;
     transition: background-color 0.3s ease; 
 
   &:hover, 
     &.active { 
-        background-color: #202020;
-        color: #E0E0E0;
+        background-color: v.$secondary-color;
+        color :v.$primary-text-color;
     }
 }
 .search-container {
@@ -53,19 +90,16 @@
 
     
     &:focus-within {
-        background-color: #2a2a2a;
-        outline: 1px solid #ffffff; // High-contrast focus state
+        background-color: v.$secondary-color;
     }
 
     &:hover {
-        background-color: #2a2a2a;
+        background-color: v.$secondary-color;
     }
 
 
     .search-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+       @include m.flex-center($justify: center);
         margin-right: 10px;
         cursor: pointer;
 
@@ -81,12 +115,12 @@
         background: transparent;
         border: none;
         outline: none;
-        color: #E0E0E0;
+        color: v.$primary-text-color;
         width: 100%;
         font-size: 14px;
 
         &::placeholder {
-            color: #898989;
+            color: v.$secondary-text-color;
         }
     }
 }
@@ -97,12 +131,10 @@
     gap: 8px; // Space between icons
 
     .tool-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include m.flex-center($justify: center);
         width: 41px;
         height: 41px;
-        border-radius: 50%; 
+        border-radius: 50%;
         background: transparent;
         border: none;
         cursor: pointer;
@@ -117,8 +149,15 @@
             height: 41px;
         }
     }
+    .profile-pic{
+    width: 32px;
+}
+
+}
 
     
 }
+
+
     
    

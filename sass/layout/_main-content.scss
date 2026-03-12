@@ -2,6 +2,7 @@
 @use '../abstract/mixins' as m;
  
  .albums-for-you{display: none;}
+ 
  .main-content {
     flex: 1;
     overflow-y: auto;
@@ -148,9 +149,7 @@
     }
 
     .controls-container {
-        display: flex;
-        align-items: center;
-        gap: 15px; // Space between dots and arrows
+        display: none;
     }
 
     // Ensure the dots and buttons are treated equally
@@ -336,6 +335,11 @@ font-size: v.$font-size-small;
     
 
     .header-with-arrows {
+        .controls-container {
+        display: flex;
+        align-items: center;
+        gap: 15px; // Space between dots and arrows
+    }
         .arrow-controls {
             display: flex; // Explicitly showing on desktop
             gap: 10px;
