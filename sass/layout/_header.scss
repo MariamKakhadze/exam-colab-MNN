@@ -1,112 +1,124 @@
-// layout/_header.scss
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
 
 .navbar {
-    // 1. მთავარი კონტეინერის ჰორიზონტალური განლაგება
+    grid-area: nav;
+    height: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 0 4px;
+    z-index: 100;
+   
     
-    // 2. ვიზუალი (შენი ცვლადების მნიშვნელობები)
-    background-color: #060606; // $primary-color
-    padding: 0px 24px;
-    min-height: 70px;
-
+   
     .navbar-container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex: 1; // იკავებს დარჩენილ ადგილს მარჯვენა სექციამდე
-        margin-right: 20px;
+        justify-content: space-between; 
+        width: 100%; 
     }
 
     .nav-group {
         display: flex;
         align-items: center;
         gap: 20px;
-
-        // მარჯვენა სექცია (ღილაკები და პროფილი)
-        &.right.section {
-            gap: 12px;
-            margin-left: auto; 
-        }
+        flex-shrink: 0; 
     }
+}
 
-    // ლინკები (Library, Home, Discover)
-    .nav-link {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #898989; // $secondary-text-color
-        text-decoration: none;
-        font-size: 14px;
-        transition: 0.3s;
 
-        &.active {
-            color: #E0E0E0; // $primary-text-color
-            
-            .icon-box.active-bg {
-                background-color: #202020;
-            }
-        }
-        
-        &:hover {
-            color: #E0E0E0;
-        }
-    }
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 15px;
+    padding-right: 105px;
+    border-radius: 8px;
+    color: #898989;
+    transition: background-color 0.3s ease; 
 
-    // საძიებო ველი
-    .search-container {
-        display: flex;
-        align-items: center;
+  &:hover, 
+    &.active { 
         background-color: #202020;
-        border-radius: 10px; // $radius-main
-        padding: 8px 15px;
-        width: 280px;
-        margin-left: 20px;
+        color: #E0E0E0;
+    }
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 227px;
+    transition: background-color 0.3s ease, outline 0.2s ease;
+    
 
-        .Search-input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #E0E0E0;
-            padding-left: 10px;
-            width: 100%;
-            font-size: 12px;
-
-            &::placeholder {
-                color: #898989;
-            }
-        }
+    
+    &:focus-within {
+        background-color: #2a2a2a;
+        outline: 1px solid #ffffff; // High-contrast focus state
     }
 
-    // ხატულების კონტეინერი
-    .icon-box {
+    &:hover {
+        background-color: #2a2a2a;
+    }
+
+
+    .search-icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-        
-        img {
-            width: 22px;
-            height: 22px;
-        }
-    }
-
-    // პროფილი
-    .profile-box {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 2px solid #202020;
+        margin-right: 10px;
         cursor: pointer;
 
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+   
+
+    .search-input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #E0E0E0;
+        width: 100%;
+        font-size: 14px;
+
+        &::placeholder {
+            color: #898989;
         }
     }
 }
+
+.icon-section {
+    display: flex;
+    align-items: center;
+    gap: 8px; // Space between icons
+
+    .tool-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%; 
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background-color: #202020;
+        }
+
+        img {
+            width: 41px;
+            height: 41px;
+        }
+    }
+
+    
+}
+    
+   
