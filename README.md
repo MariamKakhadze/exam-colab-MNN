@@ -63,4 +63,10 @@ Flexbox Positioning: Utilized strategic spacing (margin-right: auto) to group na
 
 Note: This version represents an initial draft of the CSS styles. While the layout is functional, the final version is subject to further refinements and adjustments to ensure 100% alignment with the design specifications.
 
+## Latest Updates
+* **New Branch:** Created the `discover` branch for focused development.
+* **Header Refactor:** Cleaned up the header structure by removing the library section.
+* **Navigation:** Implemented a horizontal layout for Home, Discover, and Search.
+* **Styling:** Added active states and improved SCSS organization for better navigation clarity.
+
 Author: Nino Gogoberidze
