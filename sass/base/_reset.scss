@@ -1,7 +1,7 @@
 @use '../abstract/variables' as v;
 
 body {
-    background-color: v.$background-color; 
+    background-color: v.$primary-color; 
     color: v.$primary-text-color; 
     font-family: 'Satoshi';
 }

@@ -67,3 +67,24 @@
     &:checked ~ label .check {display: none;}
     &:checked ~ label .check-hover {display: block;}
 }
+
+//for card text container on podcats for tou
+@mixin accent-card($color) {
+    background-color: rgba($color, 0.05); // 5% opacity
+    border-left: 3px solid rgba($color, 0.6); // 60% opacity
+    border-radius: 6px;
+    padding: 4px 0 7px 6px;
+}
+//for eoisodes for u
+@mixin bg-only($color) {
+    background-color: rgba($color, 0.05);
+    border-radius: 6px;
+    padding: 4px 6px 7px 6px;
+    border-left: none; // Explicitly ensures no border exists
+}
+//card number colors
+@mixin num-color($color) {
+  span:last-child {
+    color: $color;
+  }
+}

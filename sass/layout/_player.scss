@@ -14,7 +14,7 @@
     right: 0;
     background-color: #333842;
     border-radius: $radius-main;
-    width: 100%;
+    width: 100vw;
     height: 61px;
     margin: 0 8px;
     padding: 8px;
@@ -342,7 +342,7 @@
                 span {
                     background: linear-gradient(to right, $primary-text-color 55%, rgba(219, 219, 219, 0.2) 20%);
                     -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; // ← missing
+                    -webkit-text-fill-color: transparent; 
                     background-clip: text; 
                  }
             }
