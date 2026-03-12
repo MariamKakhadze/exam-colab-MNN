@@ -75,16 +75,62 @@
     border-radius: 6px;
     padding: 4px 0 7px 6px;
 }
-//for eoisodes for u
+
+
+//for eoisodes for u text conainer
 @mixin bg-only($color) {
     background-color: rgba($color, 0.05);
     border-radius: 6px;
     padding: 4px 6px 7px 6px;
     border-left: none; // Explicitly ensures no border exists
 }
+
+
 //card number colors
 @mixin num-color($color) {
   span:last-child {
     color: $color;
   }
+}
+
+
+//card stacked on top
+@mixin stacked-card($color) {
+    position: relative;
+    z-index: 1;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        height: 50%; // Keep it to the top half of the card only
+        border-radius: 12px; // Slightly more round than the image to show the curve
+        background-color: $color;
+        pointer-events: none;
+    }
+
+    // The furthest back layer
+    &::before {
+        top: -20px; 
+        opacity: 0.15;
+        transform: scale(0.85); // Shrink it more to show the "shoulders" of the curve
+        z-index: -2;
+    }
+
+    // The middle layer
+    &::after {
+        top: -6px;
+        opacity: 0.30;
+        transform: scale(0.92);
+        z-index: -1;
+    }
+
+    img {
+        position: relative;
+        z-index: 3;
+        border-radius: 8px;
+        display: block;
+        width: 100%;
+    }
 }
