@@ -263,10 +263,6 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
-.mobile-library {
-  display: none;
-}
-
 .albums-for-you {
   display: none;
 }

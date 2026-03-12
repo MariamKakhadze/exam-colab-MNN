@@ -1,13 +1,7 @@
 @use '../abstract/variables' as v;
 @use '../abstract/mixins' as m;
  
-
- .mobile-library{
-    display: none;
- }
  .albums-for-you{display: none;}
-
- 
 
  .filters{
     position: sticky;
