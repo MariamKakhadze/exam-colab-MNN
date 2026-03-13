@@ -122,18 +122,7 @@
  }
 
 
- .cards-wrapper-grid {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 20px 15px 10px 15px; // Added 20px to the top!
-    -webkit-overflow-scrolling: touch;
-    
-    // Ensure the container doesn't clip the vertical "peek"
-    overflow-y: visible; 
-
-    &::-webkit-scrollbar { display: none; }
-}
+ 
 
 .header-with-arrows {
     display: flex;
@@ -160,107 +149,8 @@
     }
 }
 
-.card {
-    flex: 0 0 38%; 
-    max-width: 38%;
-    position: relative; // MUST be relative for the mixin to work!
-
-    img {
-        position: relative; // Required for z-index
-        z-index: 3;        // Sits on top of the stack
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: v.$radius-small;
-        margin-bottom: 8px;
-    }
-}
-
-.card-title-cont {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;            
-    font-size: v.$font-size-small;
-
-    span:first-child {
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        flex: 1; 
-    }
-
-   
-    span:last-child {
-        flex-shrink: 0; 
-    }
-}
-.card-title{
-font-size: v.$font-size-small;
-}
-
-.card-main-txt{
-    font-size: v.$font-size-small-card;
-    color: v.$secondary-text-color;
-}
-.card-txt-wrap{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    
-
-}
-
-.card-color-green { @include m.accent-card(#85C585); }
-.card-color-yellow { @include m.accent-card(#FFDCCA); }
-.card-color-orange { @include m.accent-card(#F67D4D); }
-.title-bg-green{@include m.bg-only(#85C585);}
-.title-bgt-yellow{@include m.bg-only(#FFDCCA);}
-.title-bgt-orange{@include m.bg-only(#F67D4D);}
-
-.num-red { @include m.num-color(#CE6E9A); }
-.num-green { @include m.num-color(#95E6D3); }
-.num-pink { @include m.num-color(#F4B8BD); }
-.num-neon { @include m.num-color(#C3E7B7); }
-.num-hotpink { @include m.num-color(#F37FA6); }
-.num-blue { @include m.num-color(#A0BEC8); }
-.num-yellow { @include m.num-color(#FDD87D); }
-.num-darkyellow { @include m.num-color(#D4B2A9); }
-.num-cyan { @include m.num-color(#8DC3B5); }
-.num-purple { @include m.num-color(#A6BAD3); }
-.num-brightgreen { @include m.num-color(#CCF665); }
-.num-brightyellow { @include m.num-color(#F9E72C); }
-.num-babyblue { @include m.num-color(#9BF0E2); }
-.num-electropurple { @include m.num-color(#6F86FF); }
-.num-darkgreen { @include m.num-color(#27856B); }
-.num-fiusa { @include m.num-color(#DD138B); }
 
 
-/* --- Made For You Section --- */
-.card-stacked-pink        { @include m.stacked-card(#CE6E9A); }
-.card-stacked-green       { @include m.stacked-card(#95E6D3); }
-.card-stacked-babypink    { @include m.stacked-card(#F4B8BD); }
-.card-stacked-saladgreen  { @include m.stacked-card(#C3E7B7); }
-.card-stacked-rouge       { @include m.stacked-card(#F37FA6); }
-.card-stacked-blue        { @include m.stacked-card(#A0BEC8); }
-.card-stacked-yellow      { @include m.stacked-card(#FDD87D); }
-.card-stacked-olive       { @include m.stacked-card(#D4B2A9); }
-.card-stacked-darkyellow  { @include m.stacked-card(#D4B2A9); } // Shared with olive? check variables
-.card-stacked-darkgreen   { @include m.stacked-card(#8DC3B5); }
-.card-stacked-purple      { @include m.stacked-card(#A6BAD3); }
-.card-stacked-neongreen   { @include m.stacked-card(#C3E7B7); }
-
-/* --- Your Top Mixes Section --- */
-.card-stacked-electricgreen  { @include m.stacked-card(#CCF665); }
-.card-stacked-electricyellow { @include m.stacked-card(#F9E72C); }
-.card-stacked-cyan           { @include m.stacked-card(#9BF0E2); }
-.card-stacked-deeppurple     { @include m.stacked-card(#6F86FF); }
-.card-stacked-whitepink      { @include m.stacked-card(#F4B8BD); }
-.card-stacked-babyyellow     { @include m.stacked-card(#FDD87D); }
-.card-stacked-deepgreen      { @include m.stacked-card(#27856B); }
-.card-stacked-hotpink        { @include m.stacked-card(#DD138B); }
 
 @media (min-width:768px){
     
@@ -314,23 +204,7 @@ font-size: v.$font-size-small;
         }
     }
 
-    .card {
-       
-        flex: 0 0 calc(100% / 8 - 20px); 
-        max-width: calc(100% / 8 - 20px);
-        
-        
-        transition: transform 0.2s ease, background-color 0.2s ease;
-        padding: 10px;
-        border-radius: 8px;
-
-       
-
-        &:hover {
-            background-color: #282828; 
-            transform: translateY(-5px);
-        }
-    }
+    
 
     
 
@@ -359,19 +233,7 @@ font-size: v.$font-size-small;
     }
 }
 
-.card-title-cont {
-        
-        font-size: v.$font-size-medium; 
-    }
 
-    .card-main-txt {
-       
-        font-size: v.$font-size-small;
-    }
-    .popular-almubs{
-        display: none;
-
-   }
    .albums-for-you {
         display: flex;        
         flex-direction: column; 
