@@ -7,82 +7,88 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="home-page-body">
+<body class="page-home">
     <div class="app-container">
 
-     <!-- Header Section  Nino Gogoberidze -->
+     <!-- Header Section  -->
     <header class="navbar">
-        <div class="navbar-container">
-           <!-- Left Section   -->
+        <div class="navbar-container desktop-version">
+
+           <nav class="nav-group center-section">
+        
+            <a href="#" class="nav-link active ">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="" >
+                <span class="label">Home</span>
+            </a>
+
+            <a href="#" class="nav-link ">
+                <img src="./assets/icons/nav-library/discover.svg" alt="">
+                <span class="label">Discover</span>
+            </a>
+        
+            <form class="search-container" role="search">
+                <label for="nav-search" class="search-icon">
+                    <img src="./assets/icons/nav-library/search.svg" alt="Search">
+                </label>
+                <input type="text" id="nav-search" placeholder="Search" class="search-input">
+            </form>
+
+    </nav>
+        
+       
+        <section class="nav-group right icon-section">
+            <button class="tool-btn " aria-label="News">
+                <img src="./assets/icons/nav-library/notification.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Private">
+                <img src="./assets/icons/nav-library/lock.svg" alt="">
+            </button>
+
+            <button class="tool-btn for-desktop" aria-label="Friends">
+                <img src="./assets/icons/nav-library/friends.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Settings">
+                <img src="./assets/icons/nav-library/settings.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="profile-pic">
+                <img src="./assets/icons/nav-library/pofile-pic.svg" alt="">
+            </button>
+
+    </section>
+         </div>
+
+         <section class="mobile-version">
             
             
-    <!-- Left Section  / -->
 
-   <!-- + middle Section / -->
-            <nav class="nav-group center-section">
-                <a href="#" class="nav-link active">
-                    <div class="icon-box active-bg">
-                        <img src="./assets/icons/nav-library/icons big.svg" 
-                        alt="home icon">
-                    </div>
-                    <span class="label">Home</span>
-                </a>
-                <a href="#" class="nav-link">
-                    <div class="icon-box">
-                        <img src="./assets/icons/nav-library/icons big (1).svg" 
-                        alt="discover icon">
-                    </div>
-                    <span class="label">Discover</span>
-                </a>
-                <div class="search-container">
-                    <div class="search-icon box">
-                        <img src="./assets/icons/nav-library/icons big (2).svg" 
-                        alt="search icon">
-
-                    </div>
-                    <input type="text" placeholder="Search"
-                     class="Search-input">
-                </div>
-            </nav>
-    
-        </div>
-        <!-- middle Section  / -->
-        <!-- right Section  / -->
-         <section class="nav-group right section">
-            <button class="tool-btn">
-                <div class="icon-box">
-                    <img src="./assets/icons/nav-library/icons big (3).svg" 
-                    alt="news">
-                </div>
+            <button class="mobile-icon active" role="button" aria-label="home">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="Profile avatar">
+            </button>
+            
+             <button class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/discover.svg" alt="Profile avatar">
             </button>
 
-            <button class="tool-btn">
-                <div class="icon-box">
-                     <img src="./assets/icons/nav-library/icons big (4).svg" alt="private">
-                </div>
+             <button class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/search.svg" alt="Profile avatar">
             </button>
 
-            <button class="tool-btn">
-                <div class="icon-box">
-                    <img src="./assets/icons/nav-library/icons big (5).svg" alt="friends">
-                </div>
+             <button class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/sidebar-library/library.png" alt="Profile avatar">
             </button>
-            <button class="tool-btn">
-                <div class="icon-box">
-                     <img src="./assets/icons/nav-library/icons big (6).svg"
-                      alt="settings">
-                </div>
+            
+             <button class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/me-prof.png" alt="Profile avatar">
             </button>
-            <div class="profile-box">
-                  <img src="./assets/icons/nav-library/Sprite-0002 1.svg" 
-                  alt="sprite">
-
-            </div>
          </section>
+
     </header>
 
       
-     <!-- Header Section  Nino Gogoberidze   -->
+    
 
 
     <!--this is a sidebar library for desktop-->
@@ -90,9 +96,7 @@
 
         
                 <a href="#" class="sidebar-link library-header"> 
-                     <div class="icon-box">
                          <img src="./assets/icons/sidebar-library/library.png" alt="library icon">
-                     </div>
                      <span class="label">My Library</span>
                 </a>
             
@@ -170,82 +174,7 @@
     </aside>
 
 
-    <!--this is a sidebar library for mobile-->
-    <section class="mobile-library">
-        <header class="mobile-library-header">
-            <form class="search-form" role="search">
-                <div class="search-input-wrapper">
-            <input 
-                type="search" 
-                placeholder="Search library" 
-                class="search-input"
-                aria-label="Search your library"
-            >
-            <img src="assets/icons/sidebar-library/search.png" alt="search-icon" class="search-icon">
-        </div>
-    </form>
-        <img src="assets/icons/sidebar-library/plus.png" alt="plus">
-
-        
-        </header>
-
-        <div class="filter">
-            <button class="group">
-                <img src="assets/icons/sidebar-library/group.png" alt="group">
-                <span>Group</span>
-
-            </button>
-            <button class="recents">
-                <span>Recents</span>
-                <img src="assets/icons/sidebar-library/recents.png" alt="recents" class="recents-og">
-            </button>
-
-        </div>
-
-        <ul class="mobile-library-list">
-            <li class="mobile-library-item">
-                <a href="#">
-                <span>Playlists</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Playlists by Spotify</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Albums</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Folders</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-            <li class="mobile-library-item">
-                <a href="">
-                <span>Artists</span>
-                <img src="assets/icons/sidebar-library/arrow.png" alt="">
-                </a>
-
-            </li>
-
-        </ul>
-
-    </section>
+   
 
       <!--this the main content/scroll-content-->
     
@@ -349,9 +278,9 @@
             </div>
             <div class="cards-wrapper-grid" id="scroll-container">
 
-                <div class="card card-stacked">
+                <div class="card card-stacked-pink">
                 
-                    <img src="assets/pictures/main/Frame 8.png" alt="pic">
+                    <img src="assets/pictures/main/Frame 8.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-red">
@@ -362,8 +291,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked"> 
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-green"> 
+                    <img src="assets/pictures/made-for-u/dailymix1.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-green">
@@ -374,8 +303,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-babypink">
+                    <img src="assets/pictures/made-for-u/dailymix2.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-pink">
@@ -386,8 +315,8 @@
                     </div>
                 </div>
             
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-saladgreen">
+                    <img src="assets/pictures/made-for-u/dailymix3.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-neon">
@@ -398,8 +327,8 @@
                     </div>
                 </div>
                
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-rouge">
+                    <img src="assets/pictures/made-for-u/dailymix4.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-hotpink">
@@ -410,8 +339,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-blue">
+                    <img src="assets/pictures/made-for-u/dailymix5.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-blue">
@@ -422,8 +351,8 @@
                     </div>
                 </div>
                
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-yellow">
+                    <img src="assets/pictures/made-for-u/nirvana.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-yellow">
@@ -434,8 +363,8 @@
                     </div>
                 </div>
               
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-olive">
+                    <img src="assets/pictures/made-for-u/falloutboy.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-pink">
@@ -446,8 +375,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-darkyellow">
+                    <img src="assets/pictures/made-for-u/adele.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-darkyellow">
@@ -458,8 +387,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-darkgreen">
+                    <img src="assets/pictures/made-for-u/daftpunk.png" alt="picture">
 
                     <div  class="card-txt-wrap">
                     <div class="card-title-cont num-cyan">
@@ -470,8 +399,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-purple">
+                    <img src="assets/pictures/made-for-u/abba.png" alt="picture">
 
                     <div class="card-txt-wrap" >
                     <div class="card-title-cont num-purple">
@@ -482,8 +411,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-neongreen">
+                    <img src="assets/pictures/made-for-u/dailymix6.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-neon">
@@ -511,8 +440,8 @@
             </div>
             <div class="cards-wrapper-grid">
                 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="pic">
+                <div class="card card-stacked-electricgreen">
+                    <img src="assets/pictures/made-for-u/rockmix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-brightgreen">
@@ -523,8 +452,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked"> 
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-electricyellow"> 
+                    <img src="assets/pictures/made-for-u/chilimix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-brightyellow">
@@ -535,8 +464,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-cyan">
+                    <img src="assets/pictures/made-for-u/popmix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-babyblue">
@@ -547,8 +476,8 @@
                     </div>
                 </div>
             
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-deeppurple">
+                    <img src="assets/pictures/made-for-u/daftounkmix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-electropurple">
@@ -559,8 +488,8 @@
                     </div>
                 </div>
                
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-whitepink">
+                    <img src="assets/pictures/made-for-u/happymix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-pink">
@@ -571,8 +500,8 @@
                     </div>
                 </div>
 
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-babyyellow">
+                    <img src="assets/pictures/made-for-u/bowiemix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-yellow">
@@ -583,8 +512,8 @@
                     </div>
                 </div>
                
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-deepgreen">
+                    <img src="assets/pictures/made-for-u/upbeatmix.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-darkgreen">
@@ -595,8 +524,8 @@
                     </div>
                 </div>
               
-                <div class="card card-stacked">
-                    <img src="assets/pictures/main/Frame 8.png" alt="">
+                <div class="card card-stacked-hotpink">
+                    <img src="assets/pictures/made-for-u/60s.png" alt="picture">
 
                     <div class="card-txt-wrap">
                     <div class="card-title-cont num-fiusa">
