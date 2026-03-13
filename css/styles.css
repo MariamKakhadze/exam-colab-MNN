@@ -1445,6 +1445,20 @@ h1, h2, h3 {
 .card-stacked-yellow {
   position: relative;
   z-index: 1;
+.song-page-body .navbar, .song-page-body .sidebar, .song-page-body .player {
+  display: none;
+}
+
+.song-page-main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.song-page {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(59, 65, 77) 0%, rgb(39, 43, 51) 100%);
+  font-family: "satoshi";
+  border-radius: 10px;
 }
 .card-stacked-yellow::before, .card-stacked-yellow::after {
   content: "";
@@ -1960,6 +1974,189 @@ h1, h2, h3 {
     transition: transform 0.2s ease, background-color 0.2s ease;
     padding: 10px;
     border-radius: 8px;
+  .song-page-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 3px 7px 10px 7px;
+  }
+  .song-page-body .player, .song-page-body .navbar {
+    display: flex;
+    flex: 1;
+  }
+  .song-page-body .sidebar {
+    display: block;
+    display: block;
+    width: 260px;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+  .song-page-main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+  }
+  .song-page {
+    height: 100vh;
+    flex: 1;
+    overflow-y: auto;
+    max-width: 100%;
+    max-height: 869px;
+    margin: 4px 0 5px 7px;
+    background: linear-gradient(to bottom, rgba(138, 157, 187, 0.18) 0%, rgb(6, 6, 6) 100%);
+    border: 1px solid rgb(32, 32, 32);
+  }
+  .song-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/photo/player/Rectangle 6.svg");
+    background-size: cover;
+    background-position: bottom right;
+    filter: blur(120px);
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .song-page > * {
+    position: relative;
+    z-index: 1;
+  }
+  .song-page::-webkit-scrollbar {
+    display: none;
+  }
+  .song-page .mobile-lyrics-view,
+  .song-page .mobile-queue-view,
+  .song-page .song-page-mobile {
+    display: none;
+  }
+  .song-page .song-header {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 37px 168px 38px 37px;
+  }
+  .song-page .song-header .mobile-header {
+    display: none;
+  }
+  .song-page .song-header .cover-area {
+    margin-right: 62px;
+  }
+  .song-page .song-header .cover-area .cover-bg {
+    margin: 0;
+    width: 500px;
+    height: 500px;
+  }
+  .song-page .song-header .song-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .song-page .song-header .song-right .mobile-song-info {
+    display: none;
+  }
+  .song-page .song-header .song-right .song-title {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 3%;
+    color: #E0E0E0;
+  }
+  .song-page .song-header .song-right .song-information {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  .song-page .song-header .song-right .song-information .artist-icon, .song-page .song-header .song-right .song-information .album-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  .song-page .song-header .song-right .song-information .artist, .song-page .song-header .song-right .song-information .album-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #E0E0E0;
+  }
+  .song-page .song-header .song-right .song-information .dot {
+    display: block;
+  }
+  .song-page .song-header .song-right .song-information .year, .song-page .song-header .song-right .song-information .duration, .song-page .song-header .song-right .song-information .copies {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #898989;
+  }
+  .song-page .song-header .song-right .song-nav {
+    margin: 0;
+    gap: 14px;
+  }
+  .song-page .song-header .song-right .song-nav .playback-button, .song-page .song-header .song-right .song-nav .list-add-desktop, .song-page .song-header .song-right .song-nav .download-desktop, .song-page .song-header .song-right .song-nav .share, .song-page .song-header .song-right .song-nav .more-btn {
+    display: block;
+  }
+  .song-page .song-header .song-right .genre {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #898989;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .song-page .song-header .song-right .singers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .song-page .song-header .song-right .daft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .song-page .song-header .song-right .daft img {
+    width: 61px;
+    height: 61px;
+  }
+  .song-page .song-header .song-right .daft .singers-info-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .song-page .song-header .song-right .daft .singers-info-link a {
+    color: #E0E0E0;
+  }
+  .song-page .song-header .song-right .daft .singers-info-link span {
+    color: #898989;
+  }
+  .song-page .song-header .song-right .pharrell, .song-page .song-header .song-right .nile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .song-page .song-header .song-right .pharrell img, .song-page .song-header .song-right .nile img {
+    width: 61px;
+    height: 61px;
+  }
+  .song-page .song-header .song-right .pharrell .singers-info, .song-page .song-header .song-right .nile .singers-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .song-page .song-header .song-right .pharrell .singers-info p, .song-page .song-header .song-right .nile .singers-info p {
+    color: #E0E0E0;
+  }
+  .song-page .song-header .song-right .pharrell .singers-info span, .song-page .song-header .song-right .nile .singers-info span {
+    color: #898989;
   }
   .card:hover {
     background-color: #282828;
@@ -1973,6 +2170,2618 @@ h1, h2, h3 {
   }
   .popular-almubs {
     display: none;
+  }
+}
+.search-page-body {
+  background-color: rgb(17, 17, 17);
+}
+
+.search-page-cont {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.search-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 13px 15px;
+  padding-bottom: 13rem;
+}
+
+.search-page-header-mobile {
+  position: sticky;
+  top: 0;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  z-index: 10;
+  flex: 1;
+}
+
+.search-container-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 76px;
+  margin-top: 3px;
+  flex: 1;
+  min-width: 0;
+  min-height: 35.41px;
+  background-color: rgba(32, 32, 32, 0.5);
+  border-radius: 10px;
+}
+.search-container-mobile input {
+  color: rgba(137, 137, 137, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.search-container-mobile img {
+  width: 35.41px;
+  height: 35.41px;
+}
+
+.search-camera {
+  color: #898989;
+}
+.search-camera:hover {
+  color: #E0E0E0;
+}
+
+.recent-searches {
+  display: none;
+}
+
+.search-browse-section {
+  display: flex;
+  flex-direction: column;
+}
+.search-browse-section h3 {
+  color: #E0E0E0;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 16.5px;
+}
+.search-browse-section .search-cards-row p {
+  margin: 14px 0;
+  color: #E0E0E0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search-card-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.search-arrows {
+  display: none;
+}
+
+.discover-card-1 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(30, 50, 100);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-1 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-1 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-2 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(186, 93, 7);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-2 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-2 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-3 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(30, 50, 100);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-3 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-3 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-4 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(141, 103, 171);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-4 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-4 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-5 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(176, 40, 151);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-5 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-5 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-6 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(141, 103, 171);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-6 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-6 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-7 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(119, 119, 119);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-7 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-7 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.discover-card-8 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(186, 93, 7);
+  overflow: hidden;
+  position: relative;
+}
+.discover-card-8 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.discover-card-8 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-1 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(20, 138, 8);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-1 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-1 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-2 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(216, 64, 0);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-2 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-2 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-3 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(80, 55, 80);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-3 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-3 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-4 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(0, 100, 80);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-4 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-4 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-5 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(233, 20, 41);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-5 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-5 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-6 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(30, 50, 100);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-6 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-6 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-7 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(233, 20, 41);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-7 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-7 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.genre-card-8 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(83, 122, 161);
+  overflow: hidden;
+  position: relative;
+}
+.genre-card-8 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.genre-card-8 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-1 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(30, 50, 100);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-1 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-1 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-2 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(186, 93, 7);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-2 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-2 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-3 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(30, 50, 100);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-3 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-3 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-4 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(141, 103, 171);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-4 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-4 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-5 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(176, 40, 151);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-5 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-5 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-6 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(141, 103, 171);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-6 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-6 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-7 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(119, 119, 119);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-7 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-7 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.mood-card-8 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(186, 93, 7);
+  overflow: hidden;
+  position: relative;
+}
+.mood-card-8 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.mood-card-8 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.entertainment-card-1 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(20, 138, 8);
+  overflow: hidden;
+  position: relative;
+}
+.entertainment-card-1 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.entertainment-card-1 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.entertainment-card-2 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(216, 64, 0);
+  overflow: hidden;
+  position: relative;
+}
+.entertainment-card-2 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.entertainment-card-2 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.entertainment-card-3 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(80, 55, 80);
+  overflow: hidden;
+  position: relative;
+}
+.entertainment-card-3 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.entertainment-card-3 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.entertainment-card-4 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(0, 100, 80);
+  overflow: hidden;
+  position: relative;
+}
+.entertainment-card-4 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.entertainment-card-4 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Podcasts-card-1 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(176, 40, 151);
+  overflow: hidden;
+  position: relative;
+}
+.Podcasts-card-1 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Podcasts-card-1 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Podcasts-card-2 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(141, 103, 171);
+  overflow: hidden;
+  position: relative;
+}
+.Podcasts-card-2 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Podcasts-card-2 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Podcasts-card-3 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(119, 119, 119);
+  overflow: hidden;
+  position: relative;
+}
+.Podcasts-card-3 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Podcasts-card-3 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Podcasts-card-4 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(186, 93, 7);
+  overflow: hidden;
+  position: relative;
+}
+.Podcasts-card-4 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Podcasts-card-4 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Audiobooks-card-1 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(20, 138, 8);
+  overflow: hidden;
+  position: relative;
+}
+.Audiobooks-card-1 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Audiobooks-card-1 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Audiobooks-card-2 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(216, 64, 0);
+  overflow: hidden;
+  position: relative;
+}
+.Audiobooks-card-2 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Audiobooks-card-2 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Audiobooks-card-3 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(80, 55, 80);
+  overflow: hidden;
+  position: relative;
+}
+.Audiobooks-card-3 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Audiobooks-card-3 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Audiobooks-card-4 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(0, 100, 80);
+  overflow: hidden;
+  position: relative;
+}
+.Audiobooks-card-4 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Audiobooks-card-4 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+.Audiobooks-card-5 {
+  width: 170px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(233, 20, 41);
+  overflow: hidden;
+  position: relative;
+}
+.Audiobooks-card-5 h4 {
+  position: absolute;
+  width: 95px;
+  height: 54px;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 900px;
+  z-index: 2;
+}
+.Audiobooks-card-5 img {
+  position: absolute;
+  width: 104.27px;
+  height: 104.27px;
+  top: 45px;
+  left: 80px;
+  border-radius: 5px;
+  rotate: 30deg;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .search-page-body {
+    background-color: #060606;
+  }
+  .search-page-body main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+  }
+  .search-page-body main .sidebar {
+    display: block;
+    width: 260px;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+  .search-page {
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 10px;
+    padding: 13px 25px;
+  }
+  .search-page::-webkit-scrollbar {
+    display: none;
+  }
+  .search-page {
+    scrollbar-width: none;
+  }
+  .search-page-header-mobile {
+    display: none;
+  }
+  .recent-searches {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .recent-searches-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    margin-top: 7px;
+  }
+  .recent-searches-header h3 {
+    color: #E0E0E0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .recent-searches-header :last-child {
+    color: #898989;
+    transition: color 0.02s, transform 0.1s;
+  }
+  .recent-searches-header :last-child:hover {
+    color: #E0E0E0;
+    transform: scale(1.04);
+  }
+  .recent-search-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .search-daft-punk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .search-daft-punk .name {
+    width: 169px;
+    height: 169px;
+    border-radius: 121px;
+    z-index: 1;
+    margin-bottom: 17px;
+  }
+  .search-daft-punk .search-close-icon {
+    color: #898989;
+    transition: color 0.02s, transform 0.1s;
+  }
+  .search-daft-punk .search-close-icon:hover {
+    color: #E0E0E0;
+    transform: scale(1.04);
+  }
+  .search-daft-punk .search-close-icon {
+    position: absolute;
+    top: -10px;
+    left: 12.5rem;
+    width: 41px;
+    height: 41px;
+    background-color: rgb(17, 17, 17);
+    border-radius: 100px;
+    z-index: 2;
+  }
+  .search-daft-punk span {
+    color: #E0E0E0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .search-david-bowie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .search-david-bowie .name {
+    width: 169px;
+    height: 169px;
+    border-radius: 121px;
+    z-index: 1;
+    margin-bottom: 17px;
+  }
+  .search-david-bowie .search-close-icon {
+    color: #898989;
+    transition: color 0.02s, transform 0.1s;
+  }
+  .search-david-bowie .search-close-icon:hover {
+    color: #E0E0E0;
+    transform: scale(1.04);
+  }
+  .search-david-bowie .search-close-icon {
+    position: absolute;
+    top: -10px;
+    left: 12.5rem;
+    width: 41px;
+    height: 41px;
+    background-color: rgb(17, 17, 17);
+    border-radius: 100px;
+    z-index: 2;
+  }
+  .search-david-bowie span {
+    color: #E0E0E0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .search-black-holes {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0 -7px 0 rgba(98, 120, 177, 0.3);
+  }
+  .search-black-holes .name {
+    width: 171px;
+    height: 171px;
+    border-radius: 7px;
+    z-index: 1;
+    margin-bottom: 17px;
+  }
+  .search-black-holes .search-close-icon {
+    color: #898989;
+    transition: color 0.02s, transform 0.1s;
+  }
+  .search-black-holes .search-close-icon:hover {
+    color: #E0E0E0;
+    transform: scale(1.04);
+  }
+  .search-black-holes .search-close-icon {
+    position: absolute;
+    top: -10px;
+    left: 12.5rem;
+    width: 41px;
+    height: 41px;
+    background-color: rgb(17, 17, 17);
+    border-radius: 100px;
+    z-index: 2;
+  }
+  .search-black-holes .album-title {
+    color: #E0E0E0;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .search-black-holes .song-title {
+    color: #898989;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .search-browse-section {
+    margin: 20px 0;
+  }
+  .search-cards-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-cards-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .search-cards-header .search-arrows {
+    display: block;
+  }
+  .search-cards-header .search-arrows :first-child {
+    width: 41px;
+    height: 41px;
+    color: #898989;
+    transition: color 0.02s, transform 0.1s;
+  }
+  .search-cards-header .search-arrows :first-child:hover {
+    color: #E0E0E0;
+    transform: scale(1.04);
+  }
+  .search-cards-header .search-arrows :last-child {
+    width: 41px;
+    height: 41px;
+    color: #898989;
+    transition: color 0.02s, transform 0.1s;
+  }
+  .search-cards-header .search-arrows :last-child:hover {
+    color: #E0E0E0;
+    transform: scale(1.04);
+  }
+  .search-card-cont {
+    gap: 15px;
+    margin: 5px 0;
+    flex-wrap: nowrap;
+  }
+  .discover-card-1 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(30, 50, 100);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-1:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-1 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-1 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(186, 93, 7);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-2:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-2 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-2 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-3 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(30, 50, 100);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-3:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-3 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-3 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(141, 103, 171);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-4:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-4 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-4 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-5 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(176, 40, 151);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-5:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-5 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-5 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-6 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(141, 103, 171);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-6:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-6 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-6 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-7 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(119, 119, 119);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-7:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-7 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-7 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .discover-card-8 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(186, 93, 7);
+    overflow: hidden;
+    position: relative;
+  }
+  .discover-card-8:hover {
+    transform: scale(1.04);
+  }
+  .discover-card-8 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .discover-card-8 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-1 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(20, 138, 8);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-1:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-1 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-1 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(216, 64, 0);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-2:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-2 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-2 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-3 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(80, 55, 80);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-3:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-3 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-3 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(0, 100, 80);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-4:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-4 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-4 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-5 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(233, 20, 41);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-5:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-5 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-5 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-6 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(30, 50, 100);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-6:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-6 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-6 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-7 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(233, 20, 41);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-7:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-7 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-7 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .genre-card-8 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(83, 122, 161);
+    overflow: hidden;
+    position: relative;
+  }
+  .genre-card-8:hover {
+    transform: scale(1.04);
+  }
+  .genre-card-8 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .genre-card-8 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-1 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(30, 50, 100);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-1:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-1 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-1 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(186, 93, 7);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-2:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-2 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-2 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-3 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(30, 50, 100);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-3:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-3 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-3 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(141, 103, 171);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-4:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-4 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-4 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-5 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(176, 40, 151);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-5:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-5 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-5 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-6 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(141, 103, 171);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-6:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-6 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-6 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-7 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(119, 119, 119);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-7:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-7 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-7 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .mood-card-8 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(186, 93, 7);
+    overflow: hidden;
+    position: relative;
+  }
+  .mood-card-8:hover {
+    transform: scale(1.04);
+  }
+  .mood-card-8 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .mood-card-8 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .entertainment-card-1 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(20, 138, 8);
+    overflow: hidden;
+    position: relative;
+  }
+  .entertainment-card-1:hover {
+    transform: scale(1.04);
+  }
+  .entertainment-card-1 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .entertainment-card-1 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .entertainment-card-2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(216, 64, 0);
+    overflow: hidden;
+    position: relative;
+  }
+  .entertainment-card-2:hover {
+    transform: scale(1.04);
+  }
+  .entertainment-card-2 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .entertainment-card-2 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .entertainment-card-3 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(80, 55, 80);
+    overflow: hidden;
+    position: relative;
+  }
+  .entertainment-card-3:hover {
+    transform: scale(1.04);
+  }
+  .entertainment-card-3 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .entertainment-card-3 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .entertainment-card-4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(0, 100, 80);
+    overflow: hidden;
+    position: relative;
+  }
+  .entertainment-card-4:hover {
+    transform: scale(1.04);
+  }
+  .entertainment-card-4 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .entertainment-card-4 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Podcasts-card-1 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(176, 40, 151);
+    overflow: hidden;
+    position: relative;
+  }
+  .Podcasts-card-1:hover {
+    transform: scale(1.04);
+  }
+  .Podcasts-card-1 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Podcasts-card-1 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Podcasts-card-2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(141, 103, 171);
+    overflow: hidden;
+    position: relative;
+  }
+  .Podcasts-card-2:hover {
+    transform: scale(1.04);
+  }
+  .Podcasts-card-2 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Podcasts-card-2 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Podcasts-card-3 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(119, 119, 119);
+    overflow: hidden;
+    position: relative;
+  }
+  .Podcasts-card-3:hover {
+    transform: scale(1.04);
+  }
+  .Podcasts-card-3 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Podcasts-card-3 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Podcasts-card-4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(186, 93, 7);
+    overflow: hidden;
+    position: relative;
+  }
+  .Podcasts-card-4:hover {
+    transform: scale(1.04);
+  }
+  .Podcasts-card-4 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Podcasts-card-4 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Audiobooks-card-1 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(20, 138, 8);
+    overflow: hidden;
+    position: relative;
+  }
+  .Audiobooks-card-1:hover {
+    transform: scale(1.04);
+  }
+  .Audiobooks-card-1 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Audiobooks-card-1 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Audiobooks-card-2 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(216, 64, 0);
+    overflow: hidden;
+    position: relative;
+  }
+  .Audiobooks-card-2:hover {
+    transform: scale(1.04);
+  }
+  .Audiobooks-card-2 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Audiobooks-card-2 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Audiobooks-card-3 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(80, 55, 80);
+    overflow: hidden;
+    position: relative;
+  }
+  .Audiobooks-card-3:hover {
+    transform: scale(1.04);
+  }
+  .Audiobooks-card-3 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Audiobooks-card-3 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Audiobooks-card-4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(0, 100, 80);
+    overflow: hidden;
+    position: relative;
+  }
+  .Audiobooks-card-4:hover {
+    transform: scale(1.04);
+  }
+  .Audiobooks-card-4 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Audiobooks-card-4 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
+  }
+  .Audiobooks-card-5 {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: rgb(233, 20, 41);
+    overflow: hidden;
+    position: relative;
+  }
+  .Audiobooks-card-5:hover {
+    transform: scale(1.04);
+  }
+  .Audiobooks-card-5 h4 {
+    position: absolute;
+    width: 95px;
+    height: 54px;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900px;
+    z-index: 2;
+  }
+  .Audiobooks-card-5 img {
+    position: absolute;
+    width: 104.27px;
+    height: 104.27px;
+    top: 80px;
+    right: 10px;
+    border-radius: 5px;
+    rotate: 30deg;
+    z-index: 1;
   }
 }
 .player .add-sm {
