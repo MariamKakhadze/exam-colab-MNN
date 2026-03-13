@@ -1445,6 +1445,7 @@ h1, h2, h3 {
 .card-stacked-yellow {
   position: relative;
   z-index: 1;
+}
 .song-page-body .navbar, .song-page-body .sidebar, .song-page-body .player {
   display: none;
 }
@@ -5255,3 +5256,4 @@ h1, h2, h3 {
 }
 
 /*# sourceMappingURL=styles.css.map */
+}
