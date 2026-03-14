@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -26,11 +26,15 @@
                 <span class="label">Discover</span>
             </a>
         
-            <form class="search-container" role="search">
+            <form class="search-container" role="search" action="search.html" method="GET">
+                
                 <label for="nav-search" class="search-icon">
-                    <img src="./assets/icons/nav-library/search.svg" alt="Search">
+                    <a href="search.html" class="search-link">
+                <img src="./assets/icons/nav-library/search.svg" alt="Search">
+                </a>
                 </label>
                 <input type="text" id="nav-search" placeholder="Search" class="search-input">
+                
             </form>
 
     </nav>
