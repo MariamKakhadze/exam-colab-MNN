@@ -688,7 +688,7 @@ h1, h2, h3 {
     right: 0;
     width: 372px;
     z-index: 10;
-    background-color: rgba(32, 32, 32, 0.8);
+    background-color: rgb(32, 32, 32);
     border-radius: 10px;
   }
   .add-window .add-header {
@@ -765,7 +765,7 @@ h1, h2, h3 {
     width: 432px;
     height: 535px;
     z-index: 10;
-    background-color: rgba(32, 32, 32, 0.8);
+    background-color: rgb(32, 32, 32);
     border-radius: 10px;
   }
   .lyrics-window .lyrics-header {
@@ -814,7 +814,7 @@ h1, h2, h3 {
     width: 287px;
     height: 609px;
     z-index: 10;
-    background-color: rgba(32, 32, 32, 0.8);
+    background-color: rgb(32, 32, 32);
     border-radius: 10px;
     padding: 17px 18px;
   }
@@ -850,7 +850,7 @@ h1, h2, h3 {
     width: 432px;
     height: 867px;
     z-index: 10;
-    background-color: rgba(32, 32, 32, 0.8);
+    background-color: rgb(32, 32, 32);
     border-radius: 10px;
   }
   .queue-header {
@@ -5689,62 +5689,6 @@ h1, h2, h3 {
 }
 .song-lyrics-desktop .note-btn:checked ~ label .note-hover {
   display: block;
-} 
-@media  (min-width: 768px){
-  /* Manual CSS Conversion - COMPALER FROZE*/
-
-.filter-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* This MUST be space-between */
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    margin: 0 !important; /* Force no margin */
-    text-align: left !important; /* Force override of parent centering */
-}
-
-.filters-left {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    margin-left: 0 !important; /* Ensure it starts at the left */
-}
-
-.filter-nav-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.filter-nav-wrapper img {
-    height: 20px;
-    width: auto;
-}
-
-.filter-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    color: #b3b3b3; /* Replace with your actual variable color */
-}
-
-
-
-.filter-item:hover span {
-    color: white;
-}
-.filter-wrapper img {
-    width: 41px !important;
-    height: 41px !important;
-    min-width: 41px !important; /* Prevents flexbox from squishing them */
-    min-height: 41px !important;
-    object-fit: contain;      /* Keeps the image looking sharp, not stretched */
-    flex-shrink: 0;           /* Prevents the image from getting smaller */
-}
 }
 
 /*# sourceMappingURL=styles.css.map */
