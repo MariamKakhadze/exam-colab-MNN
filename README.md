@@ -5,7 +5,7 @@
 4.03.2026
 ## 🛠 Navigation Header Implementation
 
-**Author:** Nino Gogoberidze
+**Author:** Nino Gogoberidze ,Mariam Kakhadze
 
 The navigation header of this project is built following modern UI/UX standards, utilizing **Semantic HTML5** and **Flexbox** technology for precise element positioning.
 
@@ -15,6 +15,27 @@ The navigation header of this project is built following modern UI/UX standards,
 * **Pixel Perfect Proportions:**
 * All icon containers (Icon Boxes) are strictly defined at **40.41px x 40.41px**, ensuring visual symmetry.
 * The Search icon is optimized at **20px x 20px** for better visual hierarchy.
+
+* **Header & Navigation:** Engineered a responsive, pixel-perfect navigation header using Flexbox (display: flex).
+
+
+**Author:** Mariam Kakhadze
+* **Sidebar & Library Architecture:**
+
+Constructed a semantic sidebar structure, facilitating scalable navigation through user libraries.
+
+Managed icon-text spacing using standardized gap properties to ensure a clean, scannable UI.
+
+Applied object-fit: contain to all assets, ensuring aspect ratio integrity regardless of icon dimensions.
+
+Main Scrollable Content:
+
+Developed the central content area to handle independent overflow, ensuring navigation elements remain fixed while the main feed scrolls.
+
+Established global base sizing and vertical rhythm using the Satoshi font family.
+
+Optimized spacing logic to prevent layout collapse during window resizing.
+**Author:** Mariam Kakhadze
 
 
 * **Active State Management:** The "Home" section is in an active state, indicated by a specific background color and high contrast for both the text and icon.
@@ -53,7 +74,38 @@ Used object-fit: contain on the icon image to maintain its aspect ratio within t
 * Integrated the **Search Bar** featuring a dedicated search icon.
 * Added the **Right Section**: Includes tool buttons (News, Private, Friends, Settings) and the profile section.
 * Organized the file system for icons in `assets/icons/nav-library/`.
+
+📅 Update: 13/03/2026
+Author: Mariam Kakhazdr
+
+🟢 Progress Update: Mobile Library Implementation
+I have completed the core structural implementation for the Library section specifically optimized for mobile viewports.
+
+Key Technical Details:
+
+Responsive Container: Developed a flexible container using display: flex and flex-direction: column to ensure the library stack maintains visual hierarchy on smaller screens.
+
+Touch-Friendly Scaling: Optimized icon interaction areas to meet mobile usability standards while maintaining the 40.41px sizing constraint.
+
+Layout Preservation: Utilized flex-shrink: 0 on icons to ensure they remain pixel-perfect even when the mobile container width is constrained.
+
+📅 Update: 14/03/2026
+Author: Mariam kakhadze
+
+🟢 Progress Update: Desktop Library & Header Integration
+I have completed the desktop-specific layout for the Library and successfully integrated it into the main Navigation Header.
+
+Key Technical Details:
+
+Desktop Horizontal Alignment: Migrated the mobile vertical stack to a refined horizontal layout using justify-content: space-between to group utility icons and navigation links effectively.
+
+Global Alignment Fixes: Resolved inheritance issues causing layout centering by overriding parent text-align properties and enforcing width: 100% on the .filter-wrapper.
+
+Asset Standardization: Applied a global rule to all library images ensuring a consistent 41px x 41px footprint using object-fit: contain to preserve aspect ratios across all library icons.
+
+Semantic Header Structure: Finalized the integration of the Library module within the <header> semantic container, ensuring the navigation flow remains intuitive and accessible.
  
+
  #CSS
  Header Layout: Elements are horizontally aligned using Flexbox, following the design requirements.
 

@@ -5691,7 +5691,7 @@ h1, h2, h3 {
   display: block;
 } 
 @media  (min-width: 768px){
-  /* Manual CSS Conversion - No Compiler Needed */
+  /* Manual CSS Conversion - COMPALER FROZE*/
 
 .filter-wrapper {
     display: flex;
@@ -5733,10 +5733,6 @@ h1, h2, h3 {
 }
 
 
-
-.filter-item:hover {
-    color: white;
-}
 
 .filter-item:hover span {
     color: white;
