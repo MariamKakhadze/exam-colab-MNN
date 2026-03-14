@@ -1976,6 +1976,7 @@ h1, h2, h3 {
     transition: transform 0.2s ease, background-color 0.2s ease;
     padding: 10px;
     border-radius: 8px;
+  }
   .song-page-body {
     display: flex;
     flex-direction: column;
@@ -2173,7 +2174,7 @@ h1, h2, h3 {
   .popular-almubs {
     display: none;
   }
-}
+
 .search-page-body {
   background-color: rgb(17, 17, 17);
 }
