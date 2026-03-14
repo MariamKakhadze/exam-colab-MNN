@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
+    <title>library</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="search-page-body">
+<body class="page-home">
     <div class="app-container">
-      <!-- Header Section  -->
+
+     <!-- Header Section  -->
     <header class="navbar">
         <div class="navbar-container desktop-version">
 
            <nav class="nav-group center-section">
         
-            <a href="index.html" class="nav-link active ">
+            <a href="index.html" class="nav-link  ">
                 <img src="./assets/icons/nav-library/home-active.svg" alt="" >
                 <span class="label">Home</span>
             </a>
@@ -25,11 +26,15 @@
                 <span class="label">Discover</span>
             </a>
         
-            <form class="search-container" role="search">
-                <a href="search.html" class="search-icon">
-                    <img src="./assets/icons/nav-library/search.svg" alt="Search">
+            <form class="search-container" role="search" action="search.html" method="GET">
+                
+                <label for="nav-search" class="search-icon">
+                    <a href="search.html" class="search-link">
+                <img src="./assets/icons/nav-library/search.svg" alt="Search">
                 </a>
+                </label>
                 <input type="text" id="nav-search" placeholder="Search" class="search-input">
+                
             </form>
 
     </nav>
@@ -63,35 +68,39 @@
             
             
 
-            <a href="index.html" class="mobile-icon active">
+            <a class="mobile-icon active" role="button" aria-label="home">
                 <img src="./assets/icons/nav-library/home-active.svg" alt="Profile avatar">
             </a>
             
-             <button class="mobile-icon" role="button" aria-label="Profile">
+             <a class="mobile-icon" role="button" aria-label="Profile">
                 <img src="./assets/icons/nav-library/discover.svg" alt="Profile avatar">
-            </button>
+            </a>
 
-             <a href="search.html" class="mobile-icon">
+             <a class="mobile-icon" role="button" aria-label="Profile">
                 <img src="./assets/icons/nav-library/search.svg" alt="Profile avatar">
-             </a>
+            </a>
 
-             <a href="mobile-library.html" class="mobile-icon">
+             <a href="mobile-library.html" class="mobile-icon" role="button" aria-label="Profile">
                 <img src="./assets/icons/sidebar-library/library.png" alt="Profile avatar">
-             </a>
+            </a>
             
-             <button class="mobile-icon" role="button" aria-label="Profile">
+             <a class="mobile-icon" role="button" aria-label="Profile">
                 <img src="./assets/icons/nav-library/me-prof.png" alt="Profile avatar">
-            </button>
+            </a>
          </section>
 
     </header>
+
+      
+    
+
 
     <!--this is a sidebar library for desktop-->
     <aside class="sidebar">
 
         
-                <a href="desktop-library.html" class="sidebar-link library-header"> 
-                         <img src="./assets/icons/sidebar-library/library.png" alt="library icon">
+                <a href="#" class="sidebar-link library-header"> 
+                         <img src="./assets/icons/nav-library/library-active.png" alt="library icon">
                      <span class="label">My Library</span>
                 </a>
             
@@ -167,315 +176,366 @@
             </ul>
         </nav>
     </aside>
-    <main class="search-page-cont">
-        <!-- ================================
-             Search scrollable content
-        ================================ -->
-        <section class="search-page">
-            <!-- Search input visible on mobile, hidden on desktop-->
-            <section class="search-page-header-mobile">
-                <div class="search-container-mobile">
-                    <input type="text" placeholder="What do you want to play?" class="Search-input-mobile">
-                    <svg class="search-icon-mobile" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24.7356 24.3607C26.2732 22.7923 27.2213 20.6437 27.2213 18.2738C27.2213 13.4713 23.3281 9.57812 18.5256 9.57812C13.7232 9.57812 9.82999 13.4713 9.82999 18.2738C9.82999 23.0763 13.7232 26.9694 18.5256 26.9694C20.9582 26.9694 23.1574 25.9706 24.7356 24.3607ZM24.7356 24.3607L29.83 29.5781" stroke="#898989" stroke-width="2.02054" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <svg class="search-camera" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.57837 16.8346V26.3254C7.57837 27.8595 8.82202 29.1032 10.3561 29.1032H29.8006C31.3347 29.1032 32.5784 27.8595 32.5784 26.3254V16.8346C32.5784 15.3005 31.3347 14.0569 29.8006 14.0569H28.3507C27.8169 14.0569 27.3091 13.8266 26.9575 13.425L25.0236 11.2165C24.6719 10.815 24.1641 10.5846 23.6304 10.5846H16.1885C15.6548 10.5846 15.147 10.815 14.7953 11.2165L12.8614 13.425C12.5098 13.8266 12.002 14.0569 11.4682 14.0569H10.3561C8.82202 14.0569 7.57837 15.3005 7.57837 16.8346Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="20.0783" cy="20.306" r="4.16667" stroke="currentcolor" stroke-width="2"/>
-                </svg>
 
-            </section>
 
-            <!-- Search history visible on desktop, hidden on mobile-->
-            <section class="recent-searches">
-                <div class="recent-searches-header">
-                    <h3>Recent searches</h3>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="11.7863" cy="20.2056" r="1.68378" fill="currentcolor"/>
-                    <circle cx="20.2053" cy="20.2056" r="1.68378" fill="currentcolor"/>
-                    <circle cx="28.6242" cy="20.2056" r="1.68378" fill="currentcolor"/>
-                    </svg>
-                </div>
-                <div class="recent-search-cards">
-                    <div class="search-daft-punk">
-                        <img class="name" src="./assets/photo/search-page/image 3.svg" alt="Daft Punk">
-                        <svg class="search-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>Daft Punk</span>
-                    </div>
-                    <div class="search-david-bowie">
-                        <img class="name" src="./assets/photo/search-page/image 4.svg" alt="David Bowie">
-                        <svg class="search-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>David Bowie</span>
-                    </div>
-                    <div class="search-black-holes">
-                        <img class="name" src="./assets/photo/search-page/Frame 8.svg" alt="Black Holes..">
-                        <svg class="search-close-icon" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.2568 15.1543L20.2055 20.2056M15.1541 25.257L20.2055 20.2056M20.2055 20.2056L15.1541 15.1543M20.2055 20.2056L25.2568 25.257" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span class="album-title">Black Holes..</span>
-                        <span class="song-title">Muse</span>
-                    </div>
-                </div>
-            </section>
+   
 
-            <!-- Search Menu-->
-            <section class="search-browse-section">
-                <h3>Browse all</h3>
-                <div class="search-cards-row">
-                    <div class="search-cards-header">
-                        <p>Discover</p>
-                        <div class="search-arrows">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
+      <!--this the main content/scroll-content-->
+    
+    <main class="main-content">
+        <section class="filters">
+            <div class="filter-wrapper">
+                <div class="filters-left">
+                <div class="filter-icon-wrapper">
+                <img src="assets/icons/sidebar-library/recents-clicked.png" alt="">
+                <img src="assets/icons/sidebar-library/recents.png" alt="">
+                </div>
+
+                <div class="filter-nav-wrapper">
+                    <div class="filter-item">
+                        <img src="assets/icons/sidebar-library/up-down.png" alt="">
+                        <span>Recent</span>
                     </div>
 
-                    <!-- search page cards-->
-                    <div class="search-card-cont">
-                        <div class="discover-card-1">
-                            <h4>Made For You</h4>
-                            <img src="./assets/photo/search-page/422471f475ef583cf2ffee7fa9f04e91a0d2a96d.png">
-                        </div>
-                        <div class="discover-card-2">
-                            <h4>New Releases</h4>
-                            <img src="./assets/photo/search-page/a1cb60534f5505f48399778ffca8b276e8241443.png">
-                        </div>
-                        <div class="discover-card-3">
-                            <h4>Spotify Classics</h4>
-                            <img src="./assets/photo/search-page/742d5f2930150fe3d915aacef7c72b06c96307cd.png">
-                        </div>
-                        <div class="discover-card-4">
-                            <h4>Charts</h4>
-                            <img src="./assets/photo/search-page/9a78599c56996de872cb685ed73ea614638e6c70.png">
-                        </div>
-                        <div class="discover-card-5">
-                            <h4>Trending</h4>
-                            <img src="./assets/photo/search-page/147639eb7702a84859921a4140e7373abce2cbdd.png">
-                        </div>
-                        <div class="discover-card-6">
-                            <h4>Discover</h4>
-                            <img src="./assets/photo/search-page/005a4a8f3d543d70eb736995707e2141d860e115.png">
-                        </div>
-                        <div class="discover-card-7">
-                            <h4>Spotify Singles</h4>
-                            <img src="./assets/photo/search-page/27650cc21a403b552fee76ab42bb09a676f09292.png">
-                        </div>
-                        <div class="discover-card-8">
-                            <h4>Decades</h4>
-                            <img src="./assets/photo/search-page/df749602f47f6d0c569d234647d73c38df58c6d2.png">
-                        </div>
+                    <div class="filter-item">
+                        <img src="assets/icons/sidebar-library/group.png" alt="">
+                        <span>Group</span>
                     </div>
+                        <img src="assets/icons/nav-library/search.svg" alt="">
                 </div>
-                <div class="search-cards-row">
-                    <div class="search-cards-header">
-                        <p>Genres</p>
-                        <div class="search-arrows">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="search-card-cont">
-                        <div class="genre-card-1">
-                            <h4>Pop</h4>
-                            <img src="./assets/photo/search-page/d3e969adb18c26504cc4d04d143dd893b447249e.png">
-                        </div>
-                        <div class="genre-card-2">
-                            <h4>Country</h4>
-                            <img src="./assets/photo/search-page/32c68f8a2cefe54d5cdde58f9b8f710391de9d14.png">
-                        </div>
-                        <div class="genre-card-3">
-                            <h4>Hip-Hop</h4>
-                            <img src="./assets/photo/search-page/ce7834b904e8f3b9b16ce59b20f04f8be11be153.png">
-                        </div>
-                        <div class="genre-card-4">
-                            <h4>Rock</h4>
-                            <img src="./assets/photo/search-page/6ac8b3672b65c210aeaacfc7ab7be499d8932f5b.png">
-                        </div>
-                        <div class="genre-card-5">
-                            <h4>Indie</h4>
-                            <img src="./assets/photo/search-page/94a2e96ed13cc96762b74a96abea12f31cd959e3.png">
-                        </div>
-                        <div class="genre-card-6">
-                            <h4>Punk</h4>
-                            <img src="./assets/photo/search-page/6c57067452be02b9a377b5dd1ab99a661e339310.png">
-                        </div>
-                        <div class="genre-card-7">
-                            <h4>Metal</h4>
-                            <img src="./assets/photo/search-page/905344684b019f285a859bf29f98267f280adf85.png">
-                        </div>
-                        <div class="genre-card-8">
-                            <h4>Instrumental</h4>
-                            <img src="./assets/photo/search-page/796aa41fd5d351c930e930f838243158fe06a693.png">
-                        </div>
-                    </div>
                 </div>
-                <div class="search-cards-row">
-                    <div class="search-cards-header">
-                        <p>Mood & Activity</p>
-                        <div class="search-arrows">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="search-card-cont">
-                        <div class="mood-card-1">
-                            <h4>In the car?</h4>
-                            <img src="./assets/photo/search-page/422471f475ef583cf2ffee7fa9f04e91a0d2a96d.png" alt="In the car?">
-                        </div>
-                        <div class="mood-card-2">
-                            <h4>Mood</h4>
-                            <img src="./assets/photo/search-page/a1cb60534f5505f48399778ffca8b276e8241443.png" alt="Mood">
-                        </div>
-                        <div class="mood-card-3">
-                            <h4>Workout</h4>
-                            <img src="./assets/photo/search-page/742d5f2930150fe3d915aacef7c72b06c96307cd.png" alt="Workout">
-                        </div>
-                        <div class="mood-card-4">
-                            <h4>Chill</h4>
-                            <img src="./assets/photo/search-page/9a78599c56996de872cb685ed73ea614638e6c70.png" alt="Chill">
-                        </div>
-                        <div class="mood-card-5">
-                            <h4>Sleep</h4>
-                            <img src="./assets/photo/search-page/147639eb7702a84859921a4140e7373abce2cbdd.png" alt="Sleep">
-                        </div>
-                        <div class="mood-card-6">
-                            <h4>Party</h4>
-                            <img src="./assets/photo/search-page/005a4a8f3d543d70eb736995707e2141d860e115.png" alt="Party">
-                        </div>
-                        <div class="mood-card-7">
-                            <h4>At Home</h4>
-                            <img src="./assets/photo/search-page/27650cc21a403b552fee76ab42bb09a676f09292.png" alt="At Home">
-                        </div>
-                        <div class="mood-card-8">
-                            <h4>Focus</h4>
-                            <img src="./assets/photo/search-page/df749602f47f6d0c569d234647d73c38df58c6d2.png" alt="Focus">
-                        </div>
-                    </div>
-                </div>
-                <div class="search-cards-row">
-                    <div class="search-cards-header">
-                        <p>Entertainment</p>
-                        <div class="search-arrows">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="search-card-cont">
-                        <div class="entertainment-card-1">
-                            <h4>Netflix</h4>
-                            <img src="./assets/photo/search-page/005a4a8f3d543d70eb736995707e2141d860e115.png" alt="Netflix">
-                        </div>
-                        <div class="entertainment-card-2">
-                            <h4>Anime</h4>
-                            <img src="./assets/photo/search-page/6ac8b3672b65c210aeaacfc7ab7be499d8932f5b.png" alt="Anime">
-                        </div>
-                        <div class="entertainment-card-3">
-                            <h4>Disney</h4>
-                            <img src="./assets/photo/search-page/6c57067452be02b9a377b5dd1ab99a661e339310.png" alt="Disney">
-                        </div>
-                        <div class="entertainment-card-4">
-                            <h4>Gaming</h4>
-                            <img src="./assets/photo/search-page/796aa41fd5d351c930e930f838243158fe06a693.png" alt="Gaming">
-                        </div>
-                    </div>
-                </div>
-                <div class="search-cards-row">
-                    <div class="search-cards-header">
-                        <p>Podcasts</p>
-                        <div class="search-arrows">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="search-card-cont">
-                        <div class="Podcasts-card-1">
-                            <h4>Podcasts</h4>
-                            <img src="./assets/photo/search-page/d3e969adb18c26504cc4d04d143dd893b447249e.png" alt="Podcasts">
-                        </div>
-                        <div class="Podcasts-card-2">
-                            <h4>Podcast Charts</h4>
-                            <img src="./assets/photo/search-page/df749602f47f6d0c569d234647d73c38df58c6d2.png" alt="Podcast Charts">
-                        </div>
-                        <div class="Podcasts-card-3">
-                            <h4>Podcast New Releases</h4>
-                            <img src="./assets/photo/search-page/94a2e96ed13cc96762b74a96abea12f31cd959e3.png" alt="Podcast New Releases">
-                        </div>
-                        <div class="Podcasts-card-4">
-                            <h4>Video</h4>
-                            <img src="./assets/photo/search-page/905344684b019f285a859bf29f98267f280adf85.png" alt="Video">
-                        </div>
-                    </div>
-                </div>
-                <div class="search-cards-row">
-                    <div class="search-cards-header">
-                        <p>Audiobooks</p>
-                        <div class="search-arrows">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.7825 20.2064H13.4703M13.4703 20.2064L19.3636 26.0996M13.4703 20.2064L19.3636 14.3131" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.4703 20.2057H27.7824M27.7824 20.2057L21.8892 14.3125M27.7824 20.2057L21.8892 26.099" stroke="currentcolor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="search-card-cont">
-                        <div class="Audiobooks-card-1">
-                            <h4>Audiobooks</h4>
-                            <img src="./assets/photo/search-page/27650cc21a403b552fee76ab42bb09a676f09292.png" alt="Audiobooks">
-                        </div>
-                        <div class="Audiobooks-card-2">
-                            <h4>Sci-Fi & Fantasy Essential</h4>
-                            <img src="./assets/photo/search-page/ce7834b904e8f3b9b16ce59b20f04f8be11be153.png" alt="Sci-Fi & Fantasy Essential">
-                        </div>
-                        <div class="Audiobooks-card-3">
-                            <h4>Fiction & Literature</h4>
-                            <img src="./assets/photo/search-page/32c68f8a2cefe54d5cdde58f9b8f710391de9d14.png" alt="Fiction & Literature">
-                        </div>
-                        <div class="Audiobooks-card-4">
-                            <h4>Mystery & Thriller</h4>
-                            <img src="./assets/photo/search-page/9a78599c56996de872cb685ed73ea614638e6c70.png" alt="Mystery & Thriller">
-                        </div>
-                        <div class="Audiobooks-card-5">
-                            <h4>Self-Help</h4>
-                            <img src="./assets/photo/search-page/147639eb7702a84859921a4140e7373abce2cbdd.png" alt="Self-Help">
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+                <img src="assets/icons/sidebar-library/plus.png" alt="">
+
+            </div>
         </section>
-    </main>
-    </div>
 
-                <!-- ================================
-                    PLAYER SECTION
-                    Main wrapper for the entire player
-                ================================ -->
-    <section class="player">
+      
+
+    
+     <section class="main-content-container">
+
+        <section class="content-section">
+           
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                 <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Selected Linkin Park</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Numb, Crawling, In the End, and more</p>
+                    </div>  
+                 </div>
+
+                  <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                        <div class="pin-container">
+                            <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                        
+                        </div>
+                        <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                        <div class="card-txt-wrap wrap-colored">
+                        <div class="card-title-cont ">
+                            <span>Vibe</span>
+                            <span>2</span>
+                        </div>
+                        <p class="card-main-txt">Blue Skies, No Heaven</p>
+                        </div>
+                    </div>
+            </div>
+         </section>  
+        
+         <section class="content-section">
+           
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                 <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Selected Linkin Park</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Numb, Crawling, In the End, and more</p>
+                    </div>  
+                 </div>
+
+                  <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                        <div class="pin-container">
+                            <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                        
+                        </div>
+                        <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                        <div class="card-txt-wrap wrap-colored">
+                        <div class="card-title-cont ">
+                            <span>Vibe</span>
+                            <span>2</span>
+                        </div>
+                        <p class="card-main-txt">Blue Skies, No Heaven</p>
+                        </div>
+                    </div>
+            </div>
+         </section>  
+
+         <section class="content-section">
+           
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                 <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                
+            </div>
+         </section>  
+
+        
+        </section>
+
+    </main>
+
+     </div>
+
+      <section class="player">
 
                 <!-- ================================
                     Left Side — Playback Controls
@@ -1146,9 +1206,4 @@
         <!-- END right-cont -->
 
     </section>
-    <!-- END player -->
-
-
-    <script src="script.js"></script>
 </body>
-</html>
