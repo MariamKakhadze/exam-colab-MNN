@@ -12,7 +12,8 @@
 @use 'layout/header';
 @use 'layout/main-content';
 @use 'layout/player';
-@use 'layout/mobile-library';
+@use 'layout/song-page';
+@use 'layout/search-page';
 
 // 4. Components
 @use 'components/filters';
