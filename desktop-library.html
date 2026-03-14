@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-home">
+    <div class="app-container">
+
+     <!-- Header Section  -->
+    <header class="navbar">
+        <div class="navbar-container desktop-version">
+
+           <nav class="nav-group center-section">
+        
+            <a href="index.html" class="nav-link  ">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="" >
+                <span class="label">Home</span>
+            </a>
+
+            <a href="#" class="nav-link ">
+                <img src="./assets/icons/nav-library/discover.svg" alt="">
+                <span class="label">Discover</span>
+            </a>
+        
+            <form class="search-container" role="search" action="search.html" method="GET">
+                
+                <label for="nav-search" class="search-icon">
+                    <a href="search.html" class="search-link">
+                <img src="./assets/icons/nav-library/search.svg" alt="Search">
+                </a>
+                </label>
+                <input type="text" id="nav-search" placeholder="Search" class="search-input">
+                
+            </form>
+
+    </nav>
+        
+       
+        <section class="nav-group right icon-section">
+            <button class="tool-btn " aria-label="News">
+                <img src="./assets/icons/nav-library/notification.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Private">
+                <img src="./assets/icons/nav-library/lock.svg" alt="">
+            </button>
+
+            <button class="tool-btn for-desktop" aria-label="Friends">
+                <img src="./assets/icons/nav-library/friends.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="Settings">
+                <img src="./assets/icons/nav-library/settings.svg" alt="">
+            </button>
+
+            <button class="tool-btn " aria-label="profile-pic">
+                <img src="./assets/icons/nav-library/pofile-pic.svg" alt="">
+            </button>
+
+    </section>
+         </div>
+
+         <section class="mobile-version">
+            
+            
+
+            <a class="mobile-icon active" role="button" aria-label="home">
+                <img src="./assets/icons/nav-library/home-active.svg" alt="Profile avatar">
+            </a>
+            
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/discover.svg" alt="Profile avatar">
+            </a>
+
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/search.svg" alt="Profile avatar">
+            </a>
+
+             <a href="mobile-library.html" class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/sidebar-library/library.png" alt="Profile avatar">
+            </a>
+            
+             <a class="mobile-icon" role="button" aria-label="Profile">
+                <img src="./assets/icons/nav-library/me-prof.png" alt="Profile avatar">
+            </a>
+         </section>
+
+    </header>
+
+      
+    
+
+
+    <!--this is a sidebar library for desktop-->
+    <aside class="sidebar">
+
+        
+                <a href="#" class="sidebar-link library-header"> 
+                         <img src="./assets/icons/nav-library/library-active.png" alt="library icon">
+                     <span class="label">My Library</span>
+                </a>
+            
+
+        <nav class="sidebar-nav">
+            
+            <ul class="sidebar-nav-list">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/pin.png" alt="pin">
+                        <span>Pins</span>
+                    </a>
+                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
+                </li>
+
+                <li class="sidebar-item">
+                    
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/playlists.png" alt="pin">
+                        <span>Playlists</span>
+                    </a>
+                    <img src="assets/icons/sidebar-library/arrow.png" alt="arrow">
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/likedSongs.png" alt="liked">
+                        <span>Liked songs</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/saves.png" alt="saves">
+                        <span>Saves</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/albums.png" alt="albums">
+                        <span>Albums</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/folders.png" alt="foldrs">
+                        <span>Folders</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/podcasts.png" alt="podcasts">
+                        <span>Podcasts</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/audiobooks.png" alt="audiobooks">
+                        <span>Audiobooks</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <img src="assets/icons/sidebar-library/artists.png" alt="ARTISTS">
+                        <span>Artists</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+
+   
+
+      <!--this the main content/scroll-content-->
+    
+    <main class="main-content">
+        <section class="filters">
+            <div class="filter-wrapper">
+                <div class="filters-left">
+                <div class="filter-icon-wrapper">
+                <img src="assets/icons/sidebar-library/recents-clicked.png" alt="">
+                <img src="assets/icons/sidebar-library/recents.png" alt="">
+                </div>
+
+                <div class="filter-nav-wrapper">
+                    <div class="filter-item">
+                        <img src="assets/icons/sidebar-library/up-down.png" alt="">
+                        <span>Recent</span>
+                    </div>
+
+                    <div class="filter-item">
+                        <img src="assets/icons/sidebar-library/group.png" alt="">
+                        <span>Group</span>
+                    </div>
+                        <img src="assets/icons/nav-library/search.svg" alt="">
+                </div>
+                </div>
+
+                <img src="assets/icons/sidebar-library/plus.png" alt="">
+
+            </div>
+        </section>
+
+         <!--this the main btn for playlists for moibile-->
+        <section class="playlist-btns-mobile">
+            <div class="playlist-grid-container" >
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daft-punk.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Get Lucky (feat. Pharrell Williams and Nile Rodgers)</p>
+                        <p class="btn-txt">Daft Punk</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daily-mix-2.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Daily Mix 2</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daily-mix-1.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Daily Mix 1</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                 <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daft-punk.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Instant Crush</p>
+                        <p class="btn-txt">Daft Punk</p>
+                    </div>
+                </div>
+
+            </button>
+
+            <button class="playlist-btn">
+                 <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/daft-punk.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Around the world</p>
+                        <p class="btn-txt">Daft Punk</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="playlist-btn">
+                <div class="btn-cont-wrapper">
+                    <img src="assets/pictures/main/rock-mix.png" alt="">
+                    <div class="btn-txt-wrapper">
+                        <p class="btn-head">Rock Mix</p>
+                    </div>
+                </div>
+            </button>
+
+            </div>
+
+        </section>
+
+    
+     <section class="main-content-container">
+
+        <section class="content-section">
+           
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                 <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Selected Linkin Park</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Numb, Crawling, In the End, and more</p>
+                    </div>  
+                 </div>
+
+                  <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                        <div class="pin-container">
+                            <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                        
+                        </div>
+                        <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                        <div class="card-txt-wrap wrap-colored">
+                        <div class="card-title-cont ">
+                            <span>Vibe</span>
+                            <span>2</span>
+                        </div>
+                        <p class="card-main-txt">Blue Skies, No Heaven</p>
+                        </div>
+                    </div>
+            </div>
+         </section>  
+        
+         <section class="content-section">
+           
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                 <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+            
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Selected Linkin Park</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Numb, Crawling, In the End, and more</p>
+                    </div>  
+                 </div>
+
+                  <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Vibe</span>
+                        <span>2</span>
+                    </div>
+                    <p class="card-main-txt">Blue Skies, No Heaven</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey">
+                        <div class="pin-container">
+                            <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                        
+                        </div>
+                        <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                        <div class="card-txt-wrap wrap-colored">
+                        <div class="card-title-cont ">
+                            <span>Vibe</span>
+                            <span>2</span>
+                        </div>
+                        <p class="card-main-txt">Blue Skies, No Heaven</p>
+                        </div>
+                    </div>
+            </div>
+         </section>  
+
+         <section class="content-section">
+           
+            <div class="cards-wrapper-grid" id="scroll-container">
+
+                 <div class="card card-stacked-grey">
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                     <img src="assets/pictures/library/liked-songs.png" alt="picture">
+                    
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Liked songs</span>
+                        <span>12</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                <div class="card card-stacked-grey"> 
+                    <div class="pin-container">
+                        <img src="assets/icons/sidebar-library/pin-green.png" alt="">
+                       
+                    </div>
+                    <img src="assets/pictures/library/blank-music.png" alt="picture">
+
+                    <div class="card-txt-wrap wrap-colored">
+                    <div class="card-title-cont ">
+                        <span>Chill stuff</span>
+                        <span>152</span>
+                    </div>
+                    <p class="card-main-txt">Get Lucky, Instant Crush, and more</p>
+                    </div>
+                </div>
+
+                
+            </div>
+         </section>  
+
+        
+        </section>
+
+    </main>
+
+     </div>
